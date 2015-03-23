@@ -19,87 +19,87 @@ And we're gonna dive right in today to some brief slide work.
 6
 00:00:22,720 --> 00:00:28,357
 This people at Stanford, you've got a document that describe, describes all the grading and all that stuff
-在座的同學，你們手裡都有一份敘述評分標準的文檔，
+在座的同學，你們手裡都有一份敘述評分標準的文件，
 
 8
 00:00:28,359 --> 00:00:32,126
 so I'm not gonna go over that in lecture like I often do to start the quarter.
-所以我不想像以往開課時那樣再復述一遍
+所以我不想像以往開課時那樣再重覆說明一遍
 
 9
 00:00:33,663 --> 00:00:36,296
 Instead I'm gonna talk a little bit about, what this class is about.
-相反，我首先要談一談，這門課到底是講什麼的
+相反，我首先要談一談，這門課到底是有關什麼的
 
 10
 00:00:37,566 --> 00:00:42,068
 Brief mention of the prerequisites cuz they're pretty important in this class.
-接下來簡單提一下學習本課程的先決條件，這個事對於課程挺重要的
+接下來簡單會提到學習本課程的先修課程，因為這對於本課程滿重要的
 
 11
 00:00:42,070 --> 00:00:44,870
 Then just the quickest overview of iOS.
-然後會對 iOS 進行一個快速的預覽
+然後會對 iOS 進行一個快速預覽
 
 12
 00:00:44,872 --> 00:00:49,508
 I'm gonna assume that anyone who is here or is watching this, knows what that is.
-我想在座的和觀看視頻的各位同學都知道那是什麼吧
+我想假定在座的和觀看影片的各位同學，都知道那是什麼吧
 
 13
 00:00:49,510 --> 00:00:51,609
 And then, we're gonna dive right into a big old demo.
-再然後，會帶領大家做一個大的 demo
+接下來，我們將會進入一個大的舊的 demo
 
 14
 00:00:51,611 --> 00:00:54,779
 It's gonna be a two-day thing, where I'm really going to try and
-這個 demo 會講兩節課，在這期間我會
+這個會用兩節課內容，在這裡裡我會試著
 
 15
 00:00:54,781 --> 00:00:57,381
 introduce you to Xcode and the development environment and
-向你們介紹開發 iOS 需要用到的
+向你們介紹Xcode、開發環境以及
 
 16
 00:00:57,383 --> 00:01:01,818
 this language Swift, that you're gonna have to learn to develop for iOS.
-集成開發工具 Xcode 和編程語言 Swift
+程式語言 Swift，這是當你在iOS上開發時將會需要學的
 
 17
 00:01:02,854 --> 00:01:04,120
 All right, so what is this class about?
-那麼本課程是講什麼的呢？
+好的，那麼本課程是關於什麼的呢？
 
 18
 00:01:04,122 --> 00:01:06,455
 It's about building cool apps, as we know.
-這門課講述的是開發超 cool 的 iOS 應用
+這門課是有關於開發超酷的App，正如我們所知道的
 
 19
 00:01:06,457 --> 00:01:09,091
 Why are these iOS apps so cool?
-為什麼這些 iOS 應用這麼 cool 呢？
+為什麼這些 iOS Apps這麼酷呢？
 
 20
 00:01:09,093 --> 00:01:11,960
 Well, because the device you're gonna run them on is in your pocket or
-因為運行這些應用的設備要麼在你的口袋里，
+因為執行這些Apps的設備要不是在你的口袋裡，
 
 21
 00:01:11,962 --> 00:01:14,229
 in your backpack.
-要麼在你的背包里
+不然就在你的背包裡
 
 22
 00:01:14,230 --> 00:01:16,497
 Either, if you write an app, you can just pull it out and show your friends and
-如果你寫了一個應用，你可以把它展示給你的朋友，
+又或者，如果你寫了一個App，你可以把它發佈出來，然後秀給你的朋友看
 
 23
 00:01:16,500 --> 00:01:20,535
 it's highly networked and incredible graphics with animation.
-它高度集成網絡，並有驚艷的動畫圖形效果
+它高度地網路化，而且有令人驚奇的動畫圖形效果
 
 24
 00:01:20,537 --> 00:01:24,605
@@ -189,7 +189,7 @@ iOS 是一個完全的面向對象編程的開發環境
 48
 00:02:26,659 --> 00:02:28,859
 I just don't mean I'm not just talking about the language is Object-Oriented.
-我的意思不只是說編程語言是面向對象的
+我的意思不只是說程式語言是面向對象的
 
 49
 00:02:28,862 --> 00:02:31,863
@@ -409,7 +409,7 @@ static images, as you know, JPEG and things like that.
 97
 00:05:02,064 --> 00:05:07,700
 And video both capturing video, editing video, all that.
-包括拍攝視頻、編輯視頻等的視頻處理，
+包括拍攝影片、編輯影片等的影片處理，
 
 98
 00:05:07,702 --> 00:05:13,706
@@ -429,7 +429,7 @@ But I'll try to let you know, that it's in there and then you'll know to go out 
 102
 00:05:20,881 --> 00:05:23,948
 seek out, if you're building a very audio intensive app or
-或者當你正在寫一個用到大量音頻視頻技術的應用的時候，
+或者當你正在寫一個用到大量音頻影片技術的應用的時候，
 
 103
 00:05:23,950 --> 00:05:26,484
@@ -634,7 +634,7 @@ Apple did a great job of kind of, building all the best stuff of
 146
 00:07:48,711 --> 00:07:52,346
 all the languages that have been invented over the last, you know,
-它吸收了很多已存在的編程語言的優點
+它吸收了很多已存在的程式語言的優點
 
 147
 00:07:52,348 --> 00:07:57,684
@@ -953,7 +953,7 @@ I don't recommend it necessarily, or certainly I don't require it.
 214
 00:11:20,428 --> 00:11:28,400
 I am going to, you, you'll be able to go back and watch this particular demo on video.
-你們可以回去看視頻
+你們可以回去看影片
 
 216
 00:11:28,402 --> 00:11:30,535
@@ -983,7 +983,7 @@ So I'm not gonna post the code because I want you to go through the experience o
 221
 00:11:42,948 --> 00:11:45,615
 typing the code in, and if you watch in on video,
-如果你是在看這個視頻，
+如果你是在看這個影片，
 
 222
 00:11:45,617 --> 00:11:51,219
