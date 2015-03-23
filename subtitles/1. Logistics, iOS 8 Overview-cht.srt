@@ -19,12 +19,12 @@ And we're gonna dive right in today to some brief slide work.
 6
 00:00:22,720 --> 00:00:28,357
 This people at Stanford, you've got a document that describe, describes all the grading and all that stuff
-在座的同學，你們手裡都有一份敘述評分標準的文件，
+史丹佛的同學，你們手裡都有一份敘述評分和所有其它事項的文件，
 
 8
 00:00:28,359 --> 00:00:32,126
 so I'm not gonna go over that in lecture like I often do to start the quarter.
-所以我不想像以往開課時那樣再重覆說明一遍
+所以我不會像以往開課時那樣再重覆說明一遍
 
 9
 00:00:33,663 --> 00:00:36,296
@@ -34,7 +34,7 @@ Instead I'm gonna talk a little bit about, what this class is about.
 10
 00:00:37,566 --> 00:00:42,068
 Brief mention of the prerequisites cuz they're pretty important in this class.
-接下來簡單會提到學習本課程的先修課程，因為這對於本課程滿重要的
+接下來簡單提到學習本課程的先修課程，因為這對於本課程滿重要的
 
 11
 00:00:42,070 --> 00:00:44,870
@@ -49,7 +49,7 @@ I'm gonna assume that anyone who is here or is watching this, knows what that is
 13
 00:00:49,510 --> 00:00:51,609
 And then, we're gonna dive right into a big old demo.
-接下來，我們將會進入一個大的舊的 demo
+接下來，我們將會進入一個大的老牌的 demo
 
 14
 00:00:51,611 --> 00:00:54,779
@@ -104,27 +104,27 @@ it's highly networked and incredible graphics with animation.
 24
 00:01:20,537 --> 00:01:24,605
 It's just cool all the way around and I think you guys all know that or you wouldn't be here.
-它在各個方面都很 cool 我想你們應該都知道這些，否則你們就不會坐在這裡了
+它在各個方面都很酷，所以我想你們應該都知道這些，否則你們就不會在這裡了
 
 26
 00:01:24,607 --> 00:01:28,374
 But you're also gonna learn in this class a lot of real life Object-Oriented Programming.
-在這們課程中，你們也需要學習一些關於面向對象編程的知識
+在這們課程中，你們也需要學習許多現實中關於物件導向程式的知識
 
 28
 00:01:28,377 --> 00:01:32,578
 You're taking a lot of other classes here at Stanford on things like graphics, and
-你們也可能在史丹佛參加過一些關於圖形、
+你們也可能在史丹佛上過一些關於圖形、
 
 29
 00:01:32,580 --> 00:01:39,718
 networking, and databases, and maybe animation. Things like that.
-網絡、數據庫也許還有動畫方面的課程
+網路、資料庫也許還有動畫方面之類的課程
 
 31
 00:01:39,719 --> 00:01:42,586
 And we're gonna is kinda tie that all together into a real world class.
-然而我們將這些內容融合在一起，
+然而我們將這些內容都合併在一起到一個真實世界的課程中
 
 32
 00:01:42,589 --> 00:01:44,055
@@ -134,122 +134,122 @@ And we're gonna is kinda tie that all together into a real world class.
 33
 00:01:44,057 --> 00:01:46,891
 Now, you know, it's gonna be kind of a survey course in that,
-現在，你應該知道這會是一個概述型課程，
+現在，你應該知道這會是一個概論課程，
 
 34
 00:01:46,893 --> 00:01:52,462
 I can't go too deep into networking. I can't go too deep into databases.
-我不會深入講述網絡的內容，我不會深入講述數據庫的內容，
+我不會深入講解網路，我也不會深入講解資料庫，
 
 36
 00:01:52,464 --> 00:01:56,366
 I can't go too deep into animation, but you'll get to see it all in a really real
-我不會深入講述動畫的內容，但是你們會在
+我不會深入講述動畫，但是你們會在
 
 37
 00:01:56,368 --> 00:01:59,569
 world environment, where people out there building apps using that technology.
-真實項目的環境中用到所有的這些技術
+真實世界的環境中看到它們全部，人們使用這樣的技術來開發App
 
 38
 00:01:59,571 --> 00:02:04,940
 For some of you who haven't seen that before that'll be a big bonus of this class, I think.
-我認為，對於一些之前沒有接觸過這些的同學，本課程對他們會有很大的提升
+我認為，對於你們之中先前沒有接觸過的人來說，本課程對會有很大的幫助
 
 40
 00:02:06,243 --> 00:02:07,975
 The prerequisites of this class.
-學習本課程的先決條件
+學習本課程的先修課程
 
 41
 00:02:07,977 --> 00:02:11,712
 Number one thing is you have to be a pretty strong Object-Oriented programmer.
-最重要的，你需要有很好的面向對象編程功底
+最重要的，你需要是個有很好底子的物件導向程式設計師
 
 42
 00:02:11,714 --> 00:02:14,014
 If you're not a strong Object-Oriented programmer, and
-如果你不是，
+如果你不是有很好底子的物件導向程式設計師，然後
 
 43
 00:02:14,016 --> 00:02:18,018
 you hit this class, you're probably gonna go under water, pretty quick.
-還選了這個課，你可能很快就會掉隊了
+還選了這門課，你可能非常快就會掉到水下溺斃了
 
 44
 00:02:18,020 --> 00:02:22,188
 Okay? I'm gonna assume you know, everything about Object-Oriented Programming.
-我假設你已經瞭解關於面向對象編程的一切
+了解了嗎？我會假設你已經瞭解關於物件導向程式設計的一切
 
 46
 00:02:22,190 --> 00:02:26,658
 iOS is a completely Object-Oriented Programming envir, development environment.
-iOS 是一個完全的面向對象編程的開發環境
+iOS 是一個完全的物件導向程式的開發環境
 
 48
 00:02:26,659 --> 00:02:28,859
 I just don't mean I'm not just talking about the language is Object-Oriented.
-我的意思不只是說程式語言是面向對象的
+我的意思是說，不只是程式語言是物件導向的
 
 49
 00:02:28,862 --> 00:02:31,863
 But the entire design of it the way you use it if you're not
-在你使用過程中，它的整個設計方式都是面向對象的 如果你
+而是在你使用它的方式，其中全部的設計過程都是物件導向的。如果你
 
 50
 00:02:31,865 --> 00:02:33,965
 comfortable with things like subclassing and
-不熟悉類似於子類之類的東西，
+不熟悉像子類或其它等等的東西，
 
 51
 00:02:33,967 --> 00:02:37,935
 stuff like that then you're just really gonna be behind the curve.
-那麼你真的有可能真的跟不上了
+那麼你真的將會跟不上進度
 
 52
 00:02:37,937 --> 00:02:42,239
 In iOS so at Stanford here that means CS16A and B or
-史丹佛編程相關課程有 CS16A、CA16B、
+史丹佛程式相關課程有 CS16A、CA16B、
 
 53
 00:02:42,241 --> 00:02:47,344
 CS16X, and then you know, CS107, while it's not really Object-Oriented course,
-CS16X、以及 CS107，雖然它並不是專門的面向對象課程，
+CS16X、以及 CS107，雖然它並不是專門的物件導向課程，
 
 54
 00:02:47,346 --> 00:02:49,746
 at least it's a heavy duty programming course.
-但至少是一門重量級的編程課程
+但至少是一門重量級的程式設計課程
 
 55
 00:02:49,748 --> 00:02:52,615
 CS108 is a great Object-Oriented course so
-CS108 是非常好的面向對象課程
+CS108 是非常好的物件導向課程
 
 56
 00:02:52,617 --> 00:02:55,918
 if you have, if you've taken CS108 you'll probably, be really well prepped.
-如果你曾經參加過 CS108，你可能已經有了充分的準備
+如果你曾經上過 CS108，你算是已經有了充分的準備
 
 57
 00:02:55,920 --> 00:03:00,555
 110, again not really too much an Object-Oriented program but
-CS110，同樣也沒有太多關於面向對象的知識，
+CS110，同樣也沒有太多關於物件導向的知識，
 
 58
 00:03:00,557 --> 00:03:03,057
 good programming course cuz there's a lot of programming in this class,
-但同樣是一門非常好的編程課程，因為其中有大量的編程實踐
+但同樣是一門非常好的程式開發課程，因為其中有大量的程式開發實作
 
 59
 00:03:03,059 --> 00:03:05,159
 in fact, all the work in this class is programming.
-事實上，所有這些課程的內容都是關於編程的
+事實上，所有這些課程的內容都是關於程式開發的
 
 60
 00:03:05,161 --> 00:03:08,395
 You will not have, a little bit of reading the first couple of weeks just to
-在頭幾個星期，你們需要為了學習新語言，多做一些閱讀
+在前幾個星期，你們需要為了學習新語言，多做一些閱讀
 
 61
 00:03:08,397 --> 00:03:12,299
@@ -259,27 +259,27 @@ kinda learn this new language, but it's almost all programming after that all
 62
 00:03:12,301 --> 00:03:14,467
 the way til the end, including your final project.
-都需要運用到你新學到的語言進行編程任務
+都幾乎是程式開發實作
 
 63
 00:03:14,469 --> 00:03:17,804
 So if you're not really comfortable with all these terms,
-所以，如果你真的不適應面向對象編程，
+所以，如果你真的不熟悉這些術語，
 
 64
 00:03:17,806 --> 00:03:21,674
 this Object-Oriented terms or if you're just not really comfortable with
-或者你真的不太適應寫較大的程序，
+這些物件導向的專用術語，或者如果你真的不太熟悉
 
 65
 00:03:21,676 --> 00:03:26,178
 writing big programs then this class will definitely be a challenge for you.
-那麼這門課程對你來說將是一個巨大的挑戰
+大型程式開發，那麼這門課程對你來說將會是一個挑戰
 
 66
 00:03:27,848 --> 00:03:30,682
 okay, so what's in iOS, what are the parts of it?
-那麼，iOS 都包括哪些部分呢？
+好的，所以iOS 都包括哪些部分呢？
 
 67
 00:03:30,684 --> 00:03:34,085
@@ -289,22 +289,22 @@ You know, it's ha, it's such a big system, it's got so much in it.
 68
 00:03:34,087 --> 00:03:38,254
 It's impossible for me to, like, encapsulate it into a small little summary but.
-不太可能能用一兩句話將其表述完整
+不太可能能用簡單的一小段概要就能講得很完整，不過
 
 70
 00:03:38,257 --> 00:03:42,659
 I do have this slide right here that divides it into these four layers.
-我在這個 slides 中，將其分為四層
+我在這個投影片中，將其分為四層
 
 71
 00:03:42,661 --> 00:03:46,763
 These four layers are approximately down near the hardware at the bottom.
-這四層從靠近硬件的底層，
+這四層從靠近硬體的底層，
 
 72
 00:03:46,765 --> 00:03:48,964
 Up near the user at the top. Okay?
-到靠近用戶的頂層
+到靠近用戶的頂層，了解嗎？
 
 74
 00:03:48,966 --> 00:03:52,284
@@ -314,67 +314,67 @@ So at the bottom, so
 75
 00:03:52,285 --> 00:03:55,603
 a lot of people don't realize that iOS is basically a Unix-based operating system.
-很多人沒有注意到，iOS 基本就是一個基於 Unix 的操作系統
+很多人沒有注意到，iOS 基本上是一個以Unix為基礎的作業系統
 
 76
 00:03:55,605 --> 00:04:01,559
 'Kay? It's very similar shares a lot of the core of Mac OS X. Okay?
-它大量借鑒了 Mac OS X 的內核部分
+了解了嗎？共用許多 Mac OS X 核心的這部份是非常相似的。了解了嗎？
 
 79
 00:04:01,560 --> 00:04:03,911
 Now, it's certainly optimized for mobile devices, which have
-當然，它專門為在電池等等方面受到限制的移動設備優化過的，
+當然，它必定會為行動設備進行最佳化，
 
 80
 00:04:03,913 --> 00:04:08,748
 battery restrictions and things like that, but that is basically what it is.
-但基本上它仍可看作是一個 Unix 系統
+行動設備在電池等等方面是會受到限制，但這是在基本上它是個什麼
 
 81
 00:04:08,750 --> 00:04:11,517
 And so down at that layer you've got sockets, and
-這樣的話，在這層中包含了 socket（套接字）、
+這樣的話，在這層中包含了 sockets，以及
 
 82
 00:04:11,519 --> 00:04:15,121
 you've got you know, permissions, and things like that,
-permission（權限） 等等類似的部分
+permissions(權限) 等等類似的部分
 
 83
 00:04:15,123 --> 00:04:19,191
 that have to be near the oh you know, hardware to, to work properly.
-它靠近底層硬件，並保證其正常工作
+需要靠近底層硬體，讓它正常運作
 
 84
 00:04:19,193 --> 00:04:23,495
 But above that there's kind of an Object-Oriented layer that lets you get at
-在這之上，是一個能夠讓你使用大量的面向對象編程技術的
+在這之上，是一個物件導向的層，能夠讓你使用
 
 85
 00:04:23,497 --> 00:04:26,731
 a lot of that stuff using Object-Oriented Programming.
-面向對象的層
+大量的物件導向程式程式設計的
 
 86
 00:04:26,733 --> 00:04:30,234
 'Kay? And this stuff is not UI oriented it's
-但是這層不包含 UI
+了解了嗎？但是這層不包含 UI(使用者介面)
 
 87
 00:04:30,236 --> 00:04:34,171
 more kind of accessing the hardware through Object-Oriented Programming or
-其更多用於通過面向對象的編程方式訪問硬件，
+大部份是使用於透過物件導向程式設計來存取硬體，
 
 88
 00:04:34,173 --> 00:04:36,373
 accessing networking through Object-Oriented Programming but
-或者訪問網絡，等等
+或者透過物件導向程式設計來存取網路，不過
 
 89
 00:04:36,375 --> 00:04:39,309
 it's a big layer there and so we will spend a fair amount of
-它是一個很大的層，我們將花大量時間在該層上，
+它是很大的一個層，因此我們將花不少時間在這層上，
 
 90
 00:04:39,311 --> 00:04:44,980
@@ -384,7 +384,7 @@ time in this layer because we need those primitives to build at the higher layer
 91
 00:04:44,982 --> 00:04:48,450
 Then, there's this whole layer, which I wish we had more time to spend on.
-我希望我們有更多時間花在這一層，
+我希望我們有更多時間花在這一整個層上，
 
 92
 00:04:48,452 --> 00:04:50,252
@@ -394,92 +394,92 @@ We only get ten weeks in this whole class.
 93
 00:04:50,254 --> 00:04:54,655
 It goes by so fast, you'll be amazed, as you're probably, used to with your Stanford courses.
-在史丹佛的課程中，你會感嘆時間過得如此之快
+就像你可能大概已經習慣的其他的史丹佛課程一樣，你會驚訝時間咻一下就過了。
 
 95
 00:04:55,758 --> 00:04:58,092
 But there's a whole media layer here, both for
-再往上，是一整個媒體層，
+再往上，是一整個媒體層，包含
 
 96
 00:04:58,094 --> 00:05:02,062
 static images, as you know, JPEG and things like that.
-包括比如你們熟悉的 JPEG 等的靜態圖像，
+靜態圖像，例如你們熟悉的 JPEG 之類的東西，
 
 97
 00:05:02,064 --> 00:05:07,700
 And video both capturing video, editing video, all that.
-包括拍攝影片、編輯影片等的影片處理，
+以及影片，包括拍攝影片、編輯影片等的影片處理，
 
 98
 00:05:07,702 --> 00:05:13,706
 Incredible audio, the frameworks on this device for doing 3D audio for games and all that.
-不可思議的音頻框架，用於處理 3D 音效，以及遊戲等等
+令人驚奇的聲音，在這個設備上的這個程式框架，用於處理遊戲中的 3D 音效等等
 
 100
 00:05:13,708 --> 00:05:16,675
 I get to, unfortunately I get to very little of this layer.
-很不幸，我對這層知道的並不多
+不幸的是，我承認我對這層知道的不多
 
 101
 00:05:16,677 --> 00:05:20,879
 But I'll try to let you know, that it's in there and then you'll know to go out and
-但是我可以告訴你它裡面有什麼，這樣你用到的時候就可以查閱相關資料，
+但是我會試著告訴你它裡面有什麼，然後你就會知道該到哪裡去與
 
 102
 00:05:20,881 --> 00:05:23,948
 seek out, if you're building a very audio intensive app or
-或者當你正在寫一個用到大量音頻影片技術的應用的時候，
+找到相關資料，如果當你正在開發一個用到大量聲音或
 
 103
 00:05:23,950 --> 00:05:26,484
 video intensive app, you'll seek out that layer.
-你會知道去哪找這些資料
+影片技術的App的時候，你將會知道上哪找這一層
 
 104
 00:05:26,486 --> 00:05:32,756
 But we'll spend the vast majority of our time at the Cocoa Touch layer.
-我們會在 Cocoa Touch 層上花費大量的時間
+不過我們將會把我們的主要時間放在 Cocoa Touch 層上
 
 105
 00:05:32,758 --> 00:05:35,325
 So the Cocoa Touch layer, that's where the buttons and
-Cocoa Touch 層里包含了 button，
+Cocoa Touch 層里包含了 按鈕 以及
 
 106
 00:05:35,327 --> 00:05:38,895
 sliders and things like that are it's the layer,
-slider 等類似的控件，
+滑軸 之類的控件，在這一層是
 
 107
 00:05:38,897 --> 00:05:43,032
 where you're gonna build the interactivity with your end user.
-你可以通過它們來和你的用戶建立互動
+你可以與你的終端使用者建立互動的地方
 
 108
 00:05:43,034 --> 00:05:47,936
 And so, that's where we probably spend 70 plus percent of our time in the Cocoa Touch layer.
-我們會在 Cocoa Touch 上花費 70% 甚至更多的時間
+因為如此，我們大概會在 Cocoa Touch 層上花費 70% 以上時間
 
 110
 00:05:47,938 --> 00:05:50,271
 And this is a very powerful layer.
-這也是一個非常強大的層
+這也是非常強大的一層
 
 111
 00:05:50,273 --> 00:05:54,809
 You know, you've seen things like the maps app on the phone.
-你們可能在手機上見過地圖類的應用
+你們大概有在手機上看過地圖類的App
 
 112
 00:05:54,811 --> 00:05:58,346
 There's basically, an object that does almost the entire maps app, that you can
-事實上，有一個幾乎完整的地圖應用對象，
+事實上，有一個幾乎完整的地圖App的物件，
 
 113
 00:05:58,348 --> 00:06:01,482
 just drop right into your program, and now you have maps in your program.
-你只需要直接拖進你的程序里，你的程序中就有地圖了
+你只需要直接放進你的程式里，你的程式中就有地圖功能了
 
 114
 00:06:01,484 --> 00:06:04,051
@@ -489,42 +489,42 @@ Same thing with web browser.
 115
 00:06:04,052 --> 00:06:06,619
 If you wanna put web browsing in your app, it's just boom, pop an object in there,
-如果你想讓你的應用有瀏覽網頁的功能，那麼僅僅需要拖拽一個對象，
+如果你想讓你的App有瀏覽網頁的功能，那麼只需要放進一個物件在裡面，
 
 116
 00:06:06,622 --> 00:06:08,655
 call a couple methods and in your, on your way.
-再調用幾個方法即可
+再呼叫幾個方法即可
 
 117
 00:06:08,657 --> 00:06:13,592
 So very powerful, very high level in there's a lot going on in there and
-所以在強大和高級的 Cocoa Touch ，我們會瞭解很多，
+所以在非常強大和高階的這一層，我們會有很多課程內容在這裡，
 
 118
 00:06:13,594 --> 00:06:16,195
 that's where we will spend most of our time, 'kay?
-並且在此花費大量的時間
+並且在此花費大量的時間，了解了嗎？
 
 119
 00:06:16,197 --> 00:06:19,831
 And by the way, if you have any questions I try to glance up, so
-順便說一下，我抬眼一瞥的時候，
+順便說一下，如果你有任何問題時，課堂中我會儘量抬頭看一下，不過
 
 120
 00:06:19,833 --> 00:06:21,499
 the bright lights over there sometimes in my way,
-有可能會看到你們的提問，但是有時我也會注意不到，
+燈光有時候在我這邊會太亮沒看到，
 
 121
 00:06:21,501 --> 00:06:25,302
 but, shout out or you know, otherwise get my attention.
-所以盡量讓我注意到你
+所以出個聲，或是用其他方式，讓我能注意到你
 
 122
 00:06:25,304 --> 00:06:28,105
 If you feel free to interrupt.
-如果你感覺打斷我沒什麼問題的話
+如果你想要隨意中斷我正在講話時
 
 123
 00:06:28,107 --> 00:06:31,308
@@ -534,117 +534,117 @@ Then there's the development platform itself.'Kay?
 125
 00:06:31,309 --> 00:06:32,809
 With the tools we use to build these iOS apps.
-我們會用這些工具來搭建 iOS 應用
+我們會用這些工具來搭建 iOS App
 
 126
 00:06:32,811 --> 00:06:34,978
 What's in that?
-其中都有什麼？
+這裡面有什麼？
 
 127
 00:06:34,979 --> 00:06:39,048
 Well, it's all pretty much now been funneled into this one application called Xcode 6.
-有很多很棒的工具都集成在 Xcode 6 內
+嗯，所有的工具幾乎都集中在一套名稱為 Xcode 6 的應用軟體裡面
 
 129
 00:06:39,050 --> 00:06:42,418
 There are some little adjuncts that it calls out to but
-可能還有其它一些輔助編程工具，
+可能還有其它一些小的輔助程式，不過
 
 130
 00:06:42,420 --> 00:06:45,287
 Xcode 6 is everything, it's your code editor,
-但是 Xcode 6，你值得擁有，它是一個代碼編輯器，
+Xcode 6就一應俱全了，它是你的程式碼編輯器，
 
 131
 00:06:45,289 --> 00:06:50,024
 it's your compiler, your debugger all of that in one, pretty awesome app.
-它是一個編譯器，是一個調試器，總之是一個很棒的應用
+它是一個編譯器，是一個除錯器，該有都有就是了，很棒的應用軟體（而且是免費的）
 
 132
 00:06:50,026 --> 00:06:54,395
 And so we'll be learning all about Xcode 6 in this class, and
-所以我們這個課程里會講到很多有關 Xcode 6 的知識
+所以我們在這堂課將會學到所有有關 Xcode 6 的知識，而且
 
 133
 00:06:54,397 --> 00:06:59,366
 that's where you'll be spend all your time developing, you're not gonna be at
-而你編程的時候會一直使用 Xcode，你不需要
+你將會花所有你的時間在這裡面進行開發，你將不需要
 
 134
 00:06:59,368 --> 00:07:04,337
 a terminal typing in Emacs or something, you're gonna be in Xcode 6.
-在終端下用 Emacs 或其他的編輯器，你只需要使用 Xcode 6
+在終端機下用 Emacs，或者用其他的編輯器，你將只在 Xcode 6裡作這件事
 
 135
 00:07:04,339 --> 00:07:08,874
 Languages I have there's actually, two languages in iOS now.
-現在可以使用兩種語言開發 iOS 應用
+現在事實上在iOS上開發，可以使用兩種程式語言
 
 136
 00:07:08,876 --> 00:07:12,044
 There are peers that you can pretty much use either one.
-你可以選擇使用任何一個
+兩種是同等的，你可以選擇使用任何一個
 
 137
 00:07:12,046 --> 00:07:14,079
 One of them is called Objective-C,
-其中一個名為 Objective-C，
+其中一個名稱為 Objective-C，
 
 138
 00:07:14,081 --> 00:07:17,715
 that's the language that iOS was originally developed for.
-它也是 iOS 一直以來使用的開發語言
+它也是 iOS 最初使用的開發語言
 
 139
 00:07:17,717 --> 00:07:22,553
 It's a language been around a long time, probably 30 years it's been around or 25
-這個語言已經有大概 25 到 30 年的歷史了，
+這個語言已經存在有很久的時間了，大概有 30年左右，或是 25 
 
 140
 00:07:22,555 --> 00:07:27,123
 to 30 years that's it's actually been used to build stuff that's on the Mac today.
-人們用它為 Mac 開發應用
+到 30 年之久了，它事實上被用來開發今天你在Mac上看到的這些應用
 
 141
 00:07:27,125 --> 00:07:32,194
 So, it's very mature language but it's also 25, 30 years old.
-因此，它是非常成熟的語言，但是已經 25，30 歲了
+因此，它是非常成熟的程式語言，但是也已經 25或是 30 歲了
 
 142
 00:07:32,196 --> 00:07:36,965
 And so Apple last summer introduced a completely new language called Swift, and
-所以蘋果公司在去年夏天發佈了一個叫 Swift 的全新的語言，
+所以蘋果公司在去年夏天首次引入了一個全新的程式語言名稱為 Swift，而且
 
 143
 00:07:36,967 --> 00:07:40,669
 Swift, you can do pretty much everything in iOS with Swift，
-你可以使用 Swift 在 iOS 上開發任何應用，
+Swift，你可以使用 Swift 在 iOS 上開發幾乎任何應用程式，
 
 144
 00:07:40,671 --> 00:07:45,172
 that's the language we're gonna learn because it's a modern language.
-它也是本次課我們要學習的語言，它是一門現代的語言
+它是我們將要學習的程式語言，因為它個新式的程式語言
 
 145
 00:07:45,174 --> 00:07:48,709
 Apple did a great job of kind of, building all the best stuff of
-為了創建 Swift，蘋果公司做了很多工作，
+蘋果公司做了很棒的工作，他們將
 
 146
 00:07:48,711 --> 00:07:52,346
 all the languages that have been invented over the last, you know,
-它吸收了很多已存在的程式語言的優點
+來自過去所創造的所有程式語言，
 
 147
 00:07:52,348 --> 00:07:57,684
 25 years of this especially the last five or ten years into this language.
-二十五年以來，特別是近五到十年的語言的優點
+25年以來特別是最近5到10年的程式語言，最棒的優點整合吸收到這個程式語言中
 
 148
 00:07:57,686 --> 00:08:02,988
 It's very concise it's a very type safe language but has type inference and a lot
-它語法簡潔，類型安全，並且還有類型推斷以及
+它語法簡潔，它是個類型安全的程式語言，並且還有類型猜測，以及
 
 149
 00:08:02,990 --> 00:08:06,991
@@ -808,7 +808,7 @@ and but there's tons of other ones, Core Motion for doing the, the device moving
 183
 00:09:37,072 --> 00:09:42,075
 around, you know, gyro and accelerometer, Core Data for Object-Oriented database.
-旋轉、陀螺及加速度等響應，Core Data 框架用於操作面向對象的數據庫，
+旋轉、陀螺及加速度等響應，Core Data 框架用於操作物件導向的資料庫，
 
 184
 00:09:42,077 --> 00:09:44,961
@@ -1314,7 +1314,7 @@ Okay we're not going to be using Core Data,
 298
 00:15:06,188 --> 00:15:09,322
 that's object oriented database stuff so you just leave that unchecked.
-那是面向對象的數據庫，現在先不選它
+那是物件導向的資料庫，現在先不選它
 
 299
 00:15:09,324 --> 00:15:13,993
@@ -1689,7 +1689,7 @@ and a scene represents kind of phone full, phone screen full of information.
 373
 00:19:11,404 --> 00:19:15,072
 Okay and as you you've used many iOS applications, you know that you
-就像你使用過的許多 iOS 程序
+就像你使用過的許多 iOS 程式
 
 374
 00:19:15,074 --> 00:19:20,443
@@ -1719,7 +1719,7 @@ Okay, so this StoryBoard is gonna get big for
 379
 00:19:31,021 --> 00:19:35,323
 big apps, your really gonna see your whole application which is kinda cool.
-完整的 app，所以當你真的看到整個應用程序時，還挺 cool 的
+完整的 app，所以當你真的看到整個應用程式時，還挺 cool 的
 
 380
 00:19:36,359 --> 00:19:39,893
@@ -1994,7 +1994,7 @@ And this tab right here, really important, this is the Attributes Inspector.
 435
 00:22:24,307 --> 00:22:27,908
 And this is an object oriented inspector, depending on what you have selected.
-這是一個面向對象的檢查器，當你選擇不同的東西時
+這是一個物件導向的檢查器，當你選擇不同的東西時
 
 436
 00:22:27,910 --> 00:22:30,611
@@ -2079,7 +2079,7 @@ So this is how we build our user interface.
 452
 00:23:10,347 --> 00:23:14,949
 It's very direct manipulation and very object oriented as you'll start to
-非常直觀的操作，並且非常地面向對象
+非常直觀的操作，並且非常地物件導向
 
 453
 00:23:14,951 --> 00:23:17,451
@@ -2189,7 +2189,7 @@ Now it's launching the simulator.
 474
 00:24:12,935 --> 00:24:14,601
 It's a separate process.
-它是一個單獨的程序
+它是一個單獨的程式
 
 475
 00:24:14,603 --> 00:24:16,169
@@ -3419,7 +3419,7 @@ Swift 是非常簡潔的、
 723
 00:36:31,713 --> 00:36:36,048
 oriented language, it's gonna look a lot like C, some things look a lot like Java.
-面向對象的語言，它看起來像 C，有些東西像 Java
+物件導向的語言，它看起來像 C，有些東西像 Java
 
 724
 00:36:36,050 --> 00:36:40,385
@@ -3464,7 +3464,7 @@ Appropriately, it's a definition of a class.
 732
 00:37:06,977 --> 00:37:10,479
 Cuz Swift is fundamentally object-oriented and here we're defining a class.
-因為 Swift 是以面向對象為基礎的，這裡是定義的一個類
+因為 Swift 是以物件導向為基礎的，這裡是定義的一個類
 
 733
 00:37:10,481 --> 00:37:13,448
@@ -3689,7 +3689,7 @@ If you don't, again, this class,
 778
 00:39:35,741 --> 00:39:38,408
 heavy object-oriented, you should definitely know that.
-需要很強的面向對象功底，你們應當很清楚
+需要很強的物件導向功底，你們應當很清楚
 
 779
 00:39:38,410 --> 00:39:41,678
@@ -4878,7 +4878,7 @@ You can use other methods,
 1017
 00:51:34,767 --> 00:51:37,801
 call other methods if you need to get more code in there.
-然後通過調用那些方法來實現更多的邏輯
+然後通過呼叫那些方法來實現更多的邏輯
 
 1018
 00:51:37,803 --> 00:51:38,935
@@ -4953,7 +4953,7 @@ something like that, so I know it's a constant.
 1032
 00:52:05,426 --> 00:52:07,626
 That would be a programming style thing.
-這算是編程風格的問題，
+這算是程式風格的問題，
 
 1033
 00:52:07,628 --> 00:52:10,929
@@ -5123,12 +5123,12 @@ Did I not click that right thing here,
 1066
 00:53:38,040 --> 00:53:43,076
 oh I hope I don't have a network issue here.
-不會是網絡出問題了吧..
+不會是網路出問題了吧..
 
 1067
 00:53:43,078 --> 00:53:47,046
 hm, okay well, I guess I'm not connected to the network,
-好吧，我猜我的網絡出問題了
+好吧，我猜我的網路出問題了
 
 1068
 00:53:47,048 --> 00:53:50,149
@@ -5178,7 +5178,7 @@ As you can imagine.
 1077
 00:54:16,774 --> 00:54:19,041
 I'll try to get the networking working on Wednesday and we'll take a look at this.
-我爭取在下週三把網絡問題搞定，到時候我們就能一睹芳容了
+我爭取在下週三把網路問題搞定，到時候我們就能一睹芳容了
 
 1078
 00:54:19,043 --> 00:54:21,494
@@ -5218,7 +5218,7 @@ So how do we access, property or call a method in another object,
 1085
 00:54:39,995 --> 00:54:43,429
 will look exactly the same whether you call it a method or
-答案是，訪問屬性和調用方法的方式是一模一樣的
+答案是，訪問屬性和呼叫方法的方式是一模一樣的
 
 1086
 00:54:43,431 --> 00:54:46,332
@@ -5263,7 +5263,7 @@ Because it inherits from a class, it inherits from a class,
 1094
 00:55:03,749 --> 00:55:07,451
 it inherits from a class, that all have lots of methods in them.
-所以累積起來就有很多方法可供調用
+所以累積起來就有很多方法可供呼叫
 
 1095
 00:55:07,453 --> 00:55:10,320
@@ -5882,7 +5882,7 @@ What happened if this optional is nil?
 1222
 01:01:30,182 --> 01:01:34,718
 In other words the button optional has never been set, crash, 'kay,
-換句話說，就是這些 optional 類型的按鈕沒有 set 值會怎樣？對的，程序會崩潰
+換句話說，就是這些 optional 類型的按鈕沒有 set 值會怎樣？對的，程式會崩潰
 
 1223
 01:01:34,720 --> 01:01:39,855
@@ -5892,12 +5892,12 @@ crashes your program, so if you use exclamation point to unwrap an optional,
 1224
 01:01:39,857 --> 01:01:45,660
 and that optional's current value is not set, nil, then it will crash your program.
-並且這個 optional 的 currentTitle 沒有設值，為 nil 的時候，你的程序會崩潰
+並且這個 optional 的 currentTitle 沒有設值，為 nil 的時候，你的程式會崩潰
 
 1225
 01:01:46,930 --> 01:01:50,498
 Now a lot of you might be like whoa, I'm, my products are gonna be crashing all over
-現在你們中的不少人肯定在想，我的程序將會整天 crash 掉，
+現在你們中的不少人肯定在想，我的程式將會整天 crash 掉，
 
 1226
 01:01:50,500 --> 01:01:55,903
@@ -5917,12 +5917,12 @@ they can be in an not set state at some point.
 1229
 01:02:02,177 --> 01:02:07,746
 And yeah, in this case though, maybe you want your program to crash, okay?
-在這個情況下，說不定你就希望你的程序 crash？對不對？
+在這個情況下，說不定你就希望你的程式 crash？對不對？
 
 1230
 01:02:07,748 --> 01:02:11,850
 You might want your program to crash, because if you had a button, that never
-你也許就是希望自己的程序 crash，因為如果你有一個按鍵，
+你也許就是希望自己的程式 crash，因為如果你有一個按鍵，
 
 1231
 01:02:11,852 --> 01:02:15,920
@@ -5932,17 +5932,17 @@ had its title set, and it's sending a pen digit to your controller, you probably
 1232
 01:02:15,922 --> 01:02:20,358
 wanna have that crash, so you can find that bug, before you ship your program.
-想在你的程序見客戶之前，你就能找到 bug，所以你希望它 crash
+想在你的程式見客戶之前，你就能找到 bug，所以你希望它 crash
 
 1233
 01:02:20,360 --> 01:02:23,360
 You see why sometimes fra, crashing is good?
-現在你知道為什麼有時候程序 crash 是個好事吧
+現在你知道為什麼有時候程式 crash 是個好事吧
 
 1234
 01:02:23,362 --> 01:02:26,763
 Now if you don't wanna crash, there's a way to get around that as well.
-現在如果你不想你的程序 crash ，這裡有一個方法來解決
+現在如果你不想你的程式 crash ，這裡有一個方法來解決
 
 1235
 01:02:26,765 --> 01:02:28,164
