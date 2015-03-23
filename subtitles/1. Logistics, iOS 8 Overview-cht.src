@@ -1,0 +1,6515 @@
+1
+00:00:00,001 --> 00:00:06,637
+歡迎收看史丹佛大學公開課
+
+3
+00:00:06,639 --> 00:00:10,508
+本字幕由志願者義務貢獻
+
+4
+00:00:10,510 --> 00:00:17,147
+Welcome to Stanford CS193P,this is winter quarter 2015.
+歡迎參加史丹佛大學 2015 年冬季學期的 CS193P 課程
+
+5
+00:00:17,149 --> 00:00:21,718
+And we're gonna dive right in today to some brief slide work.
+我們首先簡要地概覽一下今天課程的內容
+
+6
+00:00:22,720 --> 00:00:28,357
+This people at Stanford, you've got a document that describe, describes all the grading and all that stuff
+在座的同學，你們手裡都有一份敘述評分標準的文檔，
+
+8
+00:00:28,359 --> 00:00:32,126
+so I'm not gonna go over that in lecture like I often do to start the quarter.
+所以我不想像以往開課時那樣再復述一遍
+
+9
+00:00:33,663 --> 00:00:36,296
+Instead I'm gonna talk a little bit about, what this class is about.
+相反，我首先要談一談，這門課到底是講什麼的
+
+10
+00:00:37,566 --> 00:00:42,068
+Brief mention of the prerequisites cuz they're pretty important in this class.
+接下來簡單提一下學習本課程的先決條件，這個事對於課程挺重要的
+
+11
+00:00:42,070 --> 00:00:44,870
+Then just the quickest overview of iOS.
+然後會對 iOS 進行一個快速的預覽
+
+12
+00:00:44,872 --> 00:00:49,508
+I'm gonna assume that anyone who is here or is watching this, knows what that is.
+我想在座的和觀看視頻的各位同學都知道那是什麼吧
+
+13
+00:00:49,510 --> 00:00:51,609
+And then, we're gonna dive right into a big old demo.
+再然後，會帶領大家做一個大的 demo
+
+14
+00:00:51,611 --> 00:00:54,779
+It's gonna be a two-day thing, where I'm really going to try and
+這個 demo 會講兩節課，在這期間我會
+
+15
+00:00:54,781 --> 00:00:57,381
+introduce you to Xcode and the development environment and
+向你們介紹開發 iOS 需要用到的
+
+16
+00:00:57,383 --> 00:01:01,818
+this language Swift, that you're gonna have to learn to develop for iOS.
+集成開發工具 Xcode 和編程語言 Swift
+
+17
+00:01:02,854 --> 00:01:04,120
+All right, so what is this class about?
+那麼本課程是講什麼的呢？
+
+18
+00:01:04,122 --> 00:01:06,455
+It's about building cool apps, as we know.
+這門課講述的是開發超 cool 的 iOS 應用
+
+19
+00:01:06,457 --> 00:01:09,091
+Why are these iOS apps so cool?
+為什麼這些 iOS 應用這麼 cool 呢？
+
+20
+00:01:09,093 --> 00:01:11,960
+Well, because the device you're gonna run them on is in your pocket or
+因為運行這些應用的設備要麼在你的口袋里，
+
+21
+00:01:11,962 --> 00:01:14,229
+in your backpack.
+要麼在你的背包里
+
+22
+00:01:14,230 --> 00:01:16,497
+Either, if you write an app, you can just pull it out and show your friends and
+如果你寫了一個應用，你可以把它展示給你的朋友，
+
+23
+00:01:16,500 --> 00:01:20,535
+it's highly networked and incredible graphics with animation.
+它高度集成網絡，並有驚艷的動畫圖形效果
+
+24
+00:01:20,537 --> 00:01:24,605
+It's just cool all the way around and I think you guys all know that or you wouldn't be here.
+它在各個方面都很 cool 我想你們應該都知道這些，否則你們就不會坐在這裡了
+
+26
+00:01:24,607 --> 00:01:28,374
+But you're also gonna learn in this class a lot of real life Object-Oriented Programming.
+在這們課程中，你們也需要學習一些關於面向對象編程的知識
+
+28
+00:01:28,377 --> 00:01:32,578
+You're taking a lot of other classes here at Stanford on things like graphics, and
+你們也可能在史丹佛參加過一些關於圖形、
+
+29
+00:01:32,580 --> 00:01:39,718
+networking, and databases, and maybe animation. Things like that.
+網絡、數據庫也許還有動畫方面的課程
+
+31
+00:01:39,719 --> 00:01:42,586
+And we're gonna is kinda tie that all together into a real world class.
+然而我們將這些內容融合在一起，
+
+32
+00:01:42,589 --> 00:01:44,055
+'Kay? You're gonna get to see all this stuff.
+你們會在本課程內看到所有這些東西
+
+33
+00:01:44,057 --> 00:01:46,891
+Now, you know, it's gonna be kind of a survey course in that,
+現在，你應該知道這會是一個概述型課程，
+
+34
+00:01:46,893 --> 00:01:52,462
+I can't go too deep into networking. I can't go too deep into databases.
+我不會深入講述網絡的內容，我不會深入講述數據庫的內容，
+
+36
+00:01:52,464 --> 00:01:56,366
+I can't go too deep into animation, but you'll get to see it all in a really real
+我不會深入講述動畫的內容，但是你們會在
+
+37
+00:01:56,368 --> 00:01:59,569
+world environment, where people out there building apps using that technology.
+真實項目的環境中用到所有的這些技術
+
+38
+00:01:59,571 --> 00:02:04,940
+For some of you who haven't seen that before that'll be a big bonus of this class, I think.
+我認為，對於一些之前沒有接觸過這些的同學，本課程對他們會有很大的提升
+
+40
+00:02:06,243 --> 00:02:07,975
+The prerequisites of this class.
+學習本課程的先決條件
+
+41
+00:02:07,977 --> 00:02:11,712
+Number one thing is you have to be a pretty strong Object-Oriented programmer.
+最重要的，你需要有很好的面向對象編程功底
+
+42
+00:02:11,714 --> 00:02:14,014
+If you're not a strong Object-Oriented programmer, and
+如果你不是，
+
+43
+00:02:14,016 --> 00:02:18,018
+you hit this class, you're probably gonna go under water, pretty quick.
+還選了這個課，你可能很快就會掉隊了
+
+44
+00:02:18,020 --> 00:02:22,188
+Okay? I'm gonna assume you know, everything about Object-Oriented Programming.
+我假設你已經瞭解關於面向對象編程的一切
+
+46
+00:02:22,190 --> 00:02:26,658
+iOS is a completely Object-Oriented Programming envir, development environment.
+iOS 是一個完全的面向對象編程的開發環境
+
+48
+00:02:26,659 --> 00:02:28,859
+I just don't mean I'm not just talking about the language is Object-Oriented.
+我的意思不只是說編程語言是面向對象的
+
+49
+00:02:28,862 --> 00:02:31,863
+But the entire design of it the way you use it if you're not
+在你使用過程中，它的整個設計方式都是面向對象的 如果你
+
+50
+00:02:31,865 --> 00:02:33,965
+comfortable with things like subclassing and
+不熟悉類似於子類之類的東西，
+
+51
+00:02:33,967 --> 00:02:37,935
+stuff like that then you're just really gonna be behind the curve.
+那麼你真的有可能真的跟不上了
+
+52
+00:02:37,937 --> 00:02:42,239
+In iOS so at Stanford here that means CS16A and B or
+史丹佛編程相關課程有 CS16A、CA16B、
+
+53
+00:02:42,241 --> 00:02:47,344
+CS16X, and then you know, CS107, while it's not really Object-Oriented course,
+CS16X、以及 CS107，雖然它並不是專門的面向對象課程，
+
+54
+00:02:47,346 --> 00:02:49,746
+at least it's a heavy duty programming course.
+但至少是一門重量級的編程課程
+
+55
+00:02:49,748 --> 00:02:52,615
+CS108 is a great Object-Oriented course so
+CS108 是非常好的面向對象課程
+
+56
+00:02:52,617 --> 00:02:55,918
+if you have, if you've taken CS108 you'll probably, be really well prepped.
+如果你曾經參加過 CS108，你可能已經有了充分的準備
+
+57
+00:02:55,920 --> 00:03:00,555
+110, again not really too much an Object-Oriented program but
+CS110，同樣也沒有太多關於面向對象的知識，
+
+58
+00:03:00,557 --> 00:03:03,057
+good programming course cuz there's a lot of programming in this class,
+但同樣是一門非常好的編程課程，因為其中有大量的編程實踐
+
+59
+00:03:03,059 --> 00:03:05,159
+in fact, all the work in this class is programming.
+事實上，所有這些課程的內容都是關於編程的
+
+60
+00:03:05,161 --> 00:03:08,395
+You will not have, a little bit of reading the first couple of weeks just to
+在頭幾個星期，你們需要為了學習新語言，多做一些閱讀
+
+61
+00:03:08,397 --> 00:03:12,299
+kinda learn this new language, but it's almost all programming after that all
+在這之後，一直到最終的項目，
+
+62
+00:03:12,301 --> 00:03:14,467
+the way til the end, including your final project.
+都需要運用到你新學到的語言進行編程任務
+
+63
+00:03:14,469 --> 00:03:17,804
+So if you're not really comfortable with all these terms,
+所以，如果你真的不適應面向對象編程，
+
+64
+00:03:17,806 --> 00:03:21,674
+this Object-Oriented terms or if you're just not really comfortable with
+或者你真的不太適應寫較大的程序，
+
+65
+00:03:21,676 --> 00:03:26,178
+writing big programs then this class will definitely be a challenge for you.
+那麼這門課程對你來說將是一個巨大的挑戰
+
+66
+00:03:27,848 --> 00:03:30,682
+okay, so what's in iOS, what are the parts of it?
+那麼，iOS 都包括哪些部分呢？
+
+67
+00:03:30,684 --> 00:03:34,085
+You know, it's ha, it's such a big system, it's got so much in it.
+它是一個龐大的系統，其中包含很多部分
+
+68
+00:03:34,087 --> 00:03:38,254
+It's impossible for me to, like, encapsulate it into a small little summary but.
+不太可能能用一兩句話將其表述完整
+
+70
+00:03:38,257 --> 00:03:42,659
+I do have this slide right here that divides it into these four layers.
+我在這個 slides 中，將其分為四層
+
+71
+00:03:42,661 --> 00:03:46,763
+These four layers are approximately down near the hardware at the bottom.
+這四層從靠近硬件的底層，
+
+72
+00:03:46,765 --> 00:03:48,964
+Up near the user at the top. Okay?
+到靠近用戶的頂層
+
+74
+00:03:48,966 --> 00:03:52,284
+So at the bottom, so
+在最下面一層，
+
+75
+00:03:52,285 --> 00:03:55,603
+a lot of people don't realize that iOS is basically a Unix-based operating system.
+很多人沒有注意到，iOS 基本就是一個基於 Unix 的操作系統
+
+76
+00:03:55,605 --> 00:04:01,559
+'Kay? It's very similar shares a lot of the core of Mac OS X. Okay?
+它大量借鑒了 Mac OS X 的內核部分
+
+79
+00:04:01,560 --> 00:04:03,911
+Now, it's certainly optimized for mobile devices, which have
+當然，它專門為在電池等等方面受到限制的移動設備優化過的，
+
+80
+00:04:03,913 --> 00:04:08,748
+battery restrictions and things like that, but that is basically what it is.
+但基本上它仍可看作是一個 Unix 系統
+
+81
+00:04:08,750 --> 00:04:11,517
+And so down at that layer you've got sockets, and
+這樣的話，在這層中包含了 socket（套接字）、
+
+82
+00:04:11,519 --> 00:04:15,121
+you've got you know, permissions, and things like that,
+permission（權限） 等等類似的部分
+
+83
+00:04:15,123 --> 00:04:19,191
+that have to be near the oh you know, hardware to, to work properly.
+它靠近底層硬件，並保證其正常工作
+
+84
+00:04:19,193 --> 00:04:23,495
+But above that there's kind of an Object-Oriented layer that lets you get at
+在這之上，是一個能夠讓你使用大量的面向對象編程技術的
+
+85
+00:04:23,497 --> 00:04:26,731
+a lot of that stuff using Object-Oriented Programming.
+面向對象的層
+
+86
+00:04:26,733 --> 00:04:30,234
+'Kay? And this stuff is not UI oriented it's
+但是這層不包含 UI
+
+87
+00:04:30,236 --> 00:04:34,171
+more kind of accessing the hardware through Object-Oriented Programming or
+其更多用於通過面向對象的編程方式訪問硬件，
+
+88
+00:04:34,173 --> 00:04:36,373
+accessing networking through Object-Oriented Programming but
+或者訪問網絡，等等
+
+89
+00:04:36,375 --> 00:04:39,309
+it's a big layer there and so we will spend a fair amount of
+它是一個很大的層，我們將花大量時間在該層上，
+
+90
+00:04:39,311 --> 00:04:44,980
+time in this layer because we need those primitives to build at the higher layers.
+因為我們需要這些原始組件來建立更高的層
+
+91
+00:04:44,982 --> 00:04:48,450
+Then, there's this whole layer, which I wish we had more time to spend on.
+我希望我們有更多時間花在這一層，
+
+92
+00:04:48,452 --> 00:04:50,252
+We only get ten weeks in this whole class.
+但是我們的課程只有十周
+
+93
+00:04:50,254 --> 00:04:54,655
+It goes by so fast, you'll be amazed, as you're probably, used to with your Stanford courses.
+在史丹佛的課程中，你會感嘆時間過得如此之快
+
+95
+00:04:55,758 --> 00:04:58,092
+But there's a whole media layer here, both for
+再往上，是一整個媒體層，
+
+96
+00:04:58,094 --> 00:05:02,062
+static images, as you know, JPEG and things like that.
+包括比如你們熟悉的 JPEG 等的靜態圖像，
+
+97
+00:05:02,064 --> 00:05:07,700
+And video both capturing video, editing video, all that.
+包括拍攝視頻、編輯視頻等的視頻處理，
+
+98
+00:05:07,702 --> 00:05:13,706
+Incredible audio, the frameworks on this device for doing 3D audio for games and all that.
+不可思議的音頻框架，用於處理 3D 音效，以及遊戲等等
+
+100
+00:05:13,708 --> 00:05:16,675
+I get to, unfortunately I get to very little of this layer.
+很不幸，我對這層知道的並不多
+
+101
+00:05:16,677 --> 00:05:20,879
+But I'll try to let you know, that it's in there and then you'll know to go out and
+但是我可以告訴你它裡面有什麼，這樣你用到的時候就可以查閱相關資料，
+
+102
+00:05:20,881 --> 00:05:23,948
+seek out, if you're building a very audio intensive app or
+或者當你正在寫一個用到大量音頻視頻技術的應用的時候，
+
+103
+00:05:23,950 --> 00:05:26,484
+video intensive app, you'll seek out that layer.
+你會知道去哪找這些資料
+
+104
+00:05:26,486 --> 00:05:32,756
+But we'll spend the vast majority of our time at the Cocoa Touch layer.
+我們會在 Cocoa Touch 層上花費大量的時間
+
+105
+00:05:32,758 --> 00:05:35,325
+So the Cocoa Touch layer, that's where the buttons and
+Cocoa Touch 層里包含了 button，
+
+106
+00:05:35,327 --> 00:05:38,895
+sliders and things like that are it's the layer,
+slider 等類似的控件，
+
+107
+00:05:38,897 --> 00:05:43,032
+where you're gonna build the interactivity with your end user.
+你可以通過它們來和你的用戶建立互動
+
+108
+00:05:43,034 --> 00:05:47,936
+And so, that's where we probably spend 70 plus percent of our time in the Cocoa Touch layer.
+我們會在 Cocoa Touch 上花費 70% 甚至更多的時間
+
+110
+00:05:47,938 --> 00:05:50,271
+And this is a very powerful layer.
+這也是一個非常強大的層
+
+111
+00:05:50,273 --> 00:05:54,809
+You know, you've seen things like the maps app on the phone.
+你們可能在手機上見過地圖類的應用
+
+112
+00:05:54,811 --> 00:05:58,346
+There's basically, an object that does almost the entire maps app, that you can
+事實上，有一個幾乎完整的地圖應用對象，
+
+113
+00:05:58,348 --> 00:06:01,482
+just drop right into your program, and now you have maps in your program.
+你只需要直接拖進你的程序里，你的程序中就有地圖了
+
+114
+00:06:01,484 --> 00:06:04,051
+Same thing with web browser.
+同樣的還有瀏覽器
+
+115
+00:06:04,052 --> 00:06:06,619
+If you wanna put web browsing in your app, it's just boom, pop an object in there,
+如果你想讓你的應用有瀏覽網頁的功能，那麼僅僅需要拖拽一個對象，
+
+116
+00:06:06,622 --> 00:06:08,655
+call a couple methods and in your, on your way.
+再調用幾個方法即可
+
+117
+00:06:08,657 --> 00:06:13,592
+So very powerful, very high level in there's a lot going on in there and
+所以在強大和高級的 Cocoa Touch ，我們會瞭解很多，
+
+118
+00:06:13,594 --> 00:06:16,195
+that's where we will spend most of our time, 'kay?
+並且在此花費大量的時間
+
+119
+00:06:16,197 --> 00:06:19,831
+And by the way, if you have any questions I try to glance up, so
+順便說一下，我抬眼一瞥的時候，
+
+120
+00:06:19,833 --> 00:06:21,499
+the bright lights over there sometimes in my way,
+有可能會看到你們的提問，但是有時我也會注意不到，
+
+121
+00:06:21,501 --> 00:06:25,302
+but, shout out or you know, otherwise get my attention.
+所以盡量讓我注意到你
+
+122
+00:06:25,304 --> 00:06:28,105
+If you feel free to interrupt.
+如果你感覺打斷我沒什麼問題的話
+
+123
+00:06:28,107 --> 00:06:31,308
+Then there's the development platform itself.'Kay?
+接下來就是開發平台本身
+
+125
+00:06:31,309 --> 00:06:32,809
+With the tools we use to build these iOS apps.
+我們會用這些工具來搭建 iOS 應用
+
+126
+00:06:32,811 --> 00:06:34,978
+What's in that?
+其中都有什麼？
+
+127
+00:06:34,979 --> 00:06:39,048
+Well, it's all pretty much now been funneled into this one application called Xcode 6.
+有很多很棒的工具都集成在 Xcode 6 內
+
+129
+00:06:39,050 --> 00:06:42,418
+There are some little adjuncts that it calls out to but
+可能還有其它一些輔助編程工具，
+
+130
+00:06:42,420 --> 00:06:45,287
+Xcode 6 is everything, it's your code editor,
+但是 Xcode 6，你值得擁有，它是一個代碼編輯器，
+
+131
+00:06:45,289 --> 00:06:50,024
+it's your compiler, your debugger all of that in one, pretty awesome app.
+它是一個編譯器，是一個調試器，總之是一個很棒的應用
+
+132
+00:06:50,026 --> 00:06:54,395
+And so we'll be learning all about Xcode 6 in this class, and
+所以我們這個課程里會講到很多有關 Xcode 6 的知識
+
+133
+00:06:54,397 --> 00:06:59,366
+that's where you'll be spend all your time developing, you're not gonna be at
+而你編程的時候會一直使用 Xcode，你不需要
+
+134
+00:06:59,368 --> 00:07:04,337
+a terminal typing in Emacs or something, you're gonna be in Xcode 6.
+在終端下用 Emacs 或其他的編輯器，你只需要使用 Xcode 6
+
+135
+00:07:04,339 --> 00:07:08,874
+Languages I have there's actually, two languages in iOS now.
+現在可以使用兩種語言開發 iOS 應用
+
+136
+00:07:08,876 --> 00:07:12,044
+There are peers that you can pretty much use either one.
+你可以選擇使用任何一個
+
+137
+00:07:12,046 --> 00:07:14,079
+One of them is called Objective-C,
+其中一個名為 Objective-C，
+
+138
+00:07:14,081 --> 00:07:17,715
+that's the language that iOS was originally developed for.
+它也是 iOS 一直以來使用的開發語言
+
+139
+00:07:17,717 --> 00:07:22,553
+It's a language been around a long time, probably 30 years it's been around or 25
+這個語言已經有大概 25 到 30 年的歷史了，
+
+140
+00:07:22,555 --> 00:07:27,123
+to 30 years that's it's actually been used to build stuff that's on the Mac today.
+人們用它為 Mac 開發應用
+
+141
+00:07:27,125 --> 00:07:32,194
+So, it's very mature language but it's also 25, 30 years old.
+因此，它是非常成熟的語言，但是已經 25，30 歲了
+
+142
+00:07:32,196 --> 00:07:36,965
+And so Apple last summer introduced a completely new language called Swift, and
+所以蘋果公司在去年夏天發佈了一個叫 Swift 的全新的語言，
+
+143
+00:07:36,967 --> 00:07:40,669
+Swift, you can do pretty much everything in iOS with Swift，
+你可以使用 Swift 在 iOS 上開發任何應用，
+
+144
+00:07:40,671 --> 00:07:45,172
+that's the language we're gonna learn because it's a modern language.
+它也是本次課我們要學習的語言，它是一門現代的語言
+
+145
+00:07:45,174 --> 00:07:48,709
+Apple did a great job of kind of, building all the best stuff of
+為了創建 Swift，蘋果公司做了很多工作，
+
+146
+00:07:48,711 --> 00:07:52,346
+all the languages that have been invented over the last, you know,
+它吸收了很多已存在的編程語言的優點
+
+147
+00:07:52,348 --> 00:07:57,684
+25 years of this especially the last five or ten years into this language.
+二十五年以來，特別是近五到十年的語言的優點
+
+148
+00:07:57,686 --> 00:08:02,988
+It's very concise it's a very type safe language but has type inference and a lot
+它語法簡潔，類型安全，並且還有類型推斷以及
+
+149
+00:08:02,990 --> 00:08:06,991
+of things that make it so that you get the best of both worlds by having type safety-
+大量的特性，可以同時擁有類型安全，
+
+150
+00:08:06,993 --> 00:08:11,295
+And not have to be constantly over specifying everything.
+又不需要不斷地指定各種類型
+
+152
+00:08:11,297 --> 00:08:14,665
+So we're gonna go Swift only, I'm not even gonna really talk about Objective-C,
+所以我們只使用 Swift，不會講太多 Objective-C，
+
+153
+00:08:14,667 --> 00:08:16,400
+I just don't have time to do both languages.
+我也沒有時間講兩種語言
+
+154
+00:08:16,402 --> 00:08:19,786
+Yeah. >>
+（學生提問）
+
+155
+00:08:19,787 --> 00:08:23,171
+（學生提問）
+
+156
+00:08:23,174 --> 00:08:26,275
+>> Yeah, so the question is if I'm going out into the world to do
+這個同學的問題是，如果我將步入社會，
+
+157
+00:08:26,277 --> 00:08:29,244
+iOS development in the real world for real companies.
+並想找一份做 iOS 開發的工作，
+
+158
+00:08:29,246 --> 00:08:30,912
+Am I probably, gonna have to learn Objective-C?
+我是否還需要學習 Objective-C？
+
+159
+00:08:30,914 --> 00:08:34,049
+And the answer is it depends on the company you're at.
+答案是，這取決於你的公司
+
+160
+00:08:34,051 --> 00:08:36,017
+Probably in the short term, yes.
+可能在短期內，答案是肯定的
+
+161
+00:08:36,019 --> 00:08:39,920
+But as the time goes by probably, more and more people switch to siff, Swift.
+但是隨著時間的推移，可能有越來越多的人會轉到 Swift
+
+162
+00:08:39,922 --> 00:08:43,490
+The good thing is the underlying iOS
+好消息這兩門語言在 iOS 之下的 API
+
+163
+00:08:43,492 --> 00:08:45,926
+APIs are exactly the same for both, its just the syntax-
+是完全相同的，
+
+164
+00:08:45,928 --> 00:08:49,162
+Of the language a little bit
+僅僅只是語法上
+
+165
+00:08:49,163 --> 00:08:52,397
+about how the language approaches calling the API is slightly different, but any,
+會有略微的不同，但是
+
+166
+00:08:52,400 --> 00:08:54,734
+everything that you learn in here about the underlying,
+你們在這裡學習的 iOS 的部分，
+
+167
+00:08:54,736 --> 00:08:57,636
+lying parts of iOS will totally work in Objective-C.
+使用 Objective-C 完全也可以實現
+
+168
+00:08:57,638 --> 00:08:59,571
+All the methods are the same you know,
+所有的方法都是一樣的，
+
+169
+00:08:59,573 --> 00:09:00,939
+it's just the syntax is a little different.
+僅僅只有語法上的一點區別
+
+170
+00:09:00,941 --> 00:09:02,540
+So, don't feel too bad about not
+所以對於沒有學全兩門語言，
+
+171
+00:09:02,542 --> 00:09:05,276
+learning both languages, and once you've learned this language,
+不要感到沮喪，一旦你掌握了 Swift，
+
+172
+00:09:05,278 --> 00:09:07,911
+learning Objective-C is gonna be pretty easy, too.
+再學 Objective-C 也很快
+
+173
+00:09:07,913 --> 00:09:11,815
+So. Good question though. All right.
+這個問題問得很好
+
+175
+00:09:11,817 --> 00:09:14,617
+Of course iOS is filled with tons of frameworks.
+當然，iOS 內部擁有眾多的框架，
+
+176
+00:09:14,619 --> 00:09:18,320
+Frameworks are libraries, basically, of objects that you use,
+框架就是你會用到的類庫以及基本對象
+
+177
+00:09:18,322 --> 00:09:20,989
+as building blocks to build your application.
+作為搭建你的應用的模塊，
+
+178
+00:09:20,991 --> 00:09:23,325
+And we are going to be covering them.
+我們也會學習它們
+
+179
+00:09:23,327 --> 00:09:25,193
+UIKit is the main one.
+UIKit 就是其中主要的一個
+
+180
+00:09:25,195 --> 00:09:27,829
+It's got most of the user interface stuff in it.
+它包含了大量的關於用戶界面的內容
+
+181
+00:09:27,831 --> 00:09:32,266
+Foundation is that most the Core Service layer that I was talking about,
+在 Core Service 中，我提及最多的就是 Foundation 框架
+
+182
+00:09:32,268 --> 00:09:37,070
+and but there's tons of other ones, Core Motion for doing the, the device moving
+其他還有很多，Core Motion 框架用於處理設備移動、
+
+183
+00:09:37,072 --> 00:09:42,075
+around, you know, gyro and accelerometer, Core Data for Object-Oriented database.
+旋轉、陀螺及加速度等響應，Core Data 框架用於操作面向對象的數據庫，
+
+184
+00:09:42,077 --> 00:09:44,961
+Things like that.
+等等
+
+185
+00:09:44,962 --> 00:09:47,846
+So I'll get to, as many as those as I can, especially the big ones.
+我會盡我所能盡可能多的傳授給你們，特別是那些大的框架
+
+186
+00:09:47,848 --> 00:09:50,849
+But there's just way too many to cover in ten weeks.
+但是這對一個只有十周的課程來說，內容太多了
+
+187
+00:09:51,851 --> 00:09:58,188
+And finally we I, I put this, as a first class thing with all the rest, as a design strategy MVC.
+然而以上的那些東西均不是我們第一課要講的內容 我首先要說的是一個叫做 MVC 的設計模式
+
+189
+00:09:58,190 --> 00:10:01,124
+I think, I usually ask, I'll all ask this year, too.
+每年我都會問，同樣今年我也要問這個問題，
+
+190
+00:10:01,126 --> 00:10:05,361
+How many people have used MVC in some other class?
+你們有多少同學曾經在其他課上用過 MVC？
+
+191
+00:10:05,363 --> 00:10:07,196
+See, so it's half of you.
+哦，有一半的同學
+
+192
+00:10:07,198 --> 00:10:09,698
+So I'll be teaching MVC, as if you don't know it, so
+有同學不知道，那麼我先說說 MVC
+
+193
+00:10:09,700 --> 00:10:11,599
+if you don't know it don't worry.
+就算你不瞭解它，也不用擔心
+
+194
+00:10:11,601 --> 00:10:15,636
+But MVC is a way of designing your application so that it's a little more
+MVC 是你設計應用的一種方式，用它設計的代碼
+
+195
+00:10:15,638 --> 00:10:21,141
+debuggable, reusable understandable to you and to anyone reading your code.
+無論對於你自己或者其他人都具有可讀性，也更易調試，易復用
+
+196
+00:10:21,143 --> 00:10:25,278
+And iOS was designed with MVC from the start.
+而 iOS 從一開始就使用 MVC 設計
+
+197
+00:10:25,280 --> 00:10:28,214
+So it's just integral part to building an iOS.
+而這僅僅是創建一個 iOS 應用整體中的一部分
+
+198
+00:10:28,216 --> 00:10:33,452
+Now, I'm gonna do the demo today, and on Wednesday I'm kinda not gonna follow MVC.
+我要開始做今天的 demo，但是在週三的課上不會使用 MVC
+
+199
+00:10:33,454 --> 00:10:37,922
+But then next Monday we're gonna apply MVC to the demo I'm doing today and
+但是下週一我會應用 MVC 繼續今天的 demo，
+
+200
+00:10:37,924 --> 00:10:41,426
+Wednesday, so you're gonna get the full MVC treatment there.
+週三的時候你們就會對 MVC 有了充分的理解
+
+201
+00:10:41,428 --> 00:10:45,262
+And I'll be having some slides on MVC on Wednesday to prepare you for next Monday.
+然後在週三我會放一些 MVC 的 slides 來為下週一做準備
+
+202
+00:10:46,832 --> 00:10:49,699
+Okay? All right, so here's the demo.
+好，下面開始做 demo
+
+203
+00:10:49,701 --> 00:10:53,936
+The demo I'm gonna do, is something I actually did a few years ago that really works well-
+接下來我要做的 demo，是我前幾年做的一個計算器，運行起來還不錯
+
+205
+00:10:53,938 --> 00:10:55,971
+With Swift, which is a calculator.
+我們用 Swift 來實現它
+
+206
+00:10:55,973 --> 00:10:57,373
+So, we're gonna build this calculator.
+現在，我們來創建這個計算器
+
+207
+00:10:57,375 --> 00:11:00,509
+And we're gonna build it from scratch, all the way.
+我們將從頭開始，一步一步創建它
+
+208
+00:11:00,511 --> 00:11:04,545
+And I like to do my demos, where I only type in stuff, I don't copy and
+我喜歡動手敲代碼來做演示，而不會複製或者
+
+209
+00:11:04,547 --> 00:11:06,914
+paste big chunks of code in or whatever.
+粘貼大段代碼什麼的
+
+210
+00:11:06,916 --> 00:11:09,817
+I know, I'd see a lot of laptops open, a lot of people like to try and
+我知道，我看到很多人已經打開筆記本電腦，很多人都喜歡
+
+211
+00:11:09,819 --> 00:11:12,736
+follow along with me.
+跟著我親自動手嘗試
+
+212
+00:11:12,737 --> 00:11:15,654
+I'm a fast typer, but usually in most demos you can keep, keep up if you want.
+我打字速度很快，但是通常在大多數演示中，只要你想，還是能夠跟上我的速度
+
+213
+00:11:15,657 --> 00:11:20,426
+I don't recommend it necessarily, or certainly I don't require it.
+我並不推薦這麼做，或者說不必要這樣
+
+214
+00:11:20,428 --> 00:11:28,400
+I am going to, you, you'll be able to go back and watch this particular demo on video.
+你們可以回去看視頻
+
+216
+00:11:28,402 --> 00:11:30,535
+Even Stanford people will be able to do that.
+史丹佛的學生也可以這麼做
+
+217
+00:11:30,537 --> 00:11:34,805
+Because your first assignment is gonna be to reproduce what I do.
+因為你們的第一次作業是要重現我所做的
+
+218
+00:11:34,807 --> 00:11:37,041
+'Kay? That is 90% of your first assignment.
+這就是你第一次作業的 90%
+
+219
+00:11:37,043 --> 00:11:40,277
+Reproduce what I'm gonna do, today and on Wednesday.
+重現我今天和星期三做的
+
+220
+00:11:40,279 --> 00:11:42,946
+So I'm not gonna post the code because I want you to go through the experience of
+我不會把代碼給你，因為我想讓你自己動手敲代碼
+
+221
+00:11:42,948 --> 00:11:45,615
+typing the code in, and if you watch in on video,
+如果你是在看這個視頻，
+
+222
+00:11:45,617 --> 00:11:51,219
+watching what I do again, and and typing it all in. 'Kay?
+看一遍我乾了什麼，然後自己敲代碼
+
+224
+00:11:51,221 --> 00:11:56,340
+And I'll explain that all on Wednesday. Okay?
+我將在週三對所有問題做解釋
+
+226
+00:11:56,341 --> 00:11:58,224
+So, I put on the slide a bunch of things that I'm gonna cover, but I'm not gonna go
+我把一些將要提及的部分放到了 slides 里，但我不會提前
+
+227
+00:11:58,227 --> 00:12:01,628
+over it in advance, I'm just gonna sit, sit and soon I'll start doing it.
+給你們講這些內容 我要坐下，然後開始演示
+
+228
+00:12:01,630 --> 00:12:04,498
+So any questions before I dive in here?
+在這之前還有什麼問題嗎？
+
+229
+00:12:04,500 --> 00:12:08,401
+I know we're gonna little fast, but I wanna maximize your learning time.
+我知道我講得有點快，因為我想最大化你們的學習時間
+
+230
+00:12:08,403 --> 00:12:11,870
+-（同學提問）
+
+231
+00:12:11,872 --> 00:12:12,771
+Direct of what?
+什麼？
+
+232
+00:12:12,773 --> 00:12:14,706
+-（同學提問）
+
+233
+00:12:14,708 --> 00:12:18,142
+So the question is, which Xcode should we use, should you use?
+問題是，我們應該用哪個版本的 Xcode？
+
+234
+00:12:18,144 --> 00:12:20,811
+Well, you should just use the one on the Mac App Store.
+你們直接使用在 Mac App Store 上的那個版本就好了
+
+235
+00:12:20,813 --> 00:12:23,247
+So, just go to the Mac App Store, it's free.
+去 Mac App Store 上免費下載
+
+236
+00:12:23,249 --> 00:12:25,482
+Use the one there, whatever the latest one is.
+使用那裡的最新的版本
+
+237
+00:12:25,484 --> 00:12:28,618
+If a new one comes out in the quarter, well, let's all switch over to it.
+如果有更新的版本出來，那麼我們就更新
+
+238
+00:12:28,620 --> 00:12:30,620
+Okay, let's just always be using the latest Xcode.
+總之我們用的是最新版本的 Xcode
+
+239
+00:12:30,622 --> 00:12:31,354
+'Kay any-
+還有問題嗎？
+
+240
+00:12:31,356 --> 00:12:32,621
+（同學提問）
+
+241
+00:12:32,623 --> 00:12:35,624
+Not. We're not gonna using a beta or anything like that.
+不，我們不用測試版或者類似的一些版本
+
+243
+00:12:35,625 --> 00:12:37,392
+We'll just use whatever the currently published Xcode is.
+我們只用當前最新的 Xcode
+
+244
+00:12:38,995 --> 00:12:41,746
+Okay.
+
+245
+00:12:41,747 --> 00:12:44,498
+So, I'm going to start this demo actually by launching Xcode.
+那麼我要開始運行 Xcode 來演示了
+
+246
+00:12:44,500 --> 00:12:50,669
+So, here it is, right here. Xcode.
+在這 Xcode
+
+248
+00:12:50,670 --> 00:12:53,270
+And when you launch Xcode, let's hide others here.
+運行 Xcode 以後，我們把其他東西隱藏起來
+
+249
+00:12:53,273 --> 00:12:55,140
+You're gonna get this splash screen and
+你會看到這個歡迎界面，
+
+250
+00:12:55,142 --> 00:12:58,376
+on this splash screen on the right, this is gonna be all your projects.
+在歡迎界面的右邊，將顯示你所有的項目
+
+251
+00:12:58,378 --> 00:13:00,711
+Now, since it's the beginning of the quarter, we don't have any projects yet,
+由於這是本學期開始，我們還沒有任何項目
+
+252
+00:13:00,713 --> 00:13:04,048
+but they'll all be listed here, so as the quarter goes by this will fill up.
+但是慢慢的，我們會逐漸將這個列表填滿
+
+253
+00:13:04,050 --> 00:13:07,284
+You can turn this splash screen off, if you don't like it by the way.
+如果你不喜歡這個歡迎頁面，可以將它關閉
+
+254
+00:13:07,286 --> 00:13:10,820
+This splash screen also lets us do things like playgrounds and
+歡迎界面中也可以創建例如 playground，
+
+255
+00:13:10,822 --> 00:13:13,256
+a source code management right down here.
+或者源代碼管理，在這裡
+
+256
+00:13:13,258 --> 00:13:15,024
+We're not gonna be doing that for a while.
+我們在很長一段時間內不會碰那些
+
+257
+00:13:15,026 --> 00:13:16,859
+We're gonna be focusing on this option, right here.
+我們需要關注的是這個選項，這裡
+
+258
+00:13:16,861 --> 00:13:18,760
+Create a new Xcode project.
+創建一個新的 Xcode 項目
+
+259
+00:13:18,762 --> 00:13:23,748
+If you don't have the splash screen, you can go to File > New > Project. Kay.
+如果你看不到歡迎界面，你也可以 File > New > Project
+
+261
+00:13:23,749 --> 00:13:25,032
+Same thing, those both the same thing.
+它們都是一樣的
+
+262
+00:13:25,034 --> 00:13:28,469
+So I'm gonna click right here on Create a new project.
+下面我點擊這裡，創建一個新項目
+
+263
+00:13:28,471 --> 00:13:31,605
+When I create a new project, it wants to know what kind of project you want to create,
+當我創建新項目的時候，它需要知道你想創建什麼類型的項目
+
+264
+00:13:31,607 --> 00:13:38,494
+because Xcode is actually used on Mac OS X and to build frameworks and all that stuff.
+Xcode 可以被用於在 Mac OS X 上創建框架，以及所有類似的東西
+
+266
+00:13:38,495 --> 00:13:41,079
+But we're always gonna be building iOS Applications.
+但是我們將要創建的是 iOS 應用
+
+267
+00:13:41,082 --> 00:13:43,382
+And in fact, we're always gonna use this template right here,
+事實上，我們經常用到這裡的模板，
+
+268
+00:13:43,384 --> 00:13:47,236
+Single View Application.'Kay?
+Single View Application
+
+270
+00:13:47,237 --> 00:13:49,688
+That's kind of your basic MVC starter application and
+這就是你的基礎 MVC 入門應用
+
+271
+00:13:49,690 --> 00:13:53,724
+we're gonna build very complicated apps out of that, but we're gonna start here,
+我們會用其他這些創建非常複雜的應用，但是我們從這裡開始
+
+272
+00:13:53,726 --> 00:13:55,592
+so you always click on that one.
+所以你會經常點這個
+
+273
+00:13:55,594 --> 00:13:58,528
+Then it wants to know what you want to call your app, and
+你需要填寫應用的名稱，
+
+274
+00:13:58,530 --> 00:14:04,634
+we're building a calculator, so we're gonna call our app, Calculator.'Kay?
+我們在創建的是計算器應用，所以我們給它起名為，Calculator
+
+276
+00:14:04,635 --> 00:14:06,669
+This organization name doesn't really matter that's just gonna appear in
+orgnization 並不重要，它只會出現在
+
+277
+00:14:06,671 --> 00:14:10,339
+copyright notice and the code that you write at the top in a comment so
+類似版權信息，或者你的代碼開頭的注釋中，所以
+
+278
+00:14:10,341 --> 00:14:12,291
+don't worry about that.
+不用管它
+
+279
+00:14:12,292 --> 00:14:14,242
+But this organization identifier that is very important.
+但是這裡的 organization Identifier 是非常重要的
+
+280
+00:14:14,244 --> 00:14:19,230
+'Kay, this uniquely identifies you. Okay?
+它是你的唯一標識符
+
+282
+00:14:19,231 --> 00:14:20,848
+So that on the next line we can you just,
+所以在下一行裡，我們需要一個新的
+
+283
+00:14:20,850 --> 00:14:23,950
+new uniquely idefy, identify your calculator.
+唯一的標識符，標識你的計算器
+
+284
+00:14:23,952 --> 00:14:26,219
+So here if your a Stanford student,
+所以如果你是史丹佛的學生，
+
+285
+00:14:26,221 --> 00:14:31,490
+you'll wanna use this reverse DNS notation here edu.stanford.cs193p.
+你可以用這個倒序的域名：edu.stanford.cs193p
+
+286
+00:14:31,492 --> 00:14:36,661
+And instead of instructor there, you wanna put your SU net ID.'Kay?
+並用你的 SU net ID 將 instructor 替換
+
+288
+00:14:36,663 --> 00:14:37,929
+Cuz nobody else has that but you.
+因為你的 ID 不會和別人的重復
+
+289
+00:14:37,931 --> 00:14:39,864
+And that'll uniquely identify you.
+這樣這個標識符就能作為唯一標識你
+
+290
+00:14:40,900 --> 00:14:44,201
+As I said, we're using Swift not Objective-C.
+我說過，我們要用 Swift 而不是 Objective-C
+
+291
+00:14:44,203 --> 00:14:49,272
+And we're gonna build an app that works be, equally well on iPad and iPhone,
+我們要創建的應用要能同時工作在 iPad 和 iPhone 上，
+
+292
+00:14:49,274 --> 00:14:51,507
+that's called a universal app.
+所以選擇 Universal
+
+293
+00:14:51,509 --> 00:14:54,209
+You can pick to develop for only one or the other.
+你也可以選擇只為其中一種設備開發
+
+294
+00:14:54,211 --> 00:14:56,745
+But we are going to go Universal here.
+但是我們在這裡選擇 Universal
+
+295
+00:14:56,747 --> 00:15:00,248
+We're not gonna really be doing the iPad part of it for a couple weeks.
+在這幾周之內我們不會做這個應用的 iPad 部分
+
+296
+00:15:00,250 --> 00:15:04,352
+But it is our intent to eventually build an app that works on both.
+但是我們最終會把它設計成一個同時能夠運行在 iPad 和 iPhone 上的應用
+
+297
+00:15:04,354 --> 00:15:06,186
+Okay we're not going to be using Core Data,
+我們現在還用不到 Core Data
+
+298
+00:15:06,188 --> 00:15:09,322
+that's object oriented database stuff so you just leave that unchecked.
+那是面向對象的數據庫，現在先不選它
+
+299
+00:15:09,324 --> 00:15:13,993
+And now it's asking where we want to save it, I strongly recommend saving in your
+現在，它問我們要把項目保存在哪裡，我強烈建議保存在你的
+
+300
+00:15:13,995 --> 00:15:18,998
+home directory, this is my home directory here in a folder called Developer, okay?
+home 目錄下，這是我的 home 目錄，裡面有一個 Developer 的目錄，看到沒？
+
+301
+00:15:19,000 --> 00:15:22,001
+You could put other folders in here if you want to arrange it more,
+當然你也可以在這裡放其它文件夾，如果你想創建更多的話
+
+302
+00:15:22,003 --> 00:15:25,103
+but home directory Developer, I highly recommend that.
+不過我建議你放在主目錄下的 Developer 文件夾
+
+303
+00:15:25,105 --> 00:15:28,273
+Source Control, we will be talking about that at some point in the quarter but
+Source Control，我們將會在這學期的某些時候講到，不過
+
+304
+00:15:28,275 --> 00:15:30,141
+we're not gonna do it right off the bat here so
+我們先跳過這個
+
+305
+00:15:30,143 --> 00:15:31,776
+you can leave that unchecked as well.
+所以那個選項你可以不打勾
+
+306
+00:15:33,045 --> 00:15:37,847
+All right, so here's our first project, its been created so
+好，這就是我們創建的第一個項目
+
+307
+00:15:37,849 --> 00:15:43,586
+this is Xcode that your seeing right here, this is Xcode's main screen and
+這裡你看到的就是 Xcode, 這是 Xcode 的主窗口
+
+308
+00:15:43,588 --> 00:15:46,955
+the center is really what your working on.
+中間這部分是主要的工作區域
+
+309
+00:15:46,957 --> 00:15:51,026
+The left is, area here, is called the navigator, and the navigator you,
+左邊的區域，被稱作 Navigator（導航欄）
+
+310
+00:15:51,028 --> 00:15:54,829
+you use to kind of choose what you're working on but you can also do
+通常用來選擇特定的選項，不過也你可以
+
+311
+00:15:54,831 --> 00:15:59,367
+things over here like search hough your whole project, that's this little guy.
+點擊這個小圖標，對整個項目進行搜索
+
+312
+00:15:59,369 --> 00:16:04,838
+Look at all your break points maybe, look at previous builds that you've done,
+這裡用來查看斷點，這裡用來查看之前編譯的項目
+
+313
+00:16:04,840 --> 00:16:09,076
+browse your project by class hierarchy, all that stuff.
+這裡可以以類的層次結構展開整個項目，等等
+
+314
+00:16:09,078 --> 00:16:12,312
+But we're usually on the left most one here which is just all of the files in
+不過我們通常會點擊最左邊的這裡，這裡可以看到我們所有的文件
+
+315
+00:16:12,314 --> 00:16:17,750
+your project which can also can be organized hierarchically like this.
+你的項目可以像這樣按層次的展現出來
+
+316
+00:16:17,752 --> 00:16:19,585
+And when you select something here on the left,
+當你選擇左邊區域這裡的某些部分，
+
+317
+00:16:19,587 --> 00:16:23,588
+the middle will fill up with what that you've selected so.
+中間區域會出現你剛剛選擇的那部分內容
+
+318
+00:16:23,590 --> 00:16:26,591
+Here I have the actual project itself selected.
+這裡我選擇了這個項目本身
+
+319
+00:16:26,593 --> 00:16:28,993
+So these are the project settings of which there are tons.
+所以這裡可以看到這個項目的很多設置項
+
+320
+00:16:28,995 --> 00:16:31,662
+All along the top here you can see tons of settings.
+在這上面你還可以看到更多設置項
+
+321
+00:16:31,664 --> 00:16:34,431
+We're, we'll go through them as the quarter goes on and
+隨著學期進展我們將會講到這些
+
+322
+00:16:34,433 --> 00:16:37,100
+you've already seen some of them like the bundle identifier there and
+你已經看到其中的一部分，比如這裡的 Bundle identifier（包標識符）
+
+323
+00:16:37,102 --> 00:16:38,702
+the fact this is a universal app.
+還可以看到這裡是一個通用 app
+
+324
+00:16:38,704 --> 00:16:41,037
+We're not going to talk about anymore of this today,
+不過我們今天不會講關於項目設置
+
+325
+00:16:41,039 --> 00:16:42,805
+this project settings business.
+的更多內容
+
+326
+00:16:42,807 --> 00:16:45,107
+We're gonna focus here on some of these files.
+我們會把注意力集中在這些文件
+
+327
+00:16:45,109 --> 00:16:47,409
+And even some of these files, like this AppDelegate,
+甚至是這些文件，比如 AppDelegate
+
+328
+00:16:47,411 --> 00:16:50,845
+I'm just gonna move that down to Supporting Files to get it out of the way.
+我會把它們移到 Supporting Files
+
+329
+00:16:50,847 --> 00:16:53,081
+Same things with these image assets,
+image assets 文件夾也是
+
+330
+00:16:53,083 --> 00:16:56,117
+LaunchScreen well get to this later in the quarter.
+LaunchScreen 我們之後會講到
+
+331
+00:16:56,119 --> 00:16:58,285
+But I wanna focus on these two files right here.
+不過我們現在會把注意力集中在這兩個文件上
+
+332
+00:16:58,287 --> 00:17:03,957
+Okay Main.storyboard and ViewController.swift, okay
+Main.storyboard 和 ViewController.swift
+
+333
+00:17:03,959 --> 00:17:06,192
+In the MVC world by the way, this is the V,
+順便說，在 MVC 中這稱為 V
+
+334
+00:17:06,194 --> 00:17:10,896
+the view and this is the C, the controller but we will talk about MVC on Wednesday.
+即視圖，這是 C，即控制器，我們將在週三講到 MVC
+
+335
+00:17:11,999 --> 00:17:13,665
+So what do these things contain?
+所以，這些東西包含什麼
+
+336
+00:17:13,667 --> 00:17:16,234
+So this Main.storyboard, if I click on it,
+這是 Main.storyboard，如果我點擊它
+
+337
+00:17:16,236 --> 00:17:18,936
+you see it appear in the middle, this is our UI.
+可以看到我們的 UI 出現在中間
+
+338
+00:17:19,972 --> 00:17:21,972
+Okay, this is our user interface.
+這就是我們的 UI
+
+339
+00:17:21,973 --> 00:17:23,973
+So for a calculator this is going to be a little display,
+對於計算器而言，這裡將會是一個稍微小一點的顯示區域
+
+340
+00:17:23,976 --> 00:17:27,811
+this shows the number that we're working on or whatever at the top.
+這裡會顯示我們計算出來的數字或任何其它在上面的數字
+
+341
+00:17:27,813 --> 00:17:32,448
+And lots of buttons down here, number buttons, times, multi, or sorry, times,
+下面這裡會有很多按鈕，包括數字，乘除
+
+342
+00:17:32,450 --> 00:17:34,917
+divide, plus, minus, square root.
+加減，平方根
+
+343
+00:17:34,919 --> 00:17:36,451
+That's all going to be here.
+都會出現在這裡
+
+344
+00:17:36,453 --> 00:17:39,521
+So we're going to build this entire user interface.
+所以我們完全使用圖形化來搭建
+
+345
+00:17:39,523 --> 00:17:41,055
+Purely graphically.
+整個用戶界面
+
+346
+00:17:41,057 --> 00:17:43,057
+Okay? We're not gonna be writing code.
+我們不會寫代碼
+
+347
+00:17:43,059 --> 00:17:45,259
+Put button at this location.
+來指出哪個按鈕該放哪個位置
+
+348
+00:17:45,261 --> 00:17:47,411
+None of that, okay?
+一點代碼都沒有
+
+349
+00:17:47,412 --> 00:17:49,562
+We just literally with our mouse are gonna build this whole user interface.
+我們只是用我們的鼠標來搭建我們的用戶界面
+
+350
+00:17:50,499 --> 00:17:53,700
+So what's the code, what do we need any code for?
+那我們的代碼寫在哪裡，什麼時候需要寫代碼？
+
+351
+00:17:53,702 --> 00:17:57,203
+Well, we, this ViewController.swift, this is a Swift file.
+看 ViewController.swift，這個 Swift 文件
+
+352
+00:17:57,205 --> 00:18:00,539
+This is your first look at Swift for most of you.
+這是你們中多數人第一次看 Swift 文件
+
+353
+00:18:00,541 --> 00:18:03,108
+This controller is gonna control that user interface.
+這是我們的 controller，用來控制我們的用戶界面
+
+354
+00:18:03,110 --> 00:18:05,877
+That's why we call it the view controller or the controller.
+這就是為什麼我們稱之為 view controller 或 controller
+
+355
+00:18:05,879 --> 00:18:09,180
+It controls user interface and that means it's gonna do things that
+它控制 UI，這意味著它會做某些事情來
+
+356
+00:18:09,182 --> 00:18:13,651
+are specific to how this user interface, a calculator's user interface, works.
+比如指定這個 UI，計算器界面應該怎樣工作
+
+357
+00:18:13,653 --> 00:18:16,720
+So when we press the digit buttons, it's going to have update the display.
+這樣當你點擊數字按鈕，它會更新顯示的內容
+
+358
+00:18:16,722 --> 00:18:19,856
+When we press times, it's gonna have to do some multiplication and
+當我們點擊乘法，它將會進行乘法運算並且
+
+359
+00:18:19,858 --> 00:18:21,524
+then put the result in the display.
+把結果顯示出來
+
+360
+00:18:21,526 --> 00:18:24,227
+So it's controlling the display.
+所以說它會控制界面的展示
+
+361
+00:18:24,229 --> 00:18:28,597
+Okay so we'll get back to this code in a moment but we're gonna start by
+我們稍後再回到這裡，現在我們先從搭建界面開始
+
+362
+00:18:28,599 --> 00:18:33,802
+building our user interface and by the way, your user interface, you can see I
+順便說一句，你可以看到這個用戶界面
+
+363
+00:18:33,804 --> 00:18:39,140
+have a low resolution screen here so my UI doesn't even really fit in the space here.
+因為屏幕的低分辨率，所以我的 UI 沒有很好地適應空間
+
+364
+00:18:39,142 --> 00:18:42,677
+You'll probably have maybe a little higher resolution screen then I do but
+你們可能有比我更高的屏幕分辨率的屏幕
+
+365
+00:18:42,679 --> 00:18:45,979
+if you don't, you can zoom in and out, I'm just right-clicking,
+不過如果你們沒有，你們可以通過右鍵點擊來進行放大和縮小
+
+366
+00:18:45,981 --> 00:18:49,516
+if you right-click on the background area here, you can zoom in and out.
+如果你在這個背景區域點擊右鍵，你可以放大縮小
+
+367
+00:18:49,518 --> 00:18:52,652
+You can also do it by double-clicking so if I double-click on this,
+你也可以採用雙擊，看如果我雙擊這裡
+
+368
+00:18:52,654 --> 00:18:56,122
+it zooms it to normal, if I double-click on the background, it zooms out so
+它放大到正常水平，如果我再雙擊背景，它會縮小
+
+369
+00:18:56,124 --> 00:18:57,523
+that way I can see my whole UI.
+這樣我可以看到我的整個 UI 界面
+
+370
+00:18:57,525 --> 00:18:59,992
+Now when we build a complicated app
+當我們完成了一個複雜的 app
+
+371
+00:18:59,994 --> 00:19:05,663
+we're gonna have a whole bunch of these little square areas, we call these scenes,
+我們將會有一大堆這些方塊區域，這些我們稱之為 scenes（場景）
+
+372
+00:19:05,665 --> 00:19:11,402
+and a scene represents kind of phone full, phone screen full of information.
+一個場景代表一個完整顯示所有信息的手機屏幕
+
+373
+00:19:11,404 --> 00:19:15,072
+Okay and as you you've used many iOS applications, you know that you
+就像你使用過的許多 iOS 程序
+
+374
+00:19:15,074 --> 00:19:20,443
+transition from one screen to another as the user goes through the app and
+你知道用戶使用這個 app 從一個屏幕切換到另外一個屏幕
+
+375
+00:19:20,445 --> 00:19:22,111
+that's how your gonna build your apps as well.
+這也是你搭建 app 的方式
+
+376
+00:19:22,113 --> 00:19:25,981
+And this StoryBoard is eventually gonna have a big map showing all
+這個 StoryBoard 最終將會有一個大的圖來顯示所有的
+
+377
+00:19:25,983 --> 00:19:28,951
+the transitions between all those scenes.
+場景間的切換
+
+378
+00:19:28,953 --> 00:19:31,019
+Okay, so this StoryBoard is gonna get big for
+好了，所以這個 StoryBoard 將會用來搭建
+
+379
+00:19:31,021 --> 00:19:35,323
+big apps, your really gonna see your whole application which is kinda cool.
+完整的 app，所以當你真的看到整個應用程序時，還挺 cool 的
+
+380
+00:19:36,359 --> 00:19:39,893
+So we're gonna start small though, just this one little screen right here.
+所以我們將從這一個小的場景開始
+
+381
+00:19:39,895 --> 00:19:41,361
+Which is gonna be our calculator.
+搭建我們的計算器
+
+382
+00:19:41,363 --> 00:19:44,864
+So let's start building our calculator with it's display.
+我們先從搭建計算器的界面顯示開始
+
+383
+00:19:44,866 --> 00:19:45,999
+So I wanna make a display.
+當我想顯示一些東西時，
+
+384
+00:19:46,001 --> 00:19:47,917
+So how do I do that?
+我應該怎麼做呢？
+
+385
+00:19:47,918 --> 00:19:49,834
+Well that brings us to the right side, the right-hand side here,
+我們看一下這裡的右邊區域
+
+386
+00:19:49,837 --> 00:19:53,939
+this whole right side, this is called the Utilities area
+右邊的整塊區域，我們稱為 Utilities （工具）區域
+
+387
+00:19:53,941 --> 00:19:56,675
+You can see that's it's got a bottom and a top, right?
+你可以看到這裡有底部和頂部，對不？
+
+388
+00:19:56,677 --> 00:20:01,979
+We want to go into the bottom and on the third tab right here, which is called
+來到底部這裡的第三個按鈕，它被我們稱為
+
+389
+00:20:01,981 --> 00:20:07,818
+the Object Library, you'll see that there's tons and tons of objects in here.
+Object Library （對象庫），你可你看到這裡有非常多的對象
+
+390
+00:20:07,820 --> 00:20:09,886
+Okay, dozens of these things and
+非常多的這類東西
+
+391
+00:20:09,888 --> 00:20:13,023
+we're gonna get to a lot of these by the end of the quarter.
+我們整個學期會接觸到很多這樣的東西
+
+392
+00:20:13,025 --> 00:20:15,992
+But these are the things you build your user interface out of.
+這些是用於搭建你的 UI 的
+
+393
+00:20:15,994 --> 00:20:19,362
+So kind of towards the top, not all the way at the top, but towards the top,
+靠近上面，但不完全靠近上面，就在這上面
+
+394
+00:20:19,364 --> 00:20:22,731
+you'll start seeing things like buttons and text fields and things like that.
+你會開始看到像按鈕，文本區域這樣的東西
+
+395
+00:20:22,733 --> 00:20:26,401
+Well this is what we need obviously, to build our display here,
+很明顯這是我們構建顯示區域所需要的東西
+
+396
+00:20:26,403 --> 00:20:28,536
+is some sort of text field, and there's a couple of them here.
+是某種顯示文本的區域，這裡有兩種
+
+397
+00:20:28,538 --> 00:20:32,140
+One, this one called Label is static text, you see?
+這一種稱為 Label 的是一種靜態的文本
+
+398
+00:20:32,142 --> 00:20:37,011
+And this one Text Field is editable text, in other words you can touch on this one.
+這種稱為 Text Field 是可編輯的文本，也就是說，你當你按下時
+
+399
+00:20:37,013 --> 00:20:39,846
+And the little keyboard would slide up from the bottom and you could type in it.
+鍵盤會從底部滑出來，所以你可以輸入文本
+
+400
+00:20:39,848 --> 00:20:43,600
+So, the calculator, you can't really touch on the screen and start typing
+因此對於計算器來說，你確實不能按下屏幕並且輸入，
+
+401
+00:20:43,604 --> 00:20:45,018
+so we want this static text.
+所以我們需要靜態的文本
+
+402
+00:20:45,020 --> 00:20:48,721
+So, I'm just going to pick this up with the mouse and drag it out.
+所以我用鼠標把它拖出來
+
+403
+00:20:48,723 --> 00:20:50,990
+Now, when I drag it out into my UI,
+現在，當我把它拖入我的 UI 中時
+
+404
+00:20:50,991 --> 00:20:53,258
+you're going to see a lot of little blue dash lines appearing.
+你會看到很多藍色虛線出現
+
+405
+00:20:53,260 --> 00:20:55,227
+You see these?
+看到沒？
+
+406
+00:20:55,228 --> 00:20:57,195
+These are helping me put this in the right place.
+這些可以幫助我們正確地擺放這些東西
+
+407
+00:20:57,197 --> 00:21:00,798
+So, I can put it right in the center, for example, of my view.
+比如說我可以把它放在視圖的中間
+
+408
+00:21:01,734 --> 00:21:04,335
+I could put it up in a corner up here, which is what I'm gonna do.
+我可以把它放在靠頂部這裡，我待會就準備這樣做
+
+409
+00:21:04,337 --> 00:21:05,669
+Mm-kay.
+
+
+410
+00:21:05,671 --> 00:21:10,073
+You always want your things that you put in your UI,
+你總是會希望你放入 UI 中的東西
+
+411
+00:21:10,075 --> 00:21:14,643
+as much as humanly possible, to be on one of these dashed blue lines.
+盡可能地去利用這些藍色虛線
+
+412
+00:21:14,645 --> 00:21:18,097
+And you'll understand why in a couple weeks when we starting talking about Auto Layout.
+當你後面學習到 Auto Layout (自動佈局) 時就會明白為什麼這麼做了
+
+414
+00:21:18,098 --> 00:21:19,748
+I'm gonna do a little Auto Layout right here just to kind of
+我這裡將會涉及一點關於 Auto Layout 的東西，可以讓你
+
+415
+00:21:19,750 --> 00:21:21,251
+give you a feel for it.
+對它有點感覺
+
+416
+00:21:21,252 --> 00:21:24,953
+But those blue, dashed blue lines are gonna be your best friend when it comes to
+不過，在你搭建用戶界面的時候，這些藍色虛線將會給你最大的幫助
+
+417
+00:21:24,955 --> 00:21:28,322
+building your user interface and you'll quickly see why that is.
+你會很快知道為什麼了
+
+418
+00:21:28,324 --> 00:21:30,691
+Once you drag something out like this, you can,
+每次你像這樣拖動東西，你可以
+
+419
+00:21:30,693 --> 00:21:34,061
+these little things are rounded that show it's selected, right?
+看到環繞在外面的東西，它表明瞭這個被選中了
+
+420
+00:21:34,063 --> 00:21:37,465
+They also are little resize handles so you can grab them and resize them.
+它們也可以用於調整大小，所以可以抓住它然後或者重新調整它們的大小
+
+421
+00:21:37,467 --> 00:21:42,235
+When you resize it also re-puts those dashed blue lines out there, okay?
+當你調整大小時，這些藍色虛線會重新排成一列，看到沒？
+
+422
+00:21:42,237 --> 00:21:43,969
+So you definitely wanna, even have,
+所以當你調整大小時，你肯定想
+
+423
+00:21:43,971 --> 00:21:47,106
+when you're resizing, get those things lining up.
+把這些東西排成一列
+
+424
+00:21:47,108 --> 00:21:49,976
+You can also manipulate it directly, just double-click on it.
+你還可以直接編輯它，只需要雙擊一下
+
+425
+00:21:49,978 --> 00:21:54,145
+like a calculator probably doesn't want to come up, this is gonna be initial state of this.
+通常計算器的初始狀態不是這樣子
+
+426
+00:21:54,147 --> 00:21:58,349
+Doesn't want to come up saying Label, it probably wants 0 or
+初始狀態上面不會顯示 Label，它可能會顯示 0
+
+427
+00:21:58,351 --> 00:22:01,318
+something like that in it's display.
+或類似的東西
+
+428
+00:22:01,320 --> 00:22:04,354
+There's also things you wanna set about this though or
+另外還有一種，當你無法直接編輯這些
+
+429
+00:22:04,356 --> 00:22:08,258
+anything you drag in your UI that you just can't direct manipulate and
+你拖到 UI 里的內容時，
+
+430
+00:22:08,260 --> 00:22:12,261
+that's what the top half of this Utilities windows is, is for, okay?
+你可以使用右上方的 Utilities windows（工具窗口）
+
+431
+00:22:12,263 --> 00:22:13,829
+So if you look at the top half here,
+所以當你看上面這裡，
+
+432
+00:22:13,831 --> 00:22:17,065
+there's a bunch of tabs across the top including something like this,
+在頂部這裡有許多標籤，包括像這種
+
+433
+00:22:17,067 --> 00:22:20,035
+the Size Inspector for setting the size of this thing.
+用於設置尺寸的 Size Inspector（尺寸檢查器）
+
+434
+00:22:20,037 --> 00:22:24,305
+And this tab right here, really important, this is the Attributes Inspector.
+這個標籤，稱作 Attributes Inspector（屬性檢查器），非常重要
+
+435
+00:22:24,307 --> 00:22:27,908
+And this is an object oriented inspector, depending on what you have selected.
+這是一個面向對象的檢查器，當你選擇不同的東西時
+
+436
+00:22:27,910 --> 00:22:30,611
+You'll have different user interface here in the top.
+用戶界面將會有所改變
+
+437
+00:22:30,613 --> 00:22:33,880
+And this let's you edit attributes about what's selected.
+通過它可以讓你修改選中的內容的屬性
+
+438
+00:22:33,882 --> 00:22:34,882
+So, for example,
+比如
+
+439
+00:22:34,883 --> 00:22:37,883
+a calculator, the zero doesn't really want to be on the left, right?
+計算器中這個 0 其實不是在左邊，對不？
+
+440
+00:22:37,886 --> 00:22:40,653
+Calculators, the zero, the numbers are on the right and
+這個 0 應該是在右邊
+
+441
+00:22:40,655 --> 00:22:43,589
+they kind of grow out from the right.
+這些數字就像是從右邊出現的
+
+442
+00:22:43,591 --> 00:22:47,426
+And so we can easily fix that with this Alignment thing right here.
+我們可以很輕鬆地使用這裡的 Alignment（校准）修改它
+
+443
+00:22:47,428 --> 00:22:50,595
+So I'm gonna click this and you see the zero move over to the right.
+我點擊這裡，你就可以看到 0 到了右邊
+
+444
+00:22:50,597 --> 00:22:52,130
+And, and maybe I want a bigger font.
+還有，也許我想要大點的字體
+
+445
+00:22:52,132 --> 00:22:53,231
+You see the Font right here.
+你可以看到這裡的 Font（字體）
+
+446
+00:22:53,233 --> 00:22:55,666
+I can click on this, pick different fonts.
+我可以點擊這裡，選擇不同的字體
+
+447
+00:22:55,668 --> 00:22:59,470
+I'm gonna just move it up to like 32 point, it's a nice big font.
+把它增大到 32 點，稍微大點的字體
+
+448
+00:22:59,472 --> 00:23:00,937
+You can notice it kinda cuts off.
+你可以看到內容有點被裁剪了
+
+449
+00:23:00,939 --> 00:23:02,572
+I made it so big that it's too small.
+字體放大後，因此這裡顯得太小
+
+450
+00:23:02,574 --> 00:23:06,976
+So I can always just resize this larger to make that fit.
+所以我可以重新調整大小，使它能夠適應字體的大小
+
+451
+00:23:08,479 --> 00:23:10,345
+So this is how we build our user interface.
+這就是我們搭建用戶界面的方式
+
+452
+00:23:10,347 --> 00:23:14,949
+It's very direct manipulation and very object oriented as you'll start to
+非常直觀的操作，並且非常地面向對象
+
+453
+00:23:14,951 --> 00:23:17,451
+see when we add different kinds of objects.
+當你加入不同的對象時你就可以看到
+
+454
+00:23:17,453 --> 00:23:20,187
+So, let's actually run this application, okay?
+所以，讓我們真正地運行我們的應用吧
+
+455
+00:23:20,189 --> 00:23:22,956
+We haven't done, built any calculaterness about it,
+儘管我們還沒有完成任何關於計算的東西，
+
+456
+00:23:22,958 --> 00:23:25,992
+but we have this one field, let's run it and see what it looks like.
+不過可以讓我們運行一下看看是什麼效果
+
+457
+00:23:25,994 --> 00:23:27,226
+So, how do you run things?
+應該怎麼運行？
+
+458
+00:23:27,228 --> 00:23:29,562
+Well, you see right here where it says, iPhone 6?
+嗯，這裡你可以看到，iPhone 6？
+
+459
+00:23:29,564 --> 00:23:33,331
+This actually is a selector that lets you say where you want to
+這實際上是可以讓你選擇用什麼設備
+
+460
+00:23:33,333 --> 00:23:35,166
+run your application.
+運行你的應用
+
+461
+00:23:35,168 --> 00:23:38,636
+So you can see you can run it on an iOS device if you have one connected,
+如果當你連上了一個 iOS 設備時，你可以在 iOS 設備上運行，
+
+462
+00:23:38,638 --> 00:23:40,271
+I don't have one connected currently.
+現在我還沒有連接
+
+463
+00:23:41,273 --> 00:23:43,056
+But you can do that.
+不過你可以這樣做試試
+
+464
+00:23:43,057 --> 00:23:44,840
+And we'll talk in a Friday section probably in a week or
+我們將會在一到兩周後的週五的課上
+
+465
+00:23:44,843 --> 00:23:48,478
+two about how to get your devices hooked up.
+談論如何連接你的設備
+
+466
+00:23:48,480 --> 00:23:52,948
+But also there's these plethora of simulators here, iPhone 6,
+不過這裡有很多模擬器， iPhone 6 、
+
+467
+00:23:52,950 --> 00:23:56,552
+6+, iPhone 5, iPhone 4s, iPad Airs.
+6+、 iPhone 5、 iPhone 4s、 iPad Airs
+
+468
+00:23:56,554 --> 00:23:58,920
+And you can pick one of these to run on and
+你可以選擇其中的一個運行，
+
+469
+00:23:58,922 --> 00:24:02,490
+it'll actually simulate that device right here on your computer.
+它們實際上是在你的電腦上模擬那些設備
+
+470
+00:24:02,492 --> 00:24:05,827
+So I'm gonna run on the iPhone 6.
+這裡我將會運行在 iPhone 6 上
+
+471
+00:24:05,829 --> 00:24:08,729
+Okay,I'm just gonna hit Play, see this Play button right here?
+好了，我將要點擊 Play 按鈕，看到 Play 按鈕沒？
+
+472
+00:24:08,731 --> 00:24:11,498
+That's how you simulate, so Play.
+這就是使用模擬器的方式，點擊 Play
+
+473
+00:24:11,500 --> 00:24:12,933
+Now it's launching the simulator.
+現在啓動模擬器
+
+474
+00:24:12,935 --> 00:24:14,601
+It's a separate process.
+它是一個單獨的程序
+
+475
+00:24:14,603 --> 00:24:16,169
+And it's going to run our App in there.
+我們的 App 將會運行在它裡面
+
+476
+00:24:16,171 --> 00:24:17,403
+And there it is.
+就是這樣
+
+477
+00:24:17,405 --> 00:24:18,737
+Now you might say, whoop.
+現在你可能會說，哇！
+
+478
+00:24:18,739 --> 00:24:19,905
+Big white square.
+這麼大的白色正方形
+
+479
+00:24:19,907 --> 00:24:21,339
+Oh that's not so good.
+看起來不怎麼好
+
+480
+00:24:21,341 --> 00:24:23,825
+And the reason this is so
+這是因為
+
+481
+00:24:23,826 --> 00:24:26,310
+big is because the iPhone 6 has a very high resolution display on it.
+iPhone 6 的高分辨率屏幕
+
+482
+00:24:26,312 --> 00:24:30,881
+Okay, the retina display, and it's way higher resolution than my computer, okay?
+這種視網膜屏幕，比我電腦上的分辨率大得多，對吧？
+
+483
+00:24:30,883 --> 00:24:35,151
+So I actually have to scroll around, you see there's the top of it.
+所以我不得不上下滾動，你可以看到它的頂部
+
+484
+00:24:35,153 --> 00:24:37,754
+Scroll up and down to get to it all.
+通過上下滾動可以看到整個區域
+
+485
+00:24:37,756 --> 00:24:42,558
+Luckily if you go to Window, this is not in the simulator now, the iOS simulator.
+如果我們前往 Window 選項，這個選項現在不在 iOS 模擬器
+
+486
+00:24:42,560 --> 00:24:46,628
+If you go to Window and Scale, you can scale it down to be smaller and
+如果你點擊 Window 並且點擊 Scale， 你可以把它縮小，
+
+487
+00:24:46,630 --> 00:24:47,762
+then it'll fit.
+然後它的大小就與屏幕的大小匹配了
+
+488
+00:24:47,764 --> 00:24:49,497
+Okay, so if you have a low resolution screen,
+因此，如果你有低分辨率的屏幕
+
+489
+00:24:49,499 --> 00:24:51,532
+you're definitely gonna wanna use Window > Scale.
+你可以點擊 Window > Scale
+
+490
+00:24:51,534 --> 00:24:54,368
+Cmd+3 right there is another way to do it.
+也可以實用快捷鍵 Cmd+3
+
+491
+00:24:54,370 --> 00:24:55,154
+Okay?
+懂不？
+
+492
+00:24:55,155 --> 00:25:00,939
+So here's our UI, but it doesn't look to good, okay, because where's this?
+這就是我們的 UI，不過看起來不怎麼樣，因為這些在哪裡？
+
+493
+00:25:00,942 --> 00:25:05,011
+We put this zero in there and it just never showed up, what did we do wrong?
+我們把 0 放在那裡，卻從來都沒有出現，我們哪裡做錯了？
+
+494
+00:25:05,013 --> 00:25:08,781
+Well we didn't really do anything wrong and that zero is actually there.
+實際上我們沒有做錯，那個 0 實際上就在那裡
+
+495
+00:25:08,783 --> 00:25:11,750
+It's just here. Let me line up these UI's, this is not
+就在那，先讓我把它們排成一列，雖然沒有
+
+496
+00:25:11,752 --> 00:25:16,554
+necessarily exactly the same scale but its appropriate, approximately the same scale,
+完全相同的比例但也是近似的，近似相同的比例，
+
+497
+00:25:16,556 --> 00:25:19,857
+you can see that the zero is actually off screen, [NOISE] okay?
+你可以看到那個 0 實際上在屏幕外面，看到不？
+
+498
+00:25:19,859 --> 00:25:24,028
+So its there but you just can't see it because its over here off the screen.
+所以實際上它存在不過你看不到它，因為它在屏幕外面
+
+499
+00:25:24,030 --> 00:25:28,465
+Okay, and that's a problem, but that's a problem we can fix.
+這是一個問題，不過這個問題我們可以解決
+
+500
+00:25:28,467 --> 00:25:29,732
+So let's go fix that problem.
+來，我們開始解決這個問題吧
+
+501
+00:25:31,302 --> 00:25:32,534
+Why is that thing off-screen?
+為什麼它在屏幕外面？
+
+502
+00:25:32,536 --> 00:25:35,837
+Well, look at this UI right here, okay?
+好了，看到這個 UI 沒？
+
+503
+00:25:35,839 --> 00:25:36,838
+What shape is it?
+它是什麼形狀的？
+
+504
+00:25:36,840 --> 00:25:38,373
+It's square.
+它是正方形的
+
+505
+00:25:38,375 --> 00:25:40,908
+Okay, no iOS device is square.
+不過沒有任何 iOS 設備是正方形的
+
+506
+00:25:40,910 --> 00:25:43,544
+There's not a single square iOS device in the world.
+世界上沒有任何一種正方形的 iOS 設備
+
+507
+00:25:43,546 --> 00:25:46,078
+They're all, you know, tall and thin,
+你知道的，它們都是高的，並且瘦的，
+
+508
+00:25:46,080 --> 00:25:48,581
+or, if you turn them sideways, then they're long and short.
+或者如果把它們側身來看，它們都又長又短
+
+509
+00:25:48,583 --> 00:25:50,650
+Or even like an iPad.
+甚至包括 iPad
+
+510
+00:25:50,651 --> 00:25:52,718
+You know the aspect ratio on an iPad is slightly different than an iPhone so
+你知道 iPad 的縱橫比例和 iPhone 稍微有點不同
+
+511
+00:25:52,721 --> 00:25:55,588
+their all slightly different, but none of them are square.
+它們略有不同，但它們都不是正方形的
+
+512
+00:25:55,590 --> 00:25:58,657
+So why do we design our UI in a square?
+那為什麼我們把 UI 設計為方的？
+
+513
+00:25:58,659 --> 00:26:03,762
+Because the way you design iOS interfaces, you design them in this square and
+因為你這種 iOS 界面的設計，是將內容放這個方形中
+
+514
+00:26:03,764 --> 00:26:09,033
+you give everything inside the square rules, called constraints,
+然後給所有的內容都添加規則，這些規則我們稱之為約束，
+
+515
+00:26:09,035 --> 00:26:12,236
+about what happens to them when they get squished down.
+是關於當它們被壓扁時應該發生什麼變化
+
+516
+00:26:12,238 --> 00:26:15,505
+Either squished down vertically, squished down horizontally,
+不過是水平還是垂直的壓扁
+
+517
+00:26:15,507 --> 00:26:18,508
+depending on what kinda device their getting put on, okay?
+取決於它們被放到哪種設備中，明白不？
+
+518
+00:26:18,510 --> 00:26:22,912
+So you put these rules in there, so, what does it look like to put these rules in?
+所以你會在這裡加入這些規則，那當加入這樣規則後會怎樣？
+
+519
+00:26:22,914 --> 00:26:25,115
+Well again, it's all direct manipulation
+同樣的，這些都是直觀的操作
+
+520
+00:26:25,117 --> 00:26:31,186
+So I'm going to give some rules to this label right here to make it so that it knows
+我將要對這裡的這個 Label 增加一些規則，使得它知道
+
+521
+00:26:31,188 --> 00:26:36,957
+what to do when this square gets squished down in any direction for any device.
+對於任何方向的任何設備被壓扁時應該如何顯示
+
+522
+00:26:36,959 --> 00:26:38,659
+So, what do I want the rules to be?
+那我希望這些規則是什麼樣的？
+
+523
+00:26:38,661 --> 00:26:42,162
+Well, I always want this thing to use the whole width.
+我總希望它可以使用全部的寬度
+
+524
+00:26:42,164 --> 00:26:44,931
+However much width I have, I want it all.
+不管我的寬度是多少，我都希望填滿這個寬度
+
+525
+00:26:44,933 --> 00:26:50,102
+So I'm gonna pin this right edge to this edge, okay?
+所以我要固定這個右邊緣到這個邊緣的距離，對吧？
+
+526
+00:26:50,104 --> 00:26:53,205
+I'm gonna make it so all widths are pinned to each other.
+我這樣做是因為所有寬度都會由另外一方決定
+
+527
+00:26:53,207 --> 00:26:55,007
+And I do that with the Ctrl key.
+我使用 Ctrl 鍵來完成
+
+528
+00:26:55,009 --> 00:26:57,559
+I've turned on sticky keys so
+我已經開啓粘滯鍵所以
+
+529
+00:26:57,560 --> 00:27:00,110
+you can see down in the lower left here, it's showing the modifier keys I'm using.
+在左下角你可以看到，它顯示了我正使用的按鍵
+
+530
+00:27:00,113 --> 00:27:02,213
+So right now I'm holding down Ctrl.
+現在我按住 Ctrl
+
+531
+00:27:02,215 --> 00:27:08,485
+And I'm gonna Ctrl+drag from the right edge of this to the container it's in.
+我按住 Ctrl，同時從右邊拖動到它的容器的右邊
+
+532
+00:27:08,487 --> 00:27:11,822
+See how it's showing me what I'm dragged to.
+看它是如何展示我正在拖動的過程
+
+533
+00:27:11,824 --> 00:27:15,125
+So when I drag to this container, it puts a menu up and says,
+當我拖到這個容器時，彈出了一個菜單，上面說，
+
+534
+00:27:15,127 --> 00:27:20,830
+oh, okay, you want some rule between that label's right edge and
+好吧，你想在標籤的右邊緣和當前邊緣之間增加一些規則
+
+535
+00:27:20,832 --> 00:27:23,999
+this thing's edge, what do you want it to be?
+你希望是怎麼樣的規則？
+
+536
+00:27:24,001 --> 00:27:26,568
+Well, I can do a lot of things here.
+恩，我可以做很多事情
+
+537
+00:27:26,569 --> 00:27:29,136
+I could center this label vertically in this container.
+我可以使這個標籤垂直居中於這個容器
+
+538
+00:27:29,139 --> 00:27:31,590
+Up, you know, vertical up and down.
+向上，你知道的，垂直向上和向下
+
+539
+00:27:31,591 --> 00:27:34,042
+I definitely don't want that, I want my label at the top, so I don't want that.
+我絕對不希望出現這種情況，我是希望我的 Label 在頂部
+
+540
+00:27:34,044 --> 00:27:34,776
+I can make it the equal width,
+我可以使它的寬度相等，
+
+541
+00:27:34,778 --> 00:27:38,479
+So I can make this label the same width as the container.
+所以我可以使這個 Label 和容器的寬度相同
+
+542
+00:27:38,481 --> 00:27:42,049
+I don't want that either, cuz I want this little margin there, right?
+我也不想那種情況，因為我想設置這個小的邊距，對不對？
+
+543
+00:27:42,051 --> 00:27:45,785
+But look at the top one, trailing space to container margin.
+不過看上面的那個，trailing space to container margin（距離容器的右間距）
+
+544
+00:27:45,787 --> 00:27:51,157
+This lets me pin the trailing space after my label to the margin of the container.
+這讓我規定了我的 Label 尾部與它的容器的間距
+
+545
+00:27:51,159 --> 00:27:55,194
+So that's the one I want, so I'm gonna click on this and it does it.
+這就時我需要的，我點擊這個來完成
+
+546
+00:27:55,196 --> 00:27:59,664
+Now, see all these yellow and orange lines that appeared when I did that?
+現在，當我這樣做後，看到這些黃色和橙色的線條出現沒？
+
+547
+00:27:59,666 --> 00:28:04,401
+That's because the systems like, okay, you've started telling me the rules for this label,
+這就像是系統在說，嗯，
+你已經開始告訴我應該遵循對這個標籤的某些規則，
+
+548
+00:28:04,403 --> 00:28:06,504
+but your you haven't told me enough rules,
+不過你沒有告訴我足夠多的規則
+
+549
+00:28:06,506 --> 00:28:08,005
+I don't know what to do with this thing.
+我不知道應該對它怎麼做，
+
+550
+00:28:08,007 --> 00:28:11,141
+So now it's showing you all the places where it's like the system's not
+所以現在提示你，當它被擠壓的時候
+
+551
+00:28:11,143 --> 00:28:13,310
+sure what to do now when this thing gets squished.
+系統不確定應該怎麼做
+
+552
+00:28:13,312 --> 00:28:15,745
+Before it was like, okay, well you weren't telling me anything so
+在這之前，你沒有告訴我任何規則
+
+553
+00:28:15,747 --> 00:28:18,081
+I'm not going to do anything, but now your starting to tell me.
+所以我沒有顯示任何東西，不過現在你開始告訴我
+
+554
+00:28:18,083 --> 00:28:19,648
+So what do I do?
+所以我應該怎麼做？
+
+555
+00:28:19,650 --> 00:28:24,353
+So we have to fully specify both the what happens horizontally and
+所以我們不得不完整地告訴它水平方向
+
+556
+00:28:24,355 --> 00:28:25,520
+vertically to this thing.
+和垂直方向應該怎麼顯示
+
+557
+00:28:25,522 --> 00:28:27,422
+So we've only just started here.
+所以我們只是先從這裡開始
+
+558
+00:28:27,424 --> 00:28:31,225
+So let's pin this edge also cuz we want this edge to stay on this side.
+讓我們拖動固定這個邊緣，我們希望這個邊緣靠近這一邊
+
+559
+00:28:31,227 --> 00:28:34,528
+So I'm gonna hold down Ctrl and drag.
+所以我按下 Ctrl 並且拖動
+
+560
+00:28:34,530 --> 00:28:38,965
+And now I'm gonna pin the leading space to the container margin.
+然後現在我想固定 Label 前部到容器之間的間距
+
+561
+00:28:38,967 --> 00:28:41,100
+Okay, boom that did that.
+好了，我成功了
+
+562
+00:28:41,102 --> 00:28:44,670
+Still have orange going on here, that's because I haven't specified anything about
+這裡仍然顯示橙色，這是因為我還沒指定任何關於
+
+563
+00:28:44,672 --> 00:28:49,675
+the vertical position of this label so I'm gonna pin the top to the top, so
+這個 Label 的垂直方向的規則，所以我把 Label 的頂部和容器頂部間距固定起來，
+
+564
+00:28:49,677 --> 00:28:54,212
+hold Ctrl again, drag up here, this is now top space.
+所以我又一次按住 Ctrl，拖到這裡，這是頂部間距
+
+565
+00:28:54,214 --> 00:28:58,882
+Notice that it realizes where I am dragging to and from, right?
+注意到它識別出我正把它拖向哪裡沒？
+
+566
+00:28:58,884 --> 00:29:00,984
+So they can give me options that make sense,
+所以它能給我有意義的選項，
+
+567
+00:29:00,986 --> 00:29:03,186
+like Top Space to Layout Guide here.
+比如這裡的 Top Space to Layout Guide(頂部間距)
+
+568
+00:29:03,188 --> 00:29:04,921
+So I'm going to do that.
+所以我會選這個
+
+569
+00:29:04,923 --> 00:29:06,489
+So now I'm starting to get blue lines.
+所以我開始看到藍色的線了
+
+570
+00:29:06,491 --> 00:29:07,489
+You see these lines?
+看到沒？
+
+571
+00:29:07,491 --> 00:29:08,657
+I hope you can see that there.
+希望你能看到
+
+572
+00:29:08,659 --> 00:29:11,493
+They're solid blue, not orange or red.
+它們是實心藍線，不是橙色或紅色
+
+573
+00:29:11,495 --> 00:29:16,230
+Okay, that's because they're okay, we are okay horizontally here.
+這是因為它們可以了，水平方向上沒問題了
+
+574
+00:29:16,232 --> 00:29:18,332
+But we still have a problem vertically.
+不過這裡仍然有一個垂直方向上的問題
+
+575
+00:29:18,334 --> 00:29:21,335
+Now I'm not sure exactly what the problem is vertically cuz I really don't
+現在我不是非常確定這個垂直方向上的問題因為我確實不
+
+576
+00:29:21,337 --> 00:29:23,536
+want the bottom of this.
+希望這樣的底部
+
+577
+00:29:23,538 --> 00:29:27,773
+I just want it to hang out wherever it wants to hang out based on the size of my
+我只是希望這個剛剛擺放的 Label 的底部是基於我的
+
+578
+00:29:27,775 --> 00:29:29,041
+font or whatever.
+字體大小之類的
+
+579
+00:29:29,043 --> 00:29:31,610
+So I don't, I don't really wanna specify anything here so
+因此，我確實不想在這裡指明特定的高度
+
+580
+00:29:31,612 --> 00:29:34,212
+why is this orange and how do I get rid of this?
+所以為什麼橙色警告會出現，我應該怎樣避免它？
+
+581
+00:29:34,214 --> 00:29:37,648
+Well any time you have orange and when you're doing this layout stuff and
+任何時候當你在佈局時看到橙色警告
+
+582
+00:29:37,650 --> 00:29:38,949
+you don't know what to do.
+你不知道應該怎樣做的時候
+
+583
+00:29:38,951 --> 00:29:41,885
+You wanna go down to this button right here, okay?
+你可以點擊下面的這個按鈕，看到不？
+
+584
+00:29:41,887 --> 00:29:44,905
+This is the document outline.
+這是 document outline(文檔大綱)
+
+585
+00:29:44,906 --> 00:29:47,924
+And when you click this, a little thing will slide out, a little shelf here.
+當你點擊這裡時，這部分會滑出來，一個小架子
+
+586
+00:29:47,926 --> 00:29:53,095
+And this is an outline view of everything that's in your UI.
+這是你的 UI 中所有內容的大綱
+
+587
+00:29:53,097 --> 00:29:53,897
+Okay? And they're linked,
+並且它們之間是相互關聯的，
+
+588
+00:29:53,899 --> 00:29:58,000
+So if I click the background, nothing is selected.
+如果我點擊背景，沒有選中任何內容
+
+589
+00:29:58,002 --> 00:30:00,769
+Then the background, the view is what's selected here.
+然後這個背景，這個視圖就是我這裡選擇的
+
+590
+00:30:00,771 --> 00:30:04,605
+But if I click this L0, which means a label with zero in it,
+但當我點擊這裡 L0 標籤時，L0 指的是 Label 中顯示內容是 0，
+
+591
+00:30:04,607 --> 00:30:06,240
+look it's selected my Zero label,
+看我被選中的 Label，
+
+592
+00:31:06,242 --> 00:30:10,143
+And vice versa if I click on this here, it selects it over here.
+選中，反之亦然如果我點擊這裡，這裡顯示被選中
+
+593
+00:30:10,145 --> 00:30:14,380
+So this is this same thing in an outline mode.
+所以這和大綱模式一樣
+
+594
+00:30:14,382 --> 00:30:16,349
+This is really nice to have.
+這是一種非常好的方式
+
+595
+00:30:16,350 --> 00:30:18,317
+Sometimes you have views that are overlapping and they're kind of in
+有時候你的視圖重疊在一起，所以它們顯得有點
+
+596
+00:30:18,319 --> 00:30:22,421
+each other's way, you can always go here to select the one you want, okay?
+難以選擇，你可以來到這裡選擇你想選擇的視圖
+
+597
+00:30:22,423 --> 00:30:27,525
+And you can Ctrl+drag to these over here too it's just as much Ctrl+draggable as
+並且你也可以在這裡 Ctrl + 拖動，這裡和其它東西
+
+598
+00:30:27,527 --> 00:30:30,294
+some of these other things.
+一樣可 Ctrl + 拖動
+
+599
+00:30:30,296 --> 00:30:32,513
+But what we're, and we'll look,
+但這些我們將會
+
+600
+00:30:32,514 --> 00:30:34,731
+We'll talk about top layout guide, bottom layout guide a little later.
+我們將討論一下頂部和底部的佈局指南
+
+601
+00:30:34,734 --> 00:30:38,369
+But what I really want you to focus on is this little yellow circle up here.
+但是我想讓你注意這個黃色的小圓圈
+
+602
+00:30:38,371 --> 00:30:39,870
+'Kay? Any time you got yellow and
+好的，任何時候，你在使用 Auto-layout 中
+
+603
+00:30:39,872 --> 00:30:42,172
+orange problems with this auto-layout business,
+看到黃色和橙色的線
+
+604
+00:30:42,174 --> 00:30:45,108
+you're gonna get this little yellow circle appearing in your document outline.
+你可以在你的 document outline 中看到這個小黃圈
+
+605
+00:30:45,110 --> 00:30:50,479
+And if you click it, it'll slide in a list of all the problems.
+如果你點擊它，它會滑入一個列表，列出所有的問題
+
+606
+00:30:50,481 --> 00:30:54,349
+And so here I highlight over this and this is where all the orange and yellow is.
+如果選中它，出現高亮的部分就是警告所出現的地方
+
+607
+00:30:54,351 --> 00:30:59,487
+It's saying the label with the 0 in it expected the height to be 39 but
+它提示這個顯示 0 的 label 的高度應該是 39，但
+
+608
+00:30:59,489 --> 00:31:00,955
+the actual height is 57.
+真實的情況卻是 57
+
+609
+00:31:00,957 --> 00:31:03,824
+Well that's because after I set this font,
+這是因為我在設置了這個字體後，
+
+610
+00:31:03,826 --> 00:31:06,460
+I just dragged this down a little bit to make space.
+我向下的拖動了一部分，讓它多出來一些空間
+
+611
+00:31:06,462 --> 00:31:09,262
+All right, I, I wasn't very, I, I didn't know it was supposed to be 39.
+我不是很清楚它的高度是否應該 39
+
+612
+00:31:09,264 --> 00:31:11,330
+I just dragged down.
+我只是稍稍向下拖動了而已
+
+613
+00:31:11,332 --> 00:31:14,283
+And so it's saying that's wrong.
+這樣，Xcode 給了我一個警告
+
+614
+00:31:14,284 --> 00:31:17,235
+Now, I could just try drag it back up and meet this dashed line.
+現在，我可以試著將其拖動，和這個虛線重疊
+
+615
+00:31:17,238 --> 00:31:19,738
+This dashed line, by the way,
+強調下這條虛線，
+
+616
+00:31:19,739 --> 00:31:22,239
+is where it's kind of saying, this is really where this thing wants to be.
+它好像就在表明，這個東西想要出現在這裡
+
+617
+00:31:22,242 --> 00:31:24,642
+But the solid lines are where it actually is.
+但是實線是它真實存在的地方
+
+618
+00:31:24,644 --> 00:31:31,749
+So I could kinda drag it up to there, but I, I could be off by a pixel or something else.
+所以我可以把它拖動到那裡，但是我也許會相差 1 個像素或有些其它差別
+
+620
+00:31:31,750 --> 00:31:34,184
+A much more reliable way is to click this little yellow triangle, 'kay?
+現在有一個可靠的方法，點擊這個黃色小三角
+
+621
+00:31:34,186 --> 00:31:36,186
+So I'm gonna click this yellow triangle.
+我將要點擊這個
+
+622
+00:31:36,188 --> 00:31:37,854
+It's gonna bring up this pop-up window.
+它會彈出一個窗口
+
+623
+00:31:37,856 --> 00:31:42,091
+And there's three ways to fix the problems, okay?
+這裡給出了三個修改問題的方法
+
+624
+00:31:42,093 --> 00:31:45,327
+One way, Update Constraints, this middle way right here.
+其中一個，Update Constraints，在中間
+
+625
+00:31:45,329 --> 00:31:49,098
+That's a way that says, hey, I want this thing to be,
+這個方法是，我想要這樣做
+
+626
+00:31:49,100 --> 00:31:51,199
+this label to be right where it is.
+我想讓這個 label 出現在它該出現的位置
+
+627
+00:31:51,201 --> 00:31:52,967
+So just make some constraints.
+所以只要做一些約束
+
+628
+00:31:52,969 --> 00:31:53,634
+Make it up.
+彌補上這個缺點
+
+629
+00:31:53,636 --> 00:31:56,237
+Make it happen!
+發生吧！
+
+630
+00:31:56,238 --> 00:31:58,839
+And it'll put some wacky constraints in there like 52 high, which is a bad
+它會添加一些古怪的約束，例如把高度設置為 52
+
+631
+00:31:58,841 --> 00:32:02,309
+constraint for it to be, 52 high, cuz this label wants to be its natural height.
+這不是我想要的約束，因為 52 的高度不是這個 label 本來的高度
+
+632
+00:32:02,311 --> 00:32:04,378
+It doesn't want to be 52 high.
+它的不想變成 52 這麼高
+
+633
+00:32:04,380 --> 00:32:06,346
+So this'll kinda force constraint.
+所以這裡就像是強制性的約束
+
+634
+00:32:06,348 --> 00:32:08,614
+You'll almost never want this one, 'kay.
+你幾乎永遠不會用到這一項
+
+635
+00:32:08,616 --> 00:32:11,250
+Rarely do you wanna force the constraints.
+你很少需要強制性地去約束
+
+636
+00:32:11,252 --> 00:32:14,520
+Reset to Suggested Constraints would probably just work here.
+Reset to Suggested Constraints 也許會在這裡起作用
+
+637
+00:32:14,522 --> 00:32:16,788
+I'm not gonna choose this one, but it would probably work.
+我不會選擇這個，但是它可能會起作用
+
+638
+00:32:16,790 --> 00:32:21,125
+This one is going to make the constraints match the blue lines.
+這個可以把 label 的約束與藍線重合
+
+639
+00:32:21,127 --> 00:32:24,762
+Those dashed blue lines that I told you always wanna meet.
+我告訴過你那些藍線，是需要必須重疊的
+
+640
+00:32:24,764 --> 00:32:28,899
+Those are what's gonna help the system pick suggested constraints.
+那些是能夠幫助系統選擇建議的約束
+
+641
+00:32:28,901 --> 00:32:32,769
+So since we dragged that label out to the blue lines perfectly,
+如果我們把 label 拖動到藍線的位置
+
+642
+00:32:32,771 --> 00:32:36,639
+I'll bet if I said Reset to Suggested Constraints, it might just work.
+Reset to Suggested Constraints 也是會起作用的
+
+643
+00:32:36,641 --> 00:32:38,941
+Okay. But I'm actually gonna show you this
+但是我想給你們展示頂部的這一項
+
+644
+00:32:38,943 --> 00:32:43,646
+last option up on top, which is Update Frame and what this says is, take into
+Update Frame，這個能夠根據已經設定的約束，
+
+645
+00:32:43,648 --> 00:32:49,918
+consideration all the rules and move this label to where the rules say it should be.
+把 label 移動到該放置的位置
+
+646
+00:32:49,920 --> 00:32:52,187
+'Kay.And I like this option a lot because it
+我比較喜歡這個選項
+
+647
+00:32:52,189 --> 00:32:55,523
+lets you kind of preview, do I have my little rules right, okay?
+它讓你能夠預覽，我的約束是否設置正確了
+
+648
+00:32:55,525 --> 00:32:59,860
+So let's try that, let's see if the, we'll tell the, move this label, go ahead and
+我們嘗試一下，label 是否能夠按照已有的約束，移動到
+
+649
+00:32:59,862 --> 00:33:03,564
+move yourself and size yourself to obey these three rules we you put in, and
+它該去的地方並且設置好自己應有的大小
+
+650
+00:33:03,566 --> 00:33:06,066
+we'll fix the misplacement, so let's try it.
+我們點擊這個按鈕，讓我們嘗試下
+
+651
+00:33:07,069 --> 00:33:10,269
+And sure enough it did it, it says there are no Auto Layout issues.
+果然做到了，沒有任何問題
+
+652
+00:33:10,271 --> 00:33:14,940
+If I go back to my document outline, this little yellow circle is gone.
+如果回到 document outline，這個黃色的小圓圈已經消失了
+
+653
+00:33:14,942 --> 00:33:18,810
+If I look in my view, everything is blue-lined, no yellow or red.
+看看自己的視圖，全部都是藍線，沒有紅色或黃色的
+
+654
+00:33:20,146 --> 00:33:22,630
+Okay? So that's your
+好了嗎？這就說明你的
+
+655
+00:33:22,631 --> 00:33:25,115
+crash course on Auto Layout, and we're gonna talk a lot more about Auto Layout,
+Auto Layout 已經完成，我們接下來討論更多 Auto Layout
+
+656
+00:33:25,118 --> 00:33:28,719
+in fact, even on Wednesday I'm gonna do another Auto Layout with all the buttons.
+在週三的課上，我會對所有的按鈕做一下 Auto Layout
+
+657
+00:33:28,721 --> 00:33:30,671
+Right? The keypad buttons, and
+計算器的所有按鈕
+
+658
+00:33:30,672 --> 00:33:32,622
+all that, which is a lot more things being laid out.
+這聽起來真的蠻多的
+
+659
+00:33:32,624 --> 00:33:34,224
+But let's see if this fixes our problem.
+看看是否修復了問題
+
+660
+00:33:34,226 --> 00:33:37,527
+Let's go ahead and run our application again.
+我們再次運行一下應用
+
+661
+00:33:37,529 --> 00:33:39,795
+So I'm just hitting that play button.
+點擊這個運行按鈕
+
+662
+00:33:39,797 --> 00:33:41,563
+ Here it, oh, we got our zero this time.
+此刻，我們可以看到這個 0 了
+
+663
+00:33:41,565 --> 00:33:45,334
+You see how it pinned this zero to that edge?
+你注意到這個 0 固定在邊緣了嗎?
+
+664
+00:33:45,336 --> 00:33:48,036
+And not only that, if we rotate this phoned,
+不僅可以這樣，如果我們旋轉模擬器，
+
+665
+00:33:48,038 --> 00:33:52,273
+which you can do in the Simulators menu, Hardware > Rotate.
+你可以在模擬器的菜單中點擊 Hardware > Rotate
+
+666
+00:33:53,976 --> 00:33:58,378
+Look the 0, this got wider and the 0 kept pin, pinning itself over to that.
+看看這個 0，它變得更寬，0 還是把自己固定在邊緣
+
+667
+00:33:58,380 --> 00:34:01,981
+And it also stayed on the top even though this got, whole thing got shorter.
+它也保持著距離頂部的距離，即使它變窄了一些
+
+668
+00:34:01,983 --> 00:34:04,884
+Okay. And if I rotate back, the 0 stays there.
+接下來，如果我旋轉回來，0 還是保持原樣
+
+669
+00:34:04,886 --> 00:34:07,420
+Question. So what did it do at the bottom there?
+學生提問：底部發生了什麼？
+
+670
+00:34:07,422 --> 00:34:10,422
+Like what did the actual update frame end up doing?
+Update Frame 到底做了什麼事情？
+
+671
+00:34:10,424 --> 00:34:12,758
+What did the update frame in the document outline do?
+Document Outline 中的 Update Frame 到底做了什麼事情？
+
+672
+00:34:12,760 --> 00:34:14,693
+Yes. It moved this bottom edge up.
+它移動了底部的邊緣
+
+673
+00:34:14,695 --> 00:34:17,462
+You see this is only 39 pixels high now.
+你看現在是 39 的像素高度
+
+674
+00:34:17,464 --> 00:34:18,396
+It was 52.
+之前它是 52
+
+675
+00:34:18,397 --> 00:34:19,329
+So, yeah, it just moved it up.
+這樣，它發生了改變，向上移動了
+
+676
+00:34:19,332 --> 00:34:21,665
+It, it, and if other things had been yellow,
+如果還有其他部分有黃色線，
+
+677
+00:34:21,667 --> 00:34:23,133
+it could have moved the whole thing.
+它可能就會移動整個 label
+
+678
+00:34:23,135 --> 00:34:24,718
+Right? It would move that
+好的，它將移動這個 label
+
+679
+00:34:24,719 --> 00:34:26,302
+whole rectangle wherever the rule said but
+來實現約束但是
+
+680
+00:34:26,304 --> 00:34:29,539
+in this case, you can fix that one problem by moving it up.
+這種情況，你可以通過向上拖動來修復這個問題
+
+681
+00:34:29,541 --> 00:34:30,139
+Good question.
+問得不錯
+
+682
+00:34:31,342 --> 00:34:33,541
+Okay? So that's good.
+還不錯
+
+684
+00:34:33,543 --> 00:34:34,976
+All right.
+
+685
+00:34:34,977 --> 00:34:36,410
+So that's it for Auto Layout.
+這就是 Auto Layout
+
+686
+00:34:36,413 --> 00:34:38,346
+Auto Layout part one.
+Auto Layout 第一部分
+
+687
+00:34:38,348 --> 00:34:43,016
+So now let's talk a little bit about connecting our user interface that we're
+現在我們來說一下如何將 UI
+
+688
+00:34:43,018 --> 00:34:45,385
+building right here, up to the code,
+和代碼建立起聯繫
+
+689
+00:34:45,387 --> 00:34:48,254
+cuz we want that code to be able to talk to the user interface.
+因為我們想讓代碼和 UI 進行交流
+
+690
+00:34:48,256 --> 00:34:51,157
+Otherwise how are we gonna have the number buttons,
+否則我們如何能夠使數字按鈕產生的數字
+
+691
+00:34:51,159 --> 00:34:53,425
+make numbers appear up here in the display?
+顯示在頂部的 label 里
+
+692
+00:34:53,427 --> 00:34:56,795
+Or the times button, give the results of the calculation up here.
+或者按下乘法按鈕，就會把結果顯示在這裡
+
+693
+00:34:56,797 --> 00:34:58,363
+We gotta be able to talk to this.
+我們需要這樣的交流
+
+694
+00:34:58,365 --> 00:35:01,633
+So how do we do that?
+但是如何做到呢？
+
+695
+00:35:01,634 --> 00:35:04,902
+And the answer, first step is, we need to get both this co, this Swift Code,
+第一步，我們要把 view 和 controller 中的 Swift 代碼
+
+696
+00:35:04,904 --> 00:35:10,440
+the controller, and this view on screen at the same time, 'kay?
+同時顯示在屏幕上
+
+697
+00:35:10,442 --> 00:35:12,742
+Cuz we're gonna connect them so we need them on screen at the same time,
+因為我們會連接它們，所以我們需要它們同時顯示在屏幕上
+
+698
+00:35:12,744 --> 00:35:17,180
+and there's a lot of ways to do that, but I'll do the simplest way right here,
+我將用最簡單的方式實現這個
+
+699
+00:35:17,182 --> 00:35:20,616
+which is this little button called the assistant editor, all right?
+使用 Assistant Editor 這個按鈕
+
+700
+00:35:20,618 --> 00:35:22,184
+So I'm gonna click that and look!
+我要點了，看看會發生什麼
+
+701
+00:35:22,186 --> 00:35:25,120
+It put them both on screen at the same time, exactly what I wanted.
+它把它們同時放上屏幕，這正是我想要的
+
+702
+00:35:25,122 --> 00:35:27,355
+Now it's all a little crowded here.
+現在這裡有一點擁擠
+
+703
+00:35:27,357 --> 00:35:31,892
+Even if I expand my view a little bit, it's like it's all smashed in here.
+即使我放大整個界面，它看起來還是這麼小
+
+704
+00:35:31,894 --> 00:35:35,696
+Luckily the navigator and the utilities can also be hidden,
+幸運的是 Navigator 和 Utilities 這些都是可以隱藏起來的，
+
+705
+00:35:35,698 --> 00:35:37,931
+see these buttons up here, these three buttons?
+這裡有三個按鈕
+
+706
+00:35:37,933 --> 00:35:40,734
+This left one, if you click it hides the navigator and
+左側這個，如果你點擊它會隱藏 Navigator
+
+707
+00:35:40,736 --> 00:35:45,504
+this right one if you click it hides utilities, 'kay?
+點擊右側這個，會隱藏右側的 Utilities
+
+708
+00:35:45,506 --> 00:35:50,308
+So now we have both my UI and over here we can still double click to zoom out, but
+現在它們都在我們的視線中，我可以雙擊縮放它
+
+709
+00:35:50,310 --> 00:35:54,646
+the thing is, anytime we're actually connecting our UI to our code or
+但是我們在想要連接代碼和 UI 或者
+
+710
+00:35:54,648 --> 00:35:59,183
+trying to edit anything in here,you need to be zoomed to normal, 'kay?
+嘗試去編輯的時候，你需要把縮放比例調到正常
+
+711
+00:35:59,185 --> 00:36:02,353
+For example if I tried to select if I'm zoomed out and
+例如這個，如果我縮小
+
+712
+00:36:02,355 --> 00:36:04,955
+I try to select this 0 I just can't.
+我就不能選中這個 0 了
+
+713
+00:36:04,957 --> 00:36:08,891
+This is really kind of a bird's eye view just for seeing what your UI looks like.
+這個其實只是一個預覽圖模式，讓你看看大體樣子，而不能編輯
+
+714
+00:36:08,893 --> 00:36:10,726
+If you wanna actually work on it,
+如果你想要編輯
+
+715
+00:36:10,727 --> 00:36:12,560
+you double-click to zoom in on this scene that you're interested in.
+雙擊你需要編輯的窗口就可以了
+
+716
+00:36:14,064 --> 00:36:15,630
+Okay, so here's our Swift code.
+這是我們的 Swift 代碼
+
+717
+00:36:15,632 --> 00:36:17,598
+I'm actually gonna delete these.
+我將要刪除這些
+
+718
+00:36:17,600 --> 00:36:20,635
+We don't need them for the calculator.
+在我們的應用中是不需要這些的
+
+719
+00:36:20,636 --> 00:36:24,338
+We will need these things for future application but we don't need it for the calculator.
+我們會在將來的應用需要這些，但在這裡不需要
+
+721
+00:36:24,340 --> 00:36:27,974
+And this is your first look at Swift, 'kay.
+這是你第一次看到 Swift 代碼
+
+722
+00:36:27,976 --> 00:36:31,711
+So Swift, as I said, very concise language, but it's basically an object
+Swift 是非常簡潔的、
+
+723
+00:36:31,713 --> 00:36:36,048
+oriented language, it's gonna look a lot like C, some things look a lot like Java.
+面向對象的語言，它看起來像 C，有些東西像 Java
+
+724
+00:36:36,050 --> 00:36:40,385
+It's kind of the, you know, best of, of a lot of different worlds at once.
+它集眾多語言之長
+
+725
+00:36:40,387 --> 00:36:44,823
+Now this import is just importing the UI portion of iOS.
+這句 import 導入了 iOS 的 UI 部分
+
+726
+00:36:44,825 --> 00:36:47,658
+You usually won't have to specify import yourself unless you start
+除非你需要使用一些框架，
+
+727
+00:36:47,660 --> 00:36:52,496
+using frameworks that are not, you know, the base frameworks and we'll get to that
+通常來說不需要自己導入，我們幾周後會講到那裡
+
+728
+00:36:52,498 --> 00:36:56,233
+probably weeks into the quarter where you fi, finally have to do an import yourself.
+最後你還是得自己導入
+
+729
+00:36:56,235 --> 00:36:58,601
+So this how it automatically got put here for us.
+這裡我們看到它自動的為我們添加了
+
+730
+00:36:58,603 --> 00:37:02,838
+And so this is really your first line of Swift code, 'kay?
+在這是你的第一行 Swift 代碼
+
+731
+00:37:02,840 --> 00:37:06,975
+Appropriately, it's a definition of a class.
+這裡是定義了一個類
+
+732
+00:37:06,977 --> 00:37:10,479
+Cuz Swift is fundamentally object-oriented and here we're defining a class.
+因為 Swift 是以面向對象為基礎的，這裡是定義的一個類
+
+733
+00:37:10,481 --> 00:37:13,448
+So what does the syntax look like to define a class?
+定義一個類的語法是什麼樣的？
+
+734
+00:37:13,450 --> 00:37:15,416
+You got the keyword class.
+你得使用關鍵字 class
+
+735
+00:37:15,418 --> 00:37:16,817
+You got the name of the class.
+這裡是這個類的名稱
+
+736
+00:37:16,819 --> 00:37:20,654
+Now this name ViewController, pretty bad name,
+現在這個名字 ViewController 看起來很糟糕
+
+737
+00:37:20,656 --> 00:37:23,523
+Okay, very generic, really they should probably be something like
+非常普通的名字，它應該起名為例如
+
+738
+00:37:23,525 --> 00:37:26,593
+CalculatorViewController,something specific to
+CalculatorViewController 這樣有針對的名字，
+
+739
+00:37:26,595 --> 00:37:33,599
+this particular scene that we're orking on right here, that it's controlling.
+這樣看起來就讓人清楚它是控制哪裡的了
+
+740
+00:37:33,601 --> 00:37:35,668
+This is the default name it gives you.
+這是個默認的名字
+
+741
+00:37:35,670 --> 00:37:38,337
+I don't want to spend the valuable demo time showing how to
+我不想花費寶貴的時間去演示如何
+
+742
+00:37:38,339 --> 00:37:40,656
+rename this cuz unfortunately,
+重命名，因為
+
+743
+00:37:40,657 --> 00:37:42,974
+I can't just type a new name here because I gotta keep the UI in sync with it.
+我不能在這裡輸入一個新名字, 因為我要保持 UI 與之同步
+
+744
+00:37:42,976 --> 00:37:45,276
+So I would have to do something in the UI as well.
+所以我必須在 UI 中做一些事情
+
+745
+00:37:45,278 --> 00:37:48,079
+But, for now, for your first assignment or two we're, we'll just
+你的第一次或第二次作業，我們只會
+
+746
+00:37:48,081 --> 00:37:51,548
+call this ViewController, but down the road you're gonna wanna pick better names.
+叫它 ViewController，但在這之後，你最好給他更換一個好的名字
+
+747
+00:37:51,550 --> 00:37:54,251
+And of course you're gonna be building multiple of
+當然你將會在這個應用的這個類中
+
+748
+00:37:54,253 --> 00:37:57,554
+these scenes in this class in the same app in the future, so
+創建多個場景
+
+749
+00:37:57,556 --> 00:38:01,024
+of course, they'll all have different controller names.
+當然它們每一個都有不同的 controller 名稱
+
+750
+00:38:01,026 --> 00:38:07,796
+Okay, this :UIViewController, that's inheritance, that's its superclass, okay?
+這個 ':UIViewController' 是告訴我們它的父類是誰
+
+751
+00:38:08,799 --> 00:38:12,334
+Swift is single inheritance, so you can only inherit from one class.
+Swift 是單繼承，你只能讓它繼承一個類
+
+752
+00:38:12,336 --> 00:38:18,139
+It's perfectly fine in Swift not to inherit from a class if you don't want to, all right?
+在 Swift 中，你不想繼承也可以
+
+754
+00:38:18,140 --> 00:38:20,140
+But here we have to inherit from UIViewController cuz we
+但在這裡我們必須繼承於 UIViewController
+
+755
+00:38:20,142 --> 00:38:23,176
+want all this magic that allows us to control the UI,
+想通過它來控制 UI，
+
+756
+00:38:23,178 --> 00:38:27,880
+like that whole Auto Layout business, and there's a ton of mechanism in here for
+像 Auto Layout，這有很多種方式來讓
+
+757
+00:38:27,882 --> 00:38:31,083
+the, the allowing the controller to control this UI.
+controller 控制 UI
+
+758
+00:38:31,085 --> 00:38:35,487
+So obviously we do that so all ViewControllers, all controllers of these
+很明顯，所有 ViewController, 所有這些場景中的 controller
+
+759
+00:38:35,489 --> 00:38:40,425
+little scenes always inherit from either from UIViewController directly or they
+必須直接繼承於 UIViewController，或者繼承於繼承 UIViewController 的子類
+
+760
+00:38:40,427 --> 00:38:45,296
+inherit from a class that inherits from UIViewController or up their chain so.
+或者在繼承鏈條上
+
+761
+00:38:46,399 --> 00:38:51,134
+And then inside this curly brace is simply all the instance variables and
+在這個花括號里是所有的實例變量和
+
+762
+00:38:51,136 --> 00:38:54,070
+methods in this class, 'kay?
+方法
+
+763
+00:38:54,072 --> 00:38:58,207
+So very simple syntax to define a class.
+定義類的語法是非常簡練的
+
+764
+00:38:58,209 --> 00:39:02,144
+So let's dive right into making some instance variables and methods so
+所以讓我們定義一些實例變量和方法
+
+765
+00:39:02,146 --> 00:39:03,912
+you can see what those look like.
+來看看語法是什麼樣的
+
+766
+00:39:03,914 --> 00:39:09,216
+And I thought we, this was segued to because we're going to
+我們要把這個
+
+767
+00:39:09,218 --> 00:39:12,953
+say we wanted to connect this UI to this code.
+這個 UI 對象連接到代碼中
+
+768
+00:39:12,955 --> 00:39:15,072
+So let's do that.
+我們現在就這樣做
+
+769
+00:39:15,073 --> 00:39:17,190
+Let's connect this label right here into this code, and
+我們連接這個 label 到代碼中去，
+
+770
+00:39:17,192 --> 00:39:20,560
+then we're gonna do that by  making an instance variable.
+然後我們會創建一個實例變量
+
+771
+00:39:20,562 --> 00:39:23,062
+In Swift we call them properties.
+在 Swift 中我們叫它們 properties
+
+772
+00:39:23,064 --> 00:39:25,330
+'Kay so if you hear me say property,
+如果你聽到我說 property，
+
+773
+00:39:25,332 --> 00:39:27,165
+I'm basically talking about an instance variable.
+那我其實就是在說實例變量
+
+774
+00:39:27,167 --> 00:39:29,467
+Right? A variable that is part of the class.
+清楚嗎？實例變量是類中的一個變量
+
+775
+00:39:29,469 --> 00:39:31,869
+Every instance of the class gets its own copy of it.
+類的每個實例都有它自己的拷貝
+
+776
+00:39:31,871 --> 00:39:34,171
+Hopefully you all know what an instance variable is.
+希望你們都知道什麼是實例變量
+
+777
+00:39:34,173 --> 00:39:35,739
+If you don't, again, this class,
+如果你不清楚，再說一次，這門課程
+
+778
+00:39:35,741 --> 00:39:38,408
+heavy object-oriented, you should definitely know that.
+需要很強的面向對象功底，你們應當很清楚
+
+779
+00:39:38,410 --> 00:39:41,678
+So I'm gonna make a property here, an instance variable,
+我將要聲明一個 property ，也可以說是一個實例變量
+
+780
+00:39:41,680 --> 00:39:45,848
+that points to this label, so that I can update the label's text, right?
+使用指針指向這個 label，這樣就我就能夠更新這個 label 的內容了
+
+781
+00:39:45,850 --> 00:39:50,486
+I need to be able to talk to this label, and the way you do that in eh,
+我得跟這個 label 通信，方法是
+
+782
+00:39:50,488 --> 00:39:55,824
+in Xcode is you hold down Ctrl, just like we did when we were making
+在 Xcode 中，按住 Ctrl，像剛才和邊緣連接那樣
+
+783
+00:39:55,826 --> 00:39:59,627
+a connection to the edge, so I'm holding down Ctrl and clicking on the label, but
+所以我按住 Ctrl，連接 label
+
+784
+00:39:59,629 --> 00:40:02,596
+instead of going to the edge, I'm gonna go into the code, 'kay?
+但這次是連接到代碼中去
+
+785
+00:40:02,598 --> 00:40:06,166
+Now this is kinda wacky.
+這是有點古怪
+
+786
+00:40:06,168 --> 00:40:07,901
+I know a lot of you are like what?
+我知道你們都會感覺很奇怪
+
+787
+00:40:07,903 --> 00:40:08,501
+Into the code?
+放到代碼里？
+
+788
+00:40:08,503 --> 00:40:11,004
+Yeah?
+
+789
+00:40:11,005 --> 00:40:13,506
+So we're going right into the code here and let go and it's gonna say oh,
+現在我們到右邊代碼中，松開鼠標
+
+790
+00:40:13,508 --> 00:40:16,308
+you wanna make a connection between your UI and your controller.
+你想連接 UI 和 controller
+
+791
+00:40:16,310 --> 00:40:18,844
+No problem, what kinda connection you wanna make?
+你需要哪種連接？
+
+792
+00:40:18,846 --> 00:40:20,846
+And we wanna make what's called an outlet connection.
+我們需要設置 outlet 連接
+
+793
+00:40:20,848 --> 00:40:22,681
+An outlet means an instance variable or
+outlet 代表指向 UI 的
+
+794
+00:40:22,683 --> 00:40:25,717
+property that points to this thing in the UI.
+實例變量或 property
+
+795
+00:40:25,719 --> 00:40:30,021
+And all it needs to know to do that is, what do you wanna call this property?
+接下來它需要知道 property 應該叫什麼名字
+
+796
+00:40:30,023 --> 00:40:34,925
+And this is the display of my calculator so I'm gonna call this display and it
+它將是我計算器的顯示部分，所以我將它命名為 display，
+
+797
+00:40:34,927 --> 00:40:38,962
+already knows the type of the thing is UILabel of course cuz we dragged from here.
+因為我們是從 label 拽過來的，所以知道它的類型
+
+798
+00:40:38,964 --> 00:40:41,431
+Don't worry about this weak, I'll talk about that in a moment.
+不要擔心這個 weak，在後面我們會講到
+
+799
+00:40:41,433 --> 00:40:45,067
+And then we just hit Connect, and it creates an instance variable or
+然後我們點擊 connect, 它會在 controller 中
+
+800
+00:40:45,069 --> 00:40:47,202
+property, right here in our controller.
+創建一個實例變量或 property
+
+801
+00:40:47,204 --> 00:40:51,339
+So this is a great opportunity to look at the syntax in Swift for
+這是一個很好的機會瞭解，在 Swift 中如何
+
+802
+00:40:51,341 --> 00:40:54,109
+creating a property.
+創建一個 property 的語法
+
+803
+00:40:54,110 --> 00:40:56,878
+And there's a couple of things on here that are not normally part of it.
+這裡有幾件事情通常都不是它的一部分
+
+804
+00:40:56,880 --> 00:41:02,516
+This is you, the main syntax for creating a property.
+這是你創建一個 property 的主要語法
+
+805
+00:41:02,518 --> 00:41:04,418
+Let's quickly look at this thing to get it out of the way.
+我們快速的瞭解下這個用法
+
+806
+00:41:04,420 --> 00:41:07,454
+This is not really part of the Swift language proper.
+這不是 Swift 真正語言的一部分
+
+807
+00:41:07,456 --> 00:41:09,555
+This is something Xcode puts in here so
+這個小圓圈是 Xcode 生成的
+
+808
+00:41:09,557 --> 00:41:14,526
+that this little circle, do you see the little circle in this gutter, appears?
+這個小圓圈出現在這裡，你看到了嗎？
+
+809
+00:41:14,528 --> 00:41:18,463
+This little circle when I mouse over it, look what Xcode does.
+當我把鼠標移動到上面時候，看看 Xcode 的變化
+
+810
+00:41:18,465 --> 00:41:21,933
+It shows me what this line of code is connected to.
+它展示了這行代碼所連接到了什麼地方
+
+811
+00:41:21,935 --> 00:41:23,852
+'Kay? So that's really cool, and
+這看起來非常酷，
+
+812
+00:41:23,853 --> 00:41:25,770
+you're gonna see that's really valuable later in this demo,
+在這個 demo 中，這是非常有用的，
+
+813
+00:41:25,772 --> 00:41:27,838
+is being able to find out what things are connected to.
+它能找到我們連接的是什麼控件
+
+814
+00:41:27,840 --> 00:41:29,773
+So that's all this thing means here.
+這個就是它在這裡所展示的意義
+
+815
+00:41:29,775 --> 00:41:33,777
+You, you, you don't type this in yourself, that when you Ctrl+drag, it puts it there.
+當你按下 Ctrl 同時點擊拖動時候，你（可能）不懂這裡出現的 Weak 的意思
+
+816
+00:41:33,779 --> 00:41:38,748
+This weak, all you, you, if you come from other languages,
+如果你從其他語言過來的
+
+817
+00:41:38,750 --> 00:41:44,653
+you're used to things like garbage collection to clean up the heap.
+你會使用過類似的垃圾回收機制
+
+818
+00:41:44,655 --> 00:41:46,288
+Or maybe you even have to alloc and
+或者你也許在一些語言里習慣
+
+819
+00:41:46,290 --> 00:41:50,258
+free things yourself manually in some languages.
+自己手動管理內存
+
+820
+00:41:50,260 --> 00:41:51,792
+None of that in Swift.
+在 Swift 中是沒有的
+
+821
+00:41:51,794 --> 00:41:54,828
+In Swift, the, all objects live in the heap, 'kay.
+在 Swift 中，所有的對象都在堆中
+
+822
+00:41:54,830 --> 00:41:58,398
+All class, the instances of classes live in the heap.
+所有類，類的實例都存在堆中
+
+823
+00:41:58,400 --> 00:42:02,335
+And the memory for them is managed for you, 'kay?
+而 Swift 已經替你進行了內存管理
+
+824
+00:42:02,337 --> 00:42:05,371
+You allocate them as much as you want, as soon as there's no pointers to them,
+只要沒有了指針指向它們，你可以隨意分配它們內存
+
+825
+00:42:05,373 --> 00:42:08,274
+they get cleaned up, and it's not garbage collection, 'kay?
+它們會自動清理，但不是垃圾回收機制
+
+826
+00:42:08,276 --> 00:42:10,493
+It's reference counting.
+這就是引用計數
+
+827
+00:42:10,494 --> 00:42:12,711
+It's actually counting references to them but it's all automatic.
+它實際上是計算引用它們的次數，但這都是自動的
+
+828
+00:42:12,713 --> 00:42:16,548
+The only thing you ever have to be maybe interested in is this weak business which
+你剛才也許唯一感興趣的是這個 weak 的作用
+
+829
+00:42:16,550 --> 00:42:19,851
+is less than a hundredth of a percent of the time.
+這東西出現的次數不會太頻繁
+
+830
+00:42:19,853 --> 00:42:23,788
+And for the first four weeks of this class, forget about weak.
+前四周的課程中，忘掉這個 weak
+
+831
+00:42:23,790 --> 00:42:27,591
+It'll automatically happen when you do this Ctrl+drag, but just ignore it.
+它會自動在你當你按下 Ctrl 同時拖動時候出現，但是先忽略它
+
+832
+00:42:27,593 --> 00:42:29,560
+But the main thing to know is that all that memory
+而最主要的事情是你要知道內存管理
+
+833
+00:42:29,562 --> 00:42:31,128
+management is happening for you.
+是如何發生的
+
+834
+00:42:31,130 --> 00:42:34,330
+Also this, instance variable right here,
+同時，實例變量在這裡，
+
+835
+00:42:34,332 --> 00:42:38,267
+which is a pointer to this object, notice there's no ampersands or
+它是指向對象的指針，注意這裡沒有與符號 「&」 或者 「*」
+
+836
+00:42:38,269 --> 00:42:42,271
+stars or any other kind of syntax that says this is a pointer.
+或者其他任何語法說這是一個指針
+
+837
+00:42:42,273 --> 00:42:44,406
+'Kay?
+
+838
+00:42:44,407 --> 00:42:46,540
+If you have a instance, variable or property or
+一個實例，變量或屬性或
+
+839
+00:42:46,543 --> 00:42:48,910
+local variable that is an object, okay,
+局部變量都是一個對象
+
+840
+00:42:48,912 --> 00:42:52,980
+it's always a pointer to it cuz objects only live in the heap, 'kay?
+它總是一個指針，因為對象只在堆中存在著
+
+841
+00:42:52,982 --> 00:42:54,648
+So you don't need all that extra stars and
+所以不需要多餘的 「*」 和 「&」，
+
+842
+00:42:54,650 --> 00:42:57,184
+ampersand, any of that business from other languages, okay?
+或者其他語言中類似作用的東西
+
+843
+00:42:58,286 --> 00:43:01,587
+This exclamation point, by the way, I'm gonna talk about in a few minutes,
+順便說一下這個感嘆號，我要談幾分鐘
+
+844
+00:43:01,589 --> 00:43:04,023
+has nothing to do with this being an object, okay?
+這是和對象不相關的
+
+845
+00:43:04,025 --> 00:43:05,858
+This is, this totally separate thing.
+這完全不相干的事情
+
+846
+00:43:05,860 --> 00:43:07,092
+We'll get to it.
+我們待會就會理解它
+
+847
+00:43:07,094 --> 00:43:08,043
+All right.
+
+848
+00:43:08,044 --> 00:43:08,993
+So let's look at this.
+所以讓我們看看這個
+
+849
+00:43:08,995 --> 00:43:15,166
+This is the syntax for defining a property, 'kay?
+這個語法定義了一個屬性，對嗎？
+
+850
+00:43:15,168 --> 00:43:16,066
+An instance variable.
+一個實例變量
+
+851
+00:43:16,068 --> 00:43:18,519
+And it's very simple.
+並且它是如此的簡單
+
+852
+00:43:18,520 --> 00:43:20,971
+You got var, short for variable cuz that's what this is, a variable.
+你看到的這個 var，它是變量（variable）的縮寫
+
+853
+00:43:20,973 --> 00:43:23,473
+The name, this is the name of it, display.
+這是變量的名稱：display
+
+854
+00:43:23,475 --> 00:43:25,475
+Okay? That's just the name of this property.
+這個屬性的名字就是這個
+
+855
+00:43:25,477 --> 00:43:26,909
+And then :UILabel!
+緊接著就是 UILabel
+
+856
+00:43:26,911 --> 00:43:28,510
+Is the type, 'kay?
+這個是它的類型
+
+857
+00:43:28,512 --> 00:43:33,815
+That's the type of this instance variable.
+這個是這個實例變量的類型
+
+858
+00:43:33,817 --> 00:43:38,452
+So again, I'll talk about the exclamation point later, but
+我稍後會講到那個感嘆號
+
+859
+00:43:38,454 --> 00:43:42,389
+obviously this thing is pointing to this label so that we can talk to it.
+但很明顯，我們可以確定這個東西是指向 label 的
+
+860
+00:43:42,391 --> 00:43:43,590
+And we'll be doing that in a moment.
+我們待會就能確定
+
+861
+00:43:43,592 --> 00:43:44,424
+'Kay?
+
+862
+00:43:44,426 --> 00:43:46,325
+Questions?
+有什麼疑問嗎？
+
+863
+00:43:46,327 --> 00:43:49,962
+All right, let's talk about another kind of connection we may,
+好的，讓我們來談談另一種連接，
+
+864
+00:43:49,964 --> 00:43:52,364
+we can make, let's start putting some buttons in our calculator.
+讓我們開始放一些計算器的按鈕吧
+
+865
+00:43:52,366 --> 00:43:55,100
+So I'm gonna go back to the Utilities window, 'kay?
+我將要回到這個 Utilities 窗口
+
+866
+00:43:55,102 --> 00:43:56,734
+By pressing this button over here,
+按下這個按鈕
+
+867
+00:43:56,736 --> 00:44:00,705
+go down to the bottom, go to the third tab over here, the object library.
+找到下方的第三個選項卡的對象目錄
+
+868
+00:44:00,707 --> 00:44:04,775
+And instead of a label, this time I'm gonna drag out a button.
+這次拖的不是 label，我將要拖出來一個按鈕
+
+869
+00:44:04,777 --> 00:44:07,143
+Okay? I'm gonna put this button here now.
+現在我要把這個按鈕放到這裡
+
+870
+00:44:07,145 --> 00:44:11,414
+Just to be different, I'm not gonna initially line it up with a blue line.
+和剛才有點不一樣，沒有初始化藍色的線
+
+871
+00:44:11,416 --> 00:44:14,283
+I'm just gonna put it kinda in space out here and
+我只是想把它放在這個空間中，
+
+872
+00:44:14,285 --> 00:44:17,119
+I'll line it up with the blue line later, 'kay?
+我等下將把它放在藍線的下面
+
+873
+00:44:17,121 --> 00:44:19,487
+But I don't wanna forget to do that though, I always wanna do that.
+希望我待會不會忘記這麼做
+
+874
+00:44:19,489 --> 00:44:22,724
+What I'm gonna do later is to show you it can be done.
+我等下要做的事就是告訴你這是可以做到的
+
+875
+00:44:22,726 --> 00:44:26,127
+So, this is gonna be, let's say this is gonna be one of our number buttons.
+所以，這會是我們其中的一個數字按鈕
+
+876
+00:44:26,129 --> 00:44:30,197
+Like the upper left corner of our keypad is a 7.
+就像鍵盤左上角的數字 7
+
+877
+00:44:30,199 --> 00:44:31,598
+Okay?
+
+878
+00:44:31,599 --> 00:44:32,998
+Again, I have the same thing over here.
+我還需要其他的一些按鈕
+
+879
+00:44:33,001 --> 00:44:35,368
+Okay? With the attributes inspector I can
+通過 attributes inspector ，我能夠
+
+880
+00:44:35,370 --> 00:44:37,203
+change things like the font.
+對字體什麼的作出修改
+
+881
+00:44:37,205 --> 00:44:40,872
+Let's make this be 24 point, let's say.
+讓我們試著把字號改成 24
+
+882
+00:44:40,874 --> 00:44:42,791
+I can resize.
+我能這麼調整大小
+
+883
+00:44:42,792 --> 00:44:44,709
+Notice that when I resize it will actually tell me the size,
+注意，當我調整它時候，會實時顯示字號
+
+884
+00:44:44,711 --> 00:44:46,978
+see it saying there what size it is?
+看到這裡顯示的當前的字號
+
+885
+00:44:46,980 --> 00:44:50,381
+I can also set the size maybe with this size inspector right here,
+還可以通過在這裡，進行字號的修改
+
+886
+00:44:50,383 --> 00:44:51,348
+type it in exactly.
+輸入精確的字號
+
+887
+00:44:51,350 --> 00:44:53,517
+Maybe 64 by 64, something like that.
+先設個 64 x 64
+
+888
+00:44:53,519 --> 00:44:54,918
+We don't usually do that.
+我們通常不這樣做
+
+889
+00:44:54,920 --> 00:44:57,587
+We want things to be kinda their natural sizes but
+我們希望它能夠是原始的大小
+
+890
+00:44:57,589 --> 00:45:01,156
+just want to show you that there are other inspectors over here.
+但這裡只想向你展示有其他的方法
+
+891
+00:45:01,158 --> 00:45:02,491
+So we have this 7.
+所以我們有這個 7
+
+892
+00:45:02,493 --> 00:45:05,460
+Now when this 7 is pressed, what do we want to happen?
+當 7 被按下的時候，會發生什麼呢？
+
+893
+00:45:05,462 --> 00:45:07,963
+What we want.
+我們想要的是
+
+894
+00:45:07,964 --> 00:45:10,465
+Numbers just start appearing up here in the display, right?
+數字出現在需要展示的地方
+
+895
+00:45:10,467 --> 00:45:13,000
+So that's something our controller is going to have to do.
+這就是我們的控制器必須處理的
+
+896
+00:45:13,002 --> 00:45:17,071
+So, when we touch this button, we kinda want this button to send a message to
+當我們點擊這個按鈕，我們想讓這個按鈕發送信息到
+
+897
+00:45:17,073 --> 00:45:21,307
+our controller, and we do that the exact same way as we did this one,
+我們的控制器，跟之前的方式一樣，
+
+898
+00:45:21,309 --> 00:45:25,911
+we hold down control, drag into our code.
+我們按住 Ctrl，然後點擊拖動它到代碼中
+
+899
+00:45:25,913 --> 00:45:29,248
+When we let go though, we're not going to an outlet connection this time,
+當我們松開時候，這回我們要的不是 outlet 這個連接，
+
+900
+00:45:29,250 --> 00:45:34,085
+because I dont want an instance variable here, what i want is a method, right?
+因為我不想要個實例變量，我要的是一個方法對吧？
+
+901
+00:45:34,087 --> 00:45:39,790
+A function on my class, a method, everyone understand the word method I hope,
+我類里的一個函數，方法，我想大家都知道 「方法」 這個詞的含義，
+
+902
+00:45:39,792 --> 00:45:44,161
+okay, so we want it to send an [INAUDIBLE] message to our control board, so
+我們想讓它發送一個消息給控制板
+
+903
+00:45:44,163 --> 00:45:48,831
+I'm going to pick" action", [COUGH] losing my voice here.
+所以我選 "action" ,[咳嗽]，今天有點失聲
+
+904
+00:45:48,833 --> 00:45:50,433
+Bad time to have a little cold, but.
+關鍵時刻有點感冒……不過還好
+
+905
+00:45:50,435 --> 00:45:52,968
+[SOUND] So I'm doing an action so
+所以在這裡我選了 action
+
+906
+00:45:52,970 --> 00:45:56,838
+an action is a little different than a outlet, okay?
+action 跟 outlet 略有不同
+
+907
+00:45:56,840 --> 00:45:58,973
+An outlet means an instance variable or
+outlet 代表一個實例變量
+
+908
+00:45:58,975 --> 00:46:01,909
+property, action means create a method for me.
+或者是一個 property ，action 則是為我創建了一個方法
+
+909
+00:46:01,911 --> 00:46:03,944
+So again it wants to know the name of the method.
+所以緊接著它要我輸入方法的名字
+
+910
+00:46:03,946 --> 00:46:05,512
+So what does this thing do?
+這個方法要做什麼呢？
+
+911
+00:46:05,514 --> 00:46:08,815
+Well when I press seven, it appends a digit onto the end of
+當我按 7 的時候，
+
+912
+00:46:08,817 --> 00:46:12,852
+whatever's already in the display, so I'm going to call it append,
+不管原先顯示著什麼，都在後面加個 7，所以我應該叫它 append...
+
+913
+00:46:12,854 --> 00:46:17,390
+I could call it append seven, but I'm actually going to call it append digit,
+本來應該叫做 append 7，但我還是選擇 appenDigit，
+
+914
+00:46:17,392 --> 00:46:20,859
+because I want to have one method that all of my buttons use.
+因為我想所有的按鈕都使用一個方法
+
+915
+00:46:20,861 --> 00:46:23,328
+All right?
+懂了嗎？
+
+916
+00:46:23,329 --> 00:46:25,796
+I don't want to, copy and pasting a bunch of methods, that would be really bad code.
+我不想複製粘貼一堆雷同的方法，那樣只會把代碼變得一團糟
+
+917
+00:46:27,400 --> 00:46:29,566
+But if I'm gonna have one method,
+相反我僅僅使用一個方法，
+
+918
+00:46:29,568 --> 00:46:33,437
+then I need to know which button is sending me this message, okay?
+所以我就需要知道是哪個按鈕發送的這個消息，對吧？
+
+919
+00:46:33,439 --> 00:46:37,073
+Luckily, when you haven't actioned a message being sent here,
+幸運的是，當你從這裡發出消息前
+
+920
+00:46:37,075 --> 00:46:40,977
+you can specify that it has arguments, you see right here where it says arguments?
+你可以規定它有沒有參數，你看這裡它寫著 arguments 了麼？
+
+921
+00:46:40,979 --> 00:46:45,414
+And it can have no arguments or it can have the sender.
+你可以選擇沒有參數，或者是 sender
+
+922
+00:46:45,416 --> 00:46:48,483
+Which is the button here as the argument.
+sender 的意思就是把這個按鈕當作參數
+
+923
+00:46:48,485 --> 00:46:52,787
+The only tricky thing here is, and I'm not sure why they did this in Xcode.
+這裡有點詭異，我不懂 Xcode 為什麼要這樣處理
+
+924
+00:46:52,789 --> 00:46:54,455
+Hopefully, they'll change it in the future.
+希望他們以後能改進下
+
+925
+00:46:54,457 --> 00:46:59,092
+By default, the type of that argument, which is right here, is anyObject.
+就是參數的默認類型是 anyObject
+
+926
+00:46:59,094 --> 00:47:01,961
+Now, we're gonna talk about anyObject next week.
+下周我們會講什麼是 anyObject
+
+927
+00:47:01,963 --> 00:47:04,330
+But, we don't want anyObject here.
+不過在這裡我們肯定不要 anyObject
+
+928
+00:47:04,332 --> 00:47:06,599
+We know that the sender is a UIButton,
+我們知道 sender 其實是 UIButton，
+
+929
+00:47:06,601 --> 00:47:09,935
+So I picked, click this little blue thing and switch this to UIButton.
+所以點這裡選擇 UIButton
+
+930
+00:47:09,937 --> 00:47:13,672
+When you're doing your homework, if you forget to switch that to UIButton,
+如果你做作業的時候，忘了選擇 UIButton，
+
+931
+00:47:13,674 --> 00:47:15,907
+you'll be sad, okay.
+你就悲劇了.
+
+932
+00:47:15,909 --> 00:47:17,541
+So don't forget.
+所以，別忘了哦
+
+933
+00:47:17,543 --> 00:47:21,978
+And obviously the event that the message is gonna be sent on, touch up inside,
+然後很明顯，觸發事件應該選為 touch up inside，
+
+934
+00:47:21,980 --> 00:47:25,448
+just means the user touched on this button and the touch went up.
+意思是你手指點擊的時候落在按鈕的範圍內
+
+935
+00:47:25,450 --> 00:47:27,116
+While it was still inside the button.
+而手指抬起來時也還在按鈕的範圍內
+
+936
+00:47:27,118 --> 00:47:29,952
+That's all a touch up inside means there.
+這就是 touch up inside 的意思
+
+937
+00:47:29,954 --> 00:47:32,021
+All right so when I connect this,
+當我點了 connect 以後，
+
+938
+00:47:32,023 --> 00:47:35,824
+I'm gonna get a method with one argument which is a sender which is a UIButton.
+我就得到了一個方法，有一個參數，類型是 UIButton
+
+939
+00:47:35,826 --> 00:47:38,760
+So let's take a look.
+讓我們看一下
+
+940
+00:47:38,761 --> 00:47:41,695
+So here's your first method declaration in SWIFT, okay?
+它就是你的第一個 Swift 聲明的方法
+
+941
+00:47:41,698 --> 00:47:46,133
+Again it's got this little IBAction thing which is kinda like IBOutlet.
+同樣這裡有一個叫 IBAction 的東西，跟 IBOutlet 類似
+
+942
+00:47:46,135 --> 00:47:47,967
+It puts a little dot in the gutter.
+左邊有一個小圓點
+
+943
+00:47:49,104 --> 00:47:50,436
+Okay? So that you can
+這樣你就可以看見它連的是哪裡
+
+944
+00:47:50,438 --> 00:47:52,938
+see what this thing is connected to.
+這樣你就可以看見它連的是哪裡
+
+945
+00:47:52,940 --> 00:47:59,010
+So this is the normal, Swift method syntax.
+這個就是 Swift 定義方法的標準語法
+
+946
+00:47:59,012 --> 00:48:02,213
+Starts with func because function,
+以 func 開頭，這是 function 的縮寫
+
+947
+00:48:02,215 --> 00:48:04,215
+basically that method is a function in class.
+它就是我們類里的一個方法了
+
+948
+00:48:04,217 --> 00:48:06,483
+[COUGH] Here's the name.
+這是它的名字, AppendDigit
+
+949
+00:48:06,485 --> 00:48:07,918
+AppendDigit.
+這是它的名字，AppendDigit
+
+950
+00:48:07,920 --> 00:48:10,987
+And then in parentheses, all the arguments separated by commas.
+在括號里，所有參數都用逗號分隔
+
+951
+00:48:10,989 --> 00:48:12,989
+We only have one argument, though.
+我們這只有一個參數
+
+952
+00:48:12,991 --> 00:48:15,057
+Here's the name of the first argument.
+這個是第一個參數的名字
+
+953
+00:48:15,059 --> 00:48:18,860
+That's the name we're going to use to access it inside of our method, and
+我們在方法里就要用到這個名字，
+
+954
+00:48:18,862 --> 00:48:20,295
+here is the type.
+這是它的類型
+
+955
+00:48:21,264 --> 00:48:22,496
+Okay? It's a UIButton.
+懂了麼？類型是 UIButton
+
+956
+00:48:22,498 --> 00:48:24,598
+I, notice no exclamation point there, by the way.
+順便提下，要注意到這裡是沒有嘆號的
+
+957
+00:48:26,535 --> 00:48:31,237
+Okay if this had a return value, if this method returned something this one doesn't
+雖然這個方法沒有返回值，但如果
+
+958
+00:48:31,239 --> 00:48:36,208
+[COUGH] but if it returned something, it would look like this arrow the return type
+如果它有的話，這裡就寫這樣的箭頭
+
+959
+00:48:37,745 --> 00:48:40,311
+okay so that's how you specify a return type.
+這樣就定義了它的返回類型
+
+960
+00:48:42,215 --> 00:48:48,185
+Okay, pretty simple the syntax and then inside here we just type,
+看見了麼？非常簡單的語法
+
+961
+00:48:48,187 --> 00:48:51,822
+well whatever we want this thing to do when one of these buttons is touched.
+繼續看我們的函數，當點擊了其中一個按鈕，
+
+962
+00:48:51,824 --> 00:48:53,774
+So what do we want it to do?
+我們要讓它幹甚麼
+
+963
+00:48:53,775 --> 00:48:55,725
+Well, okay, first of all before we do that, let's go ahead and make more of
+在此之前，我們先多弄幾個按鈕
+
+964
+00:48:55,727 --> 00:48:58,928
+these buttons because I need seven, eight, nine, four, five, six, all this.
+我們還需要其他的按鈕，4，5，6 等等等等
+
+965
+00:48:58,930 --> 00:49:01,664
+So let's copy and paste the button.
+我們可以複製粘貼這些按鈕
+
+966
+00:49:01,666 --> 00:49:04,400
+When I copy and
+當我複製粘貼這些按鈕
+
+967
+00:49:04,401 --> 00:49:07,135
+paste the button, notice I'm using the blue lines to put it perfectly lined up.
+注意我用這些藍線來對齊
+
+968
+00:49:07,138 --> 00:49:11,373
+Okay, also notice that it there also sending this message.
+而且它們都同樣發送這個消息
+
+969
+00:49:11,375 --> 00:49:14,776
+All right, see how their both sending the message, because when I copy and
+它們發送同樣這個消息是為什麼呢
+
+970
+00:49:14,778 --> 00:49:18,012
+paste, it copied that aspect of it as well.
+因為拷貝按鈕的時候連同這些信息也一起拷貝了
+
+971
+00:49:18,014 --> 00:49:21,182
+So there's another one, I could select all three of these and
+可以一次選三個，一起拷貝
+
+972
+00:49:21,184 --> 00:49:27,154
+copy and paste, okay, I could select all six of these and copy and paste.
+6 個一起選
+
+973
+00:49:27,156 --> 00:49:30,990
+So I can quickly make, my entire keypad.
+這樣快速得把鍵盤造出來了
+
+974
+00:49:30,992 --> 00:49:33,343
+Just need to edit the title.
+只需要改改 title
+
+975
+00:49:33,344 --> 00:49:35,695
+Now, if while I'm editing these titles, sometimes you're clicking around in
+如果你像現在這樣，做些改動，點來點去
+
+976
+00:49:35,697 --> 00:49:39,431
+here and, you know, you're not a very accurate clicker.
+不小心沒點准
+
+977
+00:49:39,433 --> 00:49:43,368
+[LAUGH] Or, you know, you just get out, out of control clicking here, and oh,
+手一滑把控件拖飛了
+
+978
+00:49:43,370 --> 00:49:45,236
+you moved it out of the way.
+手一滑把控件拖飛了
+
+979
+00:49:45,238 --> 00:49:46,821
+Okay?
+怎麼辦？
+
+980
+00:49:46,822 --> 00:49:48,405
+No problem, you can just put it right back in.
+沒關係，只要把它再拖回原地
+
+981
+00:49:48,408 --> 00:49:51,675
+Okay, use the blue lines to your advantage.
+那些藍色的輔助線會幫你個大忙
+
+982
+00:49:52,844 --> 00:49:55,278
+And we'll put our zero down here.
+把 0 放在這
+
+983
+00:49:55,279 --> 00:49:57,713
+And I don't need these buttons so I'm just hit, selecting it, hitting delete.
+選中這些，按下 Delete，我們就可以把不需要的按鈕刪除
+
+984
+00:49:57,716 --> 00:49:59,715
+That's how you can get rid of something.
+就這麼刪東西
+
+985
+00:49:59,717 --> 00:50:02,985
+And I promised I was gonna put these all on blue lines, so I'm gonna do that.
+我剛才說過要把它們對齊藍線
+
+986
+00:50:02,987 --> 00:50:05,921
+I'm gonna put it right underneath the zero.
+把它們放在 0 標籤控件的底下
+
+987
+00:50:05,923 --> 00:50:08,890
+So here's a blue line that means underneath the zero, and
+這條藍線就表明我可以放在標籤底下
+
+988
+00:50:08,892 --> 00:50:10,692
+then I'm going to put at this edge.
+讓它對起左邊這條藍線
+
+989
+00:50:10,694 --> 00:50:14,962
+So now you can see that the blue lines are not just the edges, but
+你可以發現，這些藍線不僅在調整邊緣的時候出現
+
+990
+00:50:14,964 --> 00:50:17,965
+they are other objects, like the other objects in the keypad and
+在調整其他對象，比如這些按鈕的時候，它們也會出現
+
+991
+00:50:17,967 --> 00:50:20,667
+also now the title, the display rather at the top.
+同樣，標題，標籤這些也同樣受用
+
+992
+00:50:21,870 --> 00:50:26,205
+So I've got all these buttons, they're all sending this message append digit.
+現在按鈕齊了，它們都發送 appendDigit 這個消息
+
+993
+00:50:26,207 --> 00:50:28,874
+So I need to figure out which one is sending it,
+所以我就需要分辨出是哪個按鈕發送的消息
+
+994
+00:50:28,876 --> 00:50:30,942
+so that I can do the right thing.
+然後針對性的做相應的功能
+
+995
+00:50:30,944 --> 00:50:33,611
+So let's start writing some code inside the method.
+現在讓我們來往這個方法里添加代碼
+
+996
+00:50:33,613 --> 00:50:37,281
+So the first thing I'm going to do is declare a local variable,
+首先，我要聲明一個局部變量
+
+997
+00:50:37,283 --> 00:50:39,917
+it's just a local variable inside this method.
+就是方法內部的局部變量
+
+998
+00:50:39,919 --> 00:50:43,520
+I'm going to do that by saying let digit equal.
+輸入 let digit =
+
+999
+00:50:43,522 --> 00:50:47,824
+So I want this local variable to be the digit that was pressed.
+我想讓這個局部變量表示我們輸入的數字
+
+1000
+00:50:47,826 --> 00:50:50,743
+Okay.
+我想讓這個變量表示我們輸入的數字
+
+1001
+00:50:50,744 --> 00:50:53,661
+So, first thing that's quite different here is, what's let?
+這裡值得注意的是，這個 let 是什麼？
+
+1002
+00:50:53,664 --> 00:50:54,363
+Okay?
+
+1003
+00:50:54,365 --> 00:50:56,999
+Why isn't this var, right?
+為什麼不是跟上面那個一樣的 var ？
+
+1004
+00:50:57,001 --> 00:51:00,735
+Cuz var means variable, what the heck does let mean?
+因為 var 是變量的意思，那 let 是什麼鬼？
+
+1005
+00:51:00,737 --> 00:51:05,973
+Well let is exactly the same as var except it's a constant.
+其實 let 跟 var 差不多，只不過 let 代表常量
+
+1006
+00:51:07,143 --> 00:51:10,744
+Which means you're going to sign this right off the bat, and
+意味著一旦你為它設置了初值
+
+1007
+00:51:10,746 --> 00:51:13,046
+it's never going to change in this method.
+它在這個方法內就再也不能被改變了
+
+1008
+00:51:13,048 --> 00:51:15,415
+Now Swift makes a big deal about this, and
+這在 Swift 里很重要
+
+1009
+00:51:15,417 --> 00:51:19,552
+I love this feature, because if I'm reading this code,
+我大愛這個特性，因為當我讀代碼的時候，
+
+1010
+00:51:19,554 --> 00:51:23,355
+I know the digit is never going to change all, this might be, you know.
+我知道它不會變，而上面那個（var）會變
+
+1011
+00:51:23,357 --> 00:51:24,856
+It might have a dozen lines of code.
+假設你的方法里有幾十行代碼，
+
+1012
+00:51:24,858 --> 00:51:26,792
+Which by the way,
+順便提一下，
+
+1013
+00:51:26,793 --> 00:51:28,727
+you shouldn't have very many methods, with many more lines of code then that.
+你最好別在一個方法裡面塞太多的代碼，
+
+1014
+00:51:28,729 --> 00:51:30,294
+Okay? You want people to be able to
+你應該讓人清楚明瞭的知道你這個方法要做的是什麼事情
+
+1015
+00:51:30,296 --> 00:51:31,796
+kind of see what a method's doing.
+你應該讓人清楚明瞭的知道你這個方法要做的是什麼事情
+
+1016
+00:51:33,232 --> 00:51:34,765
+You can use other methods,
+你可以添加其他的方法，
+
+1017
+00:51:34,767 --> 00:51:37,801
+call other methods if you need to get more code in there.
+然後通過調用那些方法來實現更多的邏輯
+
+1018
+00:51:37,803 --> 00:51:38,935
+so.
+回過頭來
+
+1019
+00:51:38,937 --> 00:51:39,835
+Here I can de-,
+回過頭來
+
+1020
+00:51:39,837 --> 00:51:41,270
+rely on that not changing.
+因為有了這個 「不變」 的性質，
+
+1021
+00:51:41,272 --> 00:51:44,406
+That's big for readability.
+代碼的可讀性得到了很大的提升
+
+1022
+00:51:44,407 --> 00:51:47,541
+You'll be surprised how much more readable it makes the code, to know that this is a,
+你會驚嘆僅僅知道哪些是變量，哪些是常量，就會對代碼的可閱讀性帶來這麼大的提升
+
+1023
+00:51:47,544 --> 00:51:49,177
+local variable, but it's constant.
+你會驚嘆僅僅知道哪些是變量，哪些是常量，就會對代碼的可閱讀性帶來這麼大的提升
+
+1024
+00:51:49,179 --> 00:51:50,111
+Only set at the beginning.
+只需要聲明的時候加個關鍵字就行
+
+1025
+00:51:50,113 --> 00:51:52,913
+Yeah. Is there a reason, constants and
+[學生提問] 對於像變量、常量這些東西，這裡為什麼都用相同的命名規範？
+
+1026
+00:51:52,915 --> 00:51:54,715
+like, variables have the same naming convention.
+[學生提問] 對於像變量、常量這些東西，這裡為什麼都使用相同的命名規範？
+
+1027
+00:51:54,717 --> 00:51:56,450
+Since [UNKNOWN] like Java there.
+因為比如說 Java 會用 「全部大寫」 或者 「全部小寫」 來區別這些概念
+
+1028
+00:51:56,451 --> 00:51:58,184
+Like the naming conventions like all caps or lowercase.
+因為比如說 Java 會用 「全部大寫」 或者 「全部小寫」 來區別這些概念
+
+1029
+00:51:58,186 --> 00:52:00,770
+Yeah. So, yeah.
+[提問完畢]
+
+1030
+00:52:00,771 --> 00:52:03,355
+The question is, why don't I call digit like all caps digit, or
+這位同學的問題是，為什麼不把 digit 寫成 DIGIT，
+
+1031
+00:52:03,358 --> 00:52:05,424
+something like that, so I know it's a constant.
+以此來區分它是不是常量
+
+1032
+00:52:05,426 --> 00:52:07,626
+That would be a programming style thing.
+這算是編程風格的問題，
+
+1033
+00:52:07,628 --> 00:52:10,929
+Generally in Swift they don't do that.
+但在 Swift 里，我們通常不這樣做
+
+1034
+00:52:10,931 --> 00:52:13,765
+And, I'll show you why that is in a moment.
+我之後會給你們演示，
+
+1035
+00:52:13,767 --> 00:52:15,233
+Why you don't really need to do that.
+為什麼我們不需要通過玩弄命名規範來區別這些概念，
+
+1036
+00:52:15,235 --> 00:52:18,069
+Because you can very quickly find out the declaration of
+因為你可以非常快速的找到每個變量的定義，
+
+1037
+00:52:18,071 --> 00:52:22,406
+any symbol anywhere with one click, and you'll see that.
+只需要點一下鼠標就一目瞭然
+
+1038
+00:52:22,408 --> 00:52:25,209
+Good question though.
+是個好問題
+
+1039
+00:52:25,210 --> 00:52:28,011
+All right, so I wanna let the digit, equal the number that's on the,
+所以，接下來我要 let digit = 被觸發的按鈕上的那個數字
+
+1040
+00:52:28,013 --> 00:52:30,196
+the sending button.
+所以，接下來我要 let digit = 被觸發的按鈕上的那個數字
+
+1041
+00:52:30,197 --> 00:52:32,380
+So I'm gonna have to send a message to this button.
+所以我要向那個按鈕發送一個消息
+
+1042
+00:52:32,383 --> 00:52:34,316
+Okay? Gonna have to somehow access this button.
+對吧？我們得訪問這個按鈕對象
+
+1043
+00:52:34,318 --> 00:52:37,886
+So I'm gonna have to do sender, something.
+我就打 sender 然後..
+
+1044
+00:52:37,888 --> 00:52:40,655
+Give me what your title is, okay?
+拿到它的 title 對吧？
+
+1045
+00:52:40,657 --> 00:52:44,091
+So this is a good time to talk about the documentation.
+現在就是講講文檔的好時機了
+
+1046
+00:52:44,093 --> 00:52:45,543
+[COUGH].
+[咳嗽]
+
+1047
+00:52:45,544 --> 00:52:46,994
+Because being a good iOS developer,
+想要成為一名好的 iOS 開發者，
+
+1048
+00:52:46,996 --> 00:52:50,397
+really demands that you are good at navigating the documentation.
+熟練地使用文檔是必須的
+
+1049
+00:52:50,399 --> 00:52:54,334
+Luckily, the documentation is really well plugged in to Xcode.
+幸運的是，Xcode 已經完美地嵌入了文檔支持
+
+1050
+00:52:54,336 --> 00:52:57,036
+For example, if I wanna find out about button,
+比如，我想看看按鈕的文檔
+
+1051
+00:52:57,038 --> 00:53:00,339
+all I need to do is hold down the option key.
+我只要按住 option 鍵
+
+1052
+00:53:00,341 --> 00:53:01,373
+Okay?
+我只要按住 option 鍵
+
+1053
+00:53:01,375 --> 00:53:02,974
+And watch what happens now.
+看見有什麼變化麼？
+
+1054
+00:53:02,976 --> 00:53:04,542
+As I mouse over things,
+當我的鼠標移動到文本上方時，它們底下就會出現一條藍色的虛線
+
+1055
+00:53:04,544 --> 00:53:09,680
+everything, it turns blue with a dashed blue line under it, okay?
+當我的鼠標移動到文本上方時，它們底下就會出現一條藍色的虛線
+
+1056
+00:53:09,682 --> 00:53:10,748
+If I click on it,
+如果我點擊
+
+1057
+00:53:12,117 --> 00:53:14,884
+it gives me a little blurb from the documentation about this thing.
+它就彈出一個文檔的摘要
+
+1058
+00:53:14,886 --> 00:53:17,954
+So it's saying, you know, here's, button is a class.
+它說這是 button， 這是一個類，
+
+1059
+00:53:17,956 --> 00:53:19,288
+Here's its inheritance.
+這裡有它的繼承關係
+
+1060
+00:53:19,290 --> 00:53:20,689
+Here's a little bit of what it does.
+這裡是關於它的功能
+
+1061
+00:53:20,691 --> 00:53:22,691
+And really awesome at the bottom here,
+最棒的是在最後這裡，
+
+1062
+00:53:22,693 --> 00:53:25,427
+here's a link that takes you to the detailed documentation.
+這是一個指向詳細文檔的鏈接
+
+1063
+00:53:25,429 --> 00:53:27,962
+So I'm gonna click this little link right here.
+我點擊這個鏈接
+
+1064
+00:53:27,964 --> 00:53:34,501
+It's going to be up a documentation window, with UIButton in it, hello?
+它就打開了 UIButton 的文檔窗口……咦？
+
+1065
+00:53:34,503 --> 00:53:38,038
+Did I not click that right thing here,
+我沒點錯吧？
+
+1066
+00:53:38,040 --> 00:53:43,076
+oh I hope I don't have a network issue here.
+不會是網絡出問題了吧..
+
+1067
+00:53:43,078 --> 00:53:47,046
+hm, okay well, I guess I'm not connected to the network,
+好吧，我猜我的網絡出問題了
+
+1068
+00:53:47,048 --> 00:53:50,149
+that's the problem, so it's getting this off the network.
+果然，沒有聯上網。
+
+1069
+00:53:50,151 --> 00:53:53,819
+Okay so.
+好吧
+
+1070
+00:53:53,820 --> 00:53:57,488
+Imagine that there were documentation here and, it would have along this side here
+那就想象一下，文檔出現在了這裡
+
+1071
+00:53:57,491 --> 00:54:03,294
+on the left all the instance variables or properties and methods of u i button.
+在窗口的左邊，就會出現很長的一列關於 UIButton 的屬性，變量，方法什麼的
+
+1072
+00:54:03,296 --> 00:54:05,929
+And you could click on any one, and
+你可以點擊它們
+
+1073
+00:54:05,931 --> 00:54:08,165
+in there we'd have a full description of it here.
+然後就可以在這裡看見完整的描述
+
+1074
+00:54:08,167 --> 00:54:11,735
+And all the types that it referenced you could click on it here, and
+所有文檔間的引用你都可以點擊，
+
+1075
+00:54:11,737 --> 00:54:14,504
+basically it's a hyper linked documentation [UNKNOWN].
+它本質上就是一些文檔間的超鏈接，
+
+1076
+00:54:14,506 --> 00:54:16,773
+As you can imagine.
+你可以想象得到的
+
+1077
+00:54:16,774 --> 00:54:19,041
+I'll try to get the networking working on Wednesday and we'll take a look at this.
+我爭取在下週三把網絡問題搞定，到時候我們就能一睹芳容了
+
+1078
+00:54:19,043 --> 00:54:21,494
+But if I was looking in here,
+假設我能看到文檔的話，
+
+1079
+00:54:21,495 --> 00:54:23,946
+I'd look down in the section that says getting the button's current state, and
+我會在這裡找到一些如何獲取 UIButton 狀態的信息
+
+1080
+00:54:23,948 --> 00:54:30,185
+I'd find that there is an instance property there called current title.
+我會找到一個叫做 currentTitle 的屬性
+
+1081
+00:54:30,187 --> 00:54:31,552
+Okay? It's unfortunate I'm not going to
+很遺憾沒能演示這個流程
+
+1082
+00:54:31,554 --> 00:54:32,186
+link these things.
+很遺憾沒能演示這個流程
+
+1083
+00:54:32,188 --> 00:54:33,687
+But.
+不過問題不大
+
+1084
+00:54:33,689 --> 00:54:39,993
+So how do we access, property or call a method in another object,
+那麼怎麼訪問到一個對象的屬性、方法呢？
+
+1085
+00:54:39,995 --> 00:54:43,429
+will look exactly the same whether you call it a method or
+答案是，訪問屬性和調用方法的方式是一模一樣的
+
+1086
+00:54:43,431 --> 00:54:46,332
+accessing a property, which is you use dot.
+訪問屬性，你用點(.)
+
+1087
+00:54:46,334 --> 00:54:49,435
+Okay. It's the same syntax that's used in
+這跟大多數語言是一樣的，都用點號來訪問成員
+
+1088
+00:54:49,437 --> 00:54:52,771
+a lot of languages is to, to do dot.
+這跟大多數語言是一樣的，都用點號來訪問成員
+
+1089
+00:54:52,773 --> 00:54:55,173
+And so when you do that, Xcode is going to say, oh,
+當你在 Xcode 里打一個點的時候，它就說，吶，
+
+1090
+00:54:55,175 --> 00:54:58,209
+well, here's all the things button knows how to do.
+這裡是所有 UIButton 可訪問的成員
+
+1091
+00:54:58,211 --> 00:54:59,894
+Okay?
+看見了麼？
+
+1092
+00:54:59,895 --> 00:55:01,578
+And as you can see, button knows how to do a lot of things.
+你可以發現，UIButton 能做很多事情，
+
+1093
+00:55:01,581 --> 00:55:03,747
+Because it inherits from a class, it inherits from a class,
+這是因為它繼承於一個類，它的父類又繼承於另一個類，不停繼承
+
+1094
+00:55:03,749 --> 00:55:07,451
+it inherits from a class, that all have lots of methods in them.
+所以累積起來就有很多方法可供調用
+
+1095
+00:55:07,453 --> 00:55:10,320
+So when I looked at that documentation.
+所以當我查看了文檔以後，
+
+1096
+00:55:10,322 --> 00:55:13,823
+I've found that current title was the thing I wanted.
+我知道 currentTitle 這個屬性正是我想要的
+
+1097
+00:55:13,825 --> 00:55:18,194
+Now notice as I start to type a c, it's already cutting down
+注意這裡我打個字母 c，它會幫我過濾出那些開頭是 c 的選擇
+
+1098
+00:55:18,196 --> 00:55:23,331
+the things that could be starting with a c, and then c u, they cut down even more.
+然後接著打 cu，它有棒我過濾掉了一些
+
+1099
+00:55:23,333 --> 00:55:28,770
+I can type tab, to get to the first ambiguity point, then I can type t.
+我可以按 Tab 鍵，前進到第一個歧義點，然後接著打 t
+
+1100
+00:55:29,739 --> 00:55:31,889
+Okay?
+我可以按 Tab 鍵，前進到第一個歧義點，然後接著打 t
+
+1101
+00:55:31,890 --> 00:55:35,875
+And then tab again, and I'm here at currentTitle and then I can press return. Okay?
+然後再敲 Tab 鍵，得到 currentTitle，然後按 Enter 鍵
+
+1103
+00:55:35,877 --> 00:55:37,327
+So there it is.
+好了
+
+1104
+00:55:37,328 --> 00:55:38,778
+digit = sender.currentTitle
+
+1105
+00:55:38,780 --> 00:55:45,484
+so, what's going on here in terms of the sender title.
+我們現在拿到了 sender 的 currentTitle 了，然後呢？
+
+1106
+00:55:45,486 --> 00:55:49,520
+Let's go ahead and print this out to the console just to see what's going on.
+我們把它在 console（控制台）中打印出來，看看它裡面是什麼東西
+
+1107
+00:55:49,522 --> 00:55:50,688
+So I'm gonna println.
+這裡使用 println 函數
+
+1108
+00:55:50,690 --> 00:55:55,992
+At which is a function, a global function that takes a String.
+它是一個全局函數，以一個 String 為參數
+
+1109
+00:55:55,994 --> 00:55:57,694
+So I give it a String.
+所以我就給它一個 String
+
+1110
+00:55:57,696 --> 00:55:59,762
+And inside that String, I'll type mm,
+在 String 里，我打
+
+1111
+00:55:59,764 --> 00:56:05,000
+digit equals and now I wanna embed the value of digit in this String.
+"digit = "，我想把 digit 的值嵌入到這個 string 裡面
+
+1112
+00:56:05,002 --> 00:56:08,337
+And Swift has a really cool feature which is backslash open parentheses
+這裡介紹一個 Swift 很酷的特性，就是，
+
+1113
+00:56:08,339 --> 00:56:11,924
+close parentheses.
+如果你在字符串里里放進這個 "\()"，然後你就可以在括號裡面放入一個表達式
+
+1114
+00:56:11,925 --> 00:56:15,510
+If you put that in a String, and then inside there you put some expression, then
+如果你在字符串里里放進這個 "\()"，然後你就可以在括號裡面放入一個表達式
+
+1115
+00:56:15,512 --> 00:56:21,048
+it will evaluate that expression turn it into a String, and embed it in the String.
+Swift 就會對這個表達式求值，然後把值轉換成 String，最後嵌入到那個字符串里
+
+1116
+00:56:21,050 --> 00:56:24,718
+Okay, so its really easy to println values by
+所以用這個 "\()" 語法可以很方便的 println 一個對象的值
+
+1117
+00:56:24,720 --> 00:56:28,254
+using this backslash parenthesis. Okay?
+所以用這個 "\()" 語法可以很方便的 println 一個對象的值
+
+1119
+00:56:28,256 --> 00:56:30,189
+So let's go ahead and run and
+現在讓我們編譯運行然後
+
+1120
+00:56:30,190 --> 00:56:32,123
+see what happens when we press these buttons to see what kind of result we get.
+看看我們按這些按鈕的時候會打印出什麼結果
+
+1121
+00:56:32,126 --> 00:56:35,027
+It's not going to be quite what we expect, but let's see.
+結果可能會跟預期的有所不同，
+
+1122
+00:56:37,864 --> 00:56:42,066
+Alright so, here's our UI we got our buttons that's a good start.
+好咧，這裡是我們的 UI，有了一些按鈕，看起來不錯
+
+1123
+00:56:42,068 --> 00:56:44,435
+And now, and console, where's the console?
+但是控制台呢？輸出結果的控制台去哪了？
+
+1124
+00:56:44,437 --> 00:56:46,269
+Watch this. I'm going to press a button five.
+看好了，當我點擊 5 按鈕的時候
+
+1125
+00:56:47,372 --> 00:56:49,238
+The console appears at the bottom here.
+控制台就在下面出現了
+
+1126
+00:56:49,240 --> 00:56:50,172
+See this down here.
+看見了嗎？在底欄這裡
+
+1127
+00:56:50,174 --> 00:56:51,874
+This is the console.
+這就是控制台
+
+1128
+00:56:51,876 --> 00:56:56,277
+And it's saying digit equals, hm, optional five.
+這裡顯示了， digit 等於……呃……Optional("5")
+
+1129
+00:56:56,279 --> 00:56:57,211
+Okay.
+好吧
+
+1130
+00:56:57,213 --> 00:56:58,746
+How about a nine?
+那 9 呢？
+
+1131
+00:56:58,748 --> 00:56:59,713
+They're all optional.
+也是 Optional 的
+
+1132
+00:56:59,715 --> 00:57:03,250
+What the heck is going on here? Okay.
+這是什麼鬼?
+
+1134
+00:57:03,251 --> 00:57:05,418
+This is crucial to understanding Swift.
+接下來我們將要理解一個 Swift 里的重要概念
+
+1135
+00:57:05,420 --> 00:57:08,421
+This is probably the most important thing to understand that
+這個概念初學者常常會搞錯，但在 Swift 里它非常特別十分重要
+
+1136
+00:57:08,423 --> 00:57:11,424
+people don't quite get right from the start.
+這個概念初學者常常會搞錯，但在 Swift 里它非常特別十分重要的
+
+1137
+00:57:11,426 --> 00:57:15,827
+So we're really going to focus here on understanding what
+所以接下來我們集中精力，好好的理解這個 Optional 到底是什麼意思
+
+1138
+00:57:15,829 --> 00:57:17,862
+optional means right there.
+所以接下來我們集中精力，好好的理解這個 Optional 到底是什麼意思
+
+1139
+00:57:17,864 --> 00:57:18,730
+Okay?
+注意聽咯
+
+1140
+00:57:18,731 --> 00:57:19,597
+So let's go back to our code.
+先回到代碼
+
+1141
+00:57:22,168 --> 00:57:25,969
+And look at this, oh and by the way it, when the console appears down here,
+看這個，對了，順便提一下，當控制台出現了以後，
+
+1142
+00:57:25,971 --> 00:57:28,538
+you can make it go away with this little button, or
+你可以用這個按鈕把它隱藏掉，或者
+
+1143
+00:57:28,540 --> 00:57:31,274
+you can just drag it out of the way okay?
+也可以用鼠標把它拖走
+
+1144
+00:57:31,276 --> 00:57:34,711
+But sometimes it's nice to have that console still there, so
+不過讓它一直顯示在那裡也挺好的，
+
+1145
+00:57:34,713 --> 00:57:39,548
+you can look at your output while you're you know reacting to whatever you found,
+你可以隨時看見你的輸出，及時察覺問題
+
+1146
+00:57:39,550 --> 00:57:41,750
+in fact we will leave that up there, so you can see the optionals.
+我就不隱藏它了，讓你可以看見我們現在要講的 Optional
+
+1147
+00:57:42,753 --> 00:57:45,186
+Alright, so, what's going on here?
+言歸正傳
+
+1148
+00:57:45,188 --> 00:57:48,956
+Well, what's happening here is, well, first of all,
+首先，
+
+1149
+00:57:48,958 --> 00:57:52,759
+don't you find this a little bit odd, let digit, I didn't put a type.
+你有沒有發現一個奇怪的地方？ 這裡 let digit = …… 我並沒有給 digit 一個類型
+
+1150
+00:57:52,761 --> 00:57:55,595
+You see that?
+看到麼？
+
+1151
+00:57:55,597 --> 00:57:57,663
+How, what type is digit?
+那這個 digit 到底是什麼類型呢？
+
+1152
+00:57:57,665 --> 00:58:02,334
+Okay, well there's no type in there, no type information whatsoever, so.
+你可能會想，這裡沒有指定任何類型，難道 Swift 支持無類型變量？
+
+1153
+00:58:02,336 --> 00:58:04,636
+Does Swift have untyped variables?
+你可能會想，這裡沒有指定任何類型，難道 Swift 支持無類型變量？
+
+1154
+00:58:04,638 --> 00:58:06,171
+No, it's exact opposite.
+錯！恰恰相反
+
+1155
+00:58:06,173 --> 00:58:10,141
+Swift is very strongly typed. Okay.
+Swift 是非常非常強類型的語言
+
+1157
+00:58:10,142 --> 00:58:11,341
+All variables have a type.
+所有變量都有它的類型
+
+1158
+00:58:11,344 --> 00:58:12,943
+You have to specify type.
+你必須規定一個類型
+
+1159
+00:58:12,945 --> 00:58:17,847
+But, Swift is also incredibly good at what's called type inference.
+然後，Swift 有一個非常強大的特性，叫做類型推導
+
+1160
+00:58:17,849 --> 00:58:20,817
+So it can infer the type from the context.
+這樣它就能通過當前上下文來推斷出變量的類型
+
+1161
+00:58:20,819 --> 00:58:25,554
+So here I let digit equalwhatever this is, this currentTitle, and
+所以，當我寫 digit = ... 無論我等號後面寫什麼，這個 currentTitle，
+
+1162
+00:58:25,556 --> 00:58:29,391
+so it just made digit be the same type as this.
+它都能將 digit 設置成等號後面那個東西的類型
+
+1163
+00:58:29,393 --> 00:58:31,543
+Okay.
+懂了麼？
+
+1164
+00:58:31,544 --> 00:58:33,694
+Now back to the question earlier, so what type is that?
+回到之前的問題，那麼這個到底是什麼類型？
+
+1165
+00:58:33,697 --> 00:58:37,365
+Well, if I hold down option, okay, just like we used option to
+我可以按住 Option 鍵，就像查看文檔那樣，
+
+1166
+00:58:37,367 --> 00:58:42,636
+go look into the documentation, we can also option click on our own variables.
+我們也可以按住 Option 來點擊我們的變量，
+
+1167
+00:58:42,638 --> 00:58:44,337
+To see are they constant?
+看看它是常量還是變量
+
+1168
+00:58:44,339 --> 00:58:45,204
+Are they variables?
+它們是變量麼？
+
+1169
+00:58:45,206 --> 00:58:46,138
+And what type are they?
+還可以看看它們是什麼類型?
+
+1170
+00:58:46,140 --> 00:58:47,306
+So watch this.
+看這個
+
+1171
+00:58:47,308 --> 00:58:50,225
+Option click.
+按住 Option 然後點擊
+
+1172
+00:58:50,226 --> 00:58:53,143
+It says digit is of type String question mark.
+它說，digit 是 「String?」 類型的
+
+1173
+00:58:53,146 --> 00:58:54,579
+Okay? String question mark.
+嗯，String 後面有個問號
+
+1174
+00:58:55,515 --> 00:58:58,248
+That question mark means optional.
+這個問號的意思是 —— 「Optional（可選）」
+
+1175
+00:58:58,250 --> 00:59:02,585
+So there is a type in Swift, it's a type, called optional.
+在 Swift 裡面，有一種類型，叫做 optional
+
+1177
+00:59:02,587 --> 00:59:08,257
+Okay. Optional, that type can have only two values.
+Optional 這種類型，只有兩個值
+
+1178
+00:59:08,259 --> 00:59:10,592
+One value is not set.
+一個值叫：未設
+
+1179
+00:59:12,095 --> 00:59:16,997
+Okay, this optional is not set, there has never been set or someone has
+代表著這個值還沒有被任何人設置過，或者，有人故意把它設置成了 「未設」 狀態
+
+1180
+00:59:16,999 --> 00:59:20,934
+set it to the not set state, they unset it if you want to think about it that way.
+代表著這個值還沒有被任何人設置過，或者，有人故意把它設置成了 「未設」 狀態
+
+1181
+00:59:20,936 --> 00:59:25,405
+So optional one value is not set, we call that there's a, symbol for
+當一個 Optional 的變量是 「未設」 狀態時，
+
+1182
+00:59:25,407 --> 00:59:28,241
+it in here called nil, N, I, L, okay?
+有一個符號用來表示這個狀態，這個符號叫做 nil, N, I, L.
+
+1183
+00:59:28,243 --> 00:59:31,210
+That means not set, that's the value of an optional not set.
+nil 就是 「未設」 的意思，就是 optional 變量在 「未設」 狀態下的值
+
+1184
+00:59:31,212 --> 00:59:34,747
+That's the only thing nil means in Swift is option this is an optional,
+在 Swift 里，nil 只有這一個意義，就是說這個變量是 Optional 的，
+
+1185
+00:59:34,749 --> 00:59:36,948
+the value of an optional that is not set.
+而且它的值是 「未設」
+
+1186
+00:59:36,950 --> 00:59:41,586
+What's the other value that an optional could have well the other value is.
+那 Optional 的另一種值是是什麼呢？
+
+1187
+00:59:41,588 --> 00:59:44,655
+Something, it's set to something, okay.
+「有值」，就是說它被設置賦了一個值
+
+1188
+00:59:44,657 --> 00:59:47,624
+And the type of that something is what,
+那 「有值」 的這個值，是什麼類型呢？
+
+1189
+00:59:47,626 --> 00:59:51,261
+is specified next to the question mark String.
+就是 「?」 前面那個東西代表的類型
+
+1190
+00:59:51,263 --> 00:59:55,932
+So really you can almost think of the question mark there, that's the type
+所以，你可以這樣想：
+
+1191
+00:59:55,934 --> 01:00:00,769
+optional, and that String to the left is just saying if this optional is set,
+問號左邊的那個 String，就表示，如果這個 Optional 變量被賦了值的話，那麼它的類型就是 String
+
+1192
+01:00:00,771 --> 01:00:04,139
+what type of thing is it set to, in this case a String.
+問號左邊的那個 String，就表示，如果這個 Optional 變量被賦了值的話，那麼它的類型就是 String
+
+1193
+01:00:04,141 --> 01:00:06,941
+So we would call this an optional String.
+所以，我們可以稱其為 「Optional String」
+
+1194
+01:00:06,943 --> 01:00:11,846
+But it's really an optional, it's not a String that can be nil,
+但是它實際上確確實實是 Optional 類型的，它不是一個可以為 nil 的 String
+
+1195
+01:00:11,848 --> 01:00:14,815
+it's an optional that can be a String.
+它是 Optional 類型，只不過可以被賦值為 Stirng
+
+1196
+01:00:14,817 --> 01:00:16,516
+Everybody cool with that sentence?
+好好理解這句話
+
+1197
+01:00:16,518 --> 01:00:19,019
+That's an important sentence to understand, okay.
+理解這個句子和含義非常非常關鍵
+
+1198
+01:00:20,055 --> 01:00:23,956
+So, this got to be an optional because this currentTitle method right here,
+所以在這裡，currentTitle 返回的值肯定是 Optional 類型的
+
+1199
+01:00:23,958 --> 01:00:26,525
+returns an optional String, let's look at that.
+我們來看看
+
+1200
+01:00:26,527 --> 01:00:29,094
+So I'm going to press Option down here, click.
+按住 Option 點 currentTitle
+
+1201
+01:00:29,096 --> 01:00:31,529
+Look at this, this is the documentation for it.
+看，這是它的文檔
+
+1201
+01:00:31,531 --> 01:00:36,334
+It's an instance variable a, a, property on UIButton.
+這是一個實例變量，UIButton 的屬性
+
+1202
+01:00:36,336 --> 01:00:37,267
+Name is currentTitle.
+名字是 currentTitle
+
+1203
+01:00:37,269 --> 01:00:39,302
+The type is String, question mark.
+類型是 「String?」
+
+1204
+01:00:39,304 --> 01:00:41,271
+And this little get means it's read-only.
+而這裡的 「get」 表示這個是只讀的
+
+1205
+01:00:41,273 --> 01:00:42,672
+I can only get the currentTitle.
+我只能 get（讀取值） currentTitle
+
+1206
+01:00:42,674 --> 01:00:44,807
+I can't set it, there are other ways to set a button's title.
+但是我不能 set （寫入值），有其他方式 set 這個按鈕的 title
+
+1207
+01:00:44,809 --> 01:00:47,810
+You can't set it with this method or this property.
+你不能通過這個方法或者屬性 set 這個 title
+
+1208
+01:00:47,812 --> 01:00:51,480
+So it's an optional, so that's why this ended up being an optional all right.
+所以這是一個 optional，這就是為什麼它最後也是 optional
+
+1209
+01:00:51,482 --> 01:00:53,081
+Well, that's all wonderful.
+嗯，這非常不錯
+
+1210
+01:00:53,083 --> 01:00:54,549
+How do I get the String?
+那我該如何獲取這個 String 呢？
+
+1211
+01:00:54,551 --> 01:00:57,318
+I don't want it optional, I want that button's String.
+我不希望它是 optional 的，我要的是這個按鈕的 String
+
+1212
+01:00:57,320 --> 01:01:02,923
+And the way you do that is you unwrap the optional, meaning you look in there and
+方法就是解包這個 optional，意思是你打開這個它找到裡面的東西，
+
+1213
+01:01:02,925 --> 01:01:08,061
+get the val, the associated value, with exclamation point, okay.
+用 「!」 就可以獲取到它的值
+
+1214
+01:01:08,063 --> 01:01:11,330
+What happens if I put that exclamation point there?
+如果我把感嘆號放在這裡會怎麼樣？
+
+1215
+01:01:11,332 --> 01:01:13,732
+Well first of all, let me show you that when I put that exclamation point,
+首先我先會展示給你們看，當我把感嘆號放在這裡
+
+1216
+01:01:13,734 --> 01:01:17,002
+look what happened to digit, I'm Option-clicking on digit.
+看看會有什麼變化，我現在點擊數字 我按 Option 然後點擊這個 digit
+
+1217
+01:01:17,004 --> 01:01:19,270
+It's not an optional anymore.
+它不再是 optional 類型了
+
+1218
+01:01:19,272 --> 01:01:22,507
+Digit turned to a String because I unwrapped the optional that
+digit 變成了 String，因為我把 optional 解包了，
+
+1219
+01:01:22,509 --> 01:01:25,576
+came back from currentTitle, got the String out of there.
+從 currentTitle 里得到了 String
+
+1220
+01:01:25,578 --> 01:01:28,612
+But what happens if this is nil?
+但是如果這是個 nil 值會怎麼樣？
+
+1221
+01:01:28,614 --> 01:01:30,180
+What happened if this optional is nil?
+如果 optional 是 nil 會怎樣呢？
+
+1222
+01:01:30,182 --> 01:01:34,718
+In other words the button optional has never been set, crash, 'kay,
+換句話說，就是這些 optional 類型的按鈕沒有 set 值會怎樣？對的，程序會崩潰
+
+1223
+01:01:34,720 --> 01:01:39,855
+crashes your program, so if you use exclamation point to unwrap an optional,
+所以如果你使用 "!" 號來解包一個 optional 的時候
+
+1224
+01:01:39,857 --> 01:01:45,660
+and that optional's current value is not set, nil, then it will crash your program.
+並且這個 optional 的 currentTitle 沒有設值，為 nil 的時候，你的程序會崩潰
+
+1225
+01:01:46,930 --> 01:01:50,498
+Now a lot of you might be like whoa, I'm, my products are gonna be crashing all over
+現在你們中的不少人肯定在想，我的程序將會整天 crash 掉，
+
+1226
+01:01:50,500 --> 01:01:55,903
+the place and, because there's a lot of optionals in iOS, I mean a lot, okay?
+因為 iOS 有著非常多的 optional，非，常，多
+
+1227
+01:01:55,905 --> 01:01:58,939
+Most things are probably optionals, because most things, it make sense,
+大部分東西都是 optional 的，因為大部分東西都是有意義的
+
+1228
+01:01:58,941 --> 01:02:00,840
+they can be in an not set state at some point.
+某些時候它們會處於 「未設」 狀態
+
+1229
+01:02:02,177 --> 01:02:07,746
+And yeah, in this case though, maybe you want your program to crash, okay?
+在這個情況下，說不定你就希望你的程序 crash？對不對？
+
+1230
+01:02:07,748 --> 01:02:11,850
+You might want your program to crash, because if you had a button, that never
+你也許就是希望自己的程序 crash，因為如果你有一個按鍵，
+
+1231
+01:02:11,852 --> 01:02:15,920
+had its title set, and it's sending a pen digit to your controller, you probably
+但是它的標題從未被 set，並且它傳了一個數字給你的 controller，你也許
+
+1232
+01:02:15,922 --> 01:02:20,358
+wanna have that crash, so you can find that bug, before you ship your program.
+想在你的程序見客戶之前，你就能找到 bug，所以你希望它 crash
+
+1233
+01:02:20,360 --> 01:02:23,360
+You see why sometimes fra, crashing is good?
+現在你知道為什麼有時候程序 crash 是個好事吧
+
+1234
+01:02:23,362 --> 01:02:26,763
+Now if you don't wanna crash, there's a way to get around that as well.
+現在如果你不想你的程序 crash ，這裡有一個方法來解決
+
+1235
+01:02:26,765 --> 01:02:28,164
+And I'll show you that a little bit later.
+我等一下下展示給你們看，
+
+1236
+01:02:28,166 --> 01:02:32,802
+But for now understanding that that's what this exclamation point does.
+但是現在，先弄明白這個感嘆號是幹甚麼的
+
+1237
+01:02:32,804 --> 01:02:35,638
+It unwraps that optional and crashes if it's nil.
+它解包了 optional，如果它是 nil 就 crash
+
+1238
+01:02:35,640 --> 01:02:38,040
+But if it's not nil, it gets to the String or
+但如果不是 nil，它是得到 String 或者
+
+1239
+01:02:38,042 --> 01:02:40,809
+whatever the optional type is out of there for you.
+其他的 optional 解包後的類型？
+
+1240
+01:02:40,811 --> 01:02:44,579
+So now let's go ahead and run again and
+所以讓我們繼續，重新運行一次，
+
+1241
+01:02:44,581 --> 01:02:51,318
+we're gonna see that digit equals is gonna say the number, 'kay?
+我們將看看是不是能得到 「digit = 」 對應的數字？
+
+1242
+01:02:51,320 --> 01:02:56,556
+It's got the String off the currentTitle, no more optional in there, okay?
+我們得到了 currentTitle 的 String，不再是 optional 的類型了
+
+1243
+01:02:56,558 --> 01:02:59,492
+Good?
+看上去不錯
+
+1244
+01:02:59,494 --> 01:03:03,362
+All right, so, now, what are we gonna do with that digit?
+好的，現在，我們要用這些 digit 做什麼呢？
+
+1245
+01:03:03,364 --> 01:03:06,715
+We got the digit,
+我們已經能得到了數字
+
+1246
+01:03:06,716 --> 01:03:10,067
+we want to append it onto the end of this display right here, okay.
+我們希望按的數字能顯示並附加在這裡的末尾
+
+1247
+01:03:10,070 --> 01:03:13,972
+And so let's just do that by saying display, dot.
+所以讓我們輸入 display.
+
+1248
+01:03:13,974 --> 01:03:17,241
+Now, again, if we have the documentation,I'd go look in the documentation and
+現在繼續，如果我們查文檔
+
+1249
+01:03:17,243 --> 01:03:21,712
+it would say oh, there's a property on UILabel, which is what display is,
+它會告訴我們，UILabel 有一個屬性，這個屬性告訴我們 display 是什麼，
+
+1250
+01:03:21,714 --> 01:03:23,046
+display is a UILabel.
+負責顯示 UILabel 應該顯示的什麼
+
+1251
+01:03:23,048 --> 01:03:25,982
+There's a property and it' called text.
+這個屬性叫做 text
+
+1252
+01:03:25,984 --> 01:03:28,518
+See it right there?
+就在這裡
+
+1253
+01:03:28,519 --> 01:03:31,053
+And actually, you can even see right here, the type of that, it's an optional as
+而且實際上，輸入這個，你能在這裡看到，這是一個 optional
+
+1254
+01:03:31,056 --> 01:03:36,225
+well, because this label's text might not have been set either, okay?
+所以這個 label 的 text 應該還沒有設值
+
+1255
+01:03:36,227 --> 01:03:39,061
+So it has to be an optional String, okay?
+所以這裡是 optional String
+
+1256
+01:03:39,063 --> 01:03:43,297
+So I'm just gonna set that equal now, display that text as an optional, so
+所以我現在要用等號設值，顯示的 text 作為一個 optional
+
+1257
+01:03:43,299 --> 01:03:46,567
+what values can I send it to,set it to?
+什麼值可以設給它？
+
+1258
+01:03:46,569 --> 01:03:51,705
+I could set it to nil, that would be legal because it's an optional,
+我可以設成 nil，因為它是一個 optional，所以它是完全合法的
+
+1259
+01:03:51,707 --> 01:03:53,940
+see, no warnings, no errors.
+看，沒有警告也沒有錯誤
+
+1260
+01:03:53,942 --> 01:03:55,475
+That would clear out that display.
+這將什麼也不顯示
+
+1261
+01:03:55,477 --> 01:03:57,943
+It would not be set to anything, or
+它不能設值成其他東西，
+
+1262
+01:03:57,945 --> 01:04:00,979
+I can set it to a String because it's an optional String.
+我能給它設一個 String 值，因為它是一個 optional String
+
+1263
+01:04:00,981 --> 01:04:03,682
+So I'm going to set it to a String and the String I'm going to set it
+所以我將把它設值一個 String
+
+1264
+01:04:03,684 --> 01:04:08,586
+to is display.text, what's currently in there, plus digit, okay?
+這個 String 我設置成 display.text ，這裡加個數字
+
+1265
+01:04:08,588 --> 01:04:10,087
+So I'm going to append that digit on.
+這樣子就能附加數字上去了
+
+1266
+01:04:10,089 --> 01:04:11,655
+Let's get rid of that.
+讓我們擺脫刪掉這句
+
+1267
+01:04:11,657 --> 01:04:14,124
+Okay, now, this has an error here.
+好吧，現在又有一個錯誤
+
+1268
+01:04:14,126 --> 01:04:15,025
+Why does this have an error?
+這個錯誤是為什麼呢？為什麼這裡有個錯誤呢？
+
+1269
+01:04:15,027 --> 01:04:17,093
+Anyone volunteer why this is an error?
+有誰自願回答這裡為什麼有個錯誤？
+
+1270
+01:04:17,095 --> 01:04:18,661
+See it's pointing right here.
+發現錯誤指向這裡
+
+1271
+01:04:18,663 --> 01:04:21,897
+There's an error, back there.
+這裡有個錯誤，後面那位同學回答
+
+1272
+01:04:21,899 --> 01:04:24,733
+The display.text is an optional String.
+display.text 是一個 optional String
+
+1273
+01:04:24,735 --> 01:04:27,702
+Bingo. Because display.text right here is not
+答對了，因為這裡的 display.text 它不是個 String，
+
+1274
+01:04:27,704 --> 01:04:33,341
+a String, it's an optional, and you can't add a String to an optional.
+你不能將一個 String 後附加一個 optional
+
+1275
+01:04:33,343 --> 01:04:35,476
+You can only add Strings to other Strings.
+你只能將一個 String 附加在另外的 String 上
+
+1276
+01:04:35,478 --> 01:04:39,813
+So we need to turn this into a String by unwrapping it.
+所以我們通過解包 optioanl，將 optioanl 轉變為 String
+
+1277
+01:04:39,815 --> 01:04:44,250
+And again, yes, this would crash if the display currently has nothing in it,
+對的，這個東西會 crash，如果 display 沒有值
+
+1278
+01:04:44,252 --> 01:04:46,185
+it's not set, okay?
+現在還沒有設值
+
+1279
+01:04:46,187 --> 01:04:48,887
+Are we cool with that?
+大家都瞭解這個了吧？
+
+1280
+01:04:48,889 --> 01:04:49,821
+So let's run again.
+再讓我們運行一次
+
+1281
+01:04:49,823 --> 01:04:52,857
+[BLANK_AUDIO]
+[背景音]
+
+1282
+01:04:52,859 --> 01:04:54,058
+All right.
+好的
+
+1283
+01:04:54,060 --> 01:04:57,461
+So now 5, oh, it put the 5 on there.
+所以現在點擊 5，噢，5 顯示在這裡了
+
+1284
+01:04:57,463 --> 01:04:58,762
+6, excellent.
+點擊 6，好極了
+
+1285
+01:04:58,764 --> 01:05:00,497
+It's kinda working.
+它能夠工作了
+
+1286
+01:05:00,499 --> 01:05:02,565
+I don't really like that 0 though.
+這個 0 在這裡我很不喜歡
+
+1287
+01:05:02,567 --> 01:05:03,966
+That's kinda weak, 0, 5, 6.
+這裡就有點問題，5 和 6 前面有個 0
+
+1288
+01:05:03,968 --> 01:05:06,669
+That should not,
+這樣子是不對的
+
+1289
+01:05:06,670 --> 01:05:09,371
+that 0 should've gotten cleared out, right, when I first typed that 5.
+這個 0 應該在我按下 5 的時候就清除掉
+
+1290
+01:05:09,374 --> 01:05:12,808
+And that's because we really need some way in our controller to know whether we're in
+這是因為我們確實需要一些方法讓我們的 controller 知道我們是否在
+
+1291
+01:05:12,810 --> 01:05:14,777
+the middle of typing a number right now.
+已經輸入了數字
+
+1292
+01:05:14,778 --> 01:05:16,745
+Because if we're in the middle of typing a number, we want to append, but
+因為如果我們在一個已經輸入了數字，我們是希望數字加在後面，
+
+1293
+01:05:16,747 --> 01:05:18,079
+if we're not in the middle of typing a number,
+但是如果我們還沒開始輸入數字，
+
+1294
+01:05:18,081 --> 01:05:21,182
+we want to start a new number, right?
+我們想要開始輸入的是一個新的數字（而不是在 0 後面附加新數字），對吧？
+
+1295
+01:05:21,184 --> 01:05:27,021
+So, let's do that, and I'm going to do that by adding a property, okay?
+所以，讓我們通過添加一個 property 來實現這個效果
+
+1296
+01:05:27,023 --> 01:05:35,628
+var userIsInTheMiddleOfTypingANumber , which you might say,
+「var userIsInTheMiddleOfTypingANumber」，你也許會說，
+
+1297
+01:05:35,630 --> 01:05:38,464
+oh my God, that terrible variable, now I have to type that over and over.
+天哪，這麼糟糕的變量名字，每次都得這麼輸入還不得累死？
+
+1298
+01:05:38,466 --> 01:05:40,900
+This is the last time I'll ever have to type that, okay?
+其實下一次用到這個變量時我並不需要輸入這麼多的
+
+1299
+01:05:40,902 --> 01:05:44,169
+Because Xcode is always going to escape complete it for me, okay?
+因為下一次 Xcode 會幫我自動補齊的
+
+1300
+01:05:44,171 --> 01:05:48,840
+So long names are perfectly fine, in terms of typing load anyway.
+所以這麼長的名字沒有問題
+
+1301
+01:05:48,842 --> 01:05:50,608
+So I like this name so I'm gonna keep it.
+我就挺喜歡這個名字的，就這麼用了.
+
+1302
+01:05:50,610 --> 01:05:53,077
+And it's a bool, okay.
+這是一個布爾型數值
+
+1303
+01:05:53,079 --> 01:05:54,845
+So I'm typing its, giving its type.
+所以我輸入它，給了它的這個類型
+
+1304
+01:05:54,847 --> 01:06:01,618
+So here's var name type, and notice, look at this little error right here, 'kay.
+這個是變量名的類型，注意看這裡，有一個小的錯誤標記
+
+1305
+01:06:01,620 --> 01:06:06,222
+Okay, sometimes you're gonna get errors in Swift that are completely incomprehensible
+有時候你在 Swift 會遇到對你來說難以理解的錯誤
+
+1306
+01:06:06,224 --> 01:06:08,724
+to you because you haven't learned enough of Swift.
+這是因為你對 Swift 的瞭解還不夠深入
+
+1307
+01:06:08,726 --> 01:06:11,143
+This one's kind of like that.
+這個錯誤就是因為這個
+
+1308
+01:06:11,144 --> 01:06:13,561
+You see, it says, class viewController has no initializers.
+你看，這裡說，viewController 沒有初始化方法
+
+1309
+01:06:13,564 --> 01:06:19,667
+And that's because, and pay attention, in Swift all properties
+請注意，這是因為，在 Swift 里，
+
+1310
+01:06:19,669 --> 01:06:24,271
+have to be initialized when the object is initialized.
+當一個對象初始化了，那麼這個對象的所有屬性都必須要初始化
+
+1311
+01:06:24,273 --> 01:06:29,142
+Okay, you can't have a property just sitting around not initialized,
+所以你不能用沒有初始化的屬性，
+
+1312
+01:06:29,144 --> 01:06:30,977
+they have to have a value.
+它們需要一個值，
+
+1313
+01:06:30,979 --> 01:06:32,862
+Now if they're an optional,
+現在，它們是一個 optional，
+
+1314
+01:06:32,863 --> 01:06:34,746
+their value can be nil, but they have to have some value.
+它們的值可以為 nil，但是它們必須有值
+
+1315
+01:06:34,749 --> 01:06:37,750
+So we can't have this have no value.
+所以我們不能在它們沒有值前使用
+
+1316
+01:06:37,752 --> 01:06:40,052
+Now there's two ways to give it a value.
+有兩種方法給它設值，
+
+1317
+01:06:40,054 --> 01:06:42,087
+One is, with an initializer.
+一種就是用初始化方法，
+
+1318
+01:06:42,089 --> 01:06:45,156
+Unfortunately, I'm not gonna teach that to you until next week, so
+但是不幸的是，這種方法要下周才會教你們，
+
+1319
+01:06:45,158 --> 01:06:46,557
+you can't do it that way.
+你還不能用這種方法
+
+1320
+01:06:46,559 --> 01:06:51,228
+Another way is just to say what it equals right here, okay?
+所以另外一種方法就是對其直接賦值
+
+1321
+01:06:51,230 --> 01:06:55,298
+And boom, gets rid of all our errors, obviously we don't start out in
+一下子，所有錯誤都解決了 很明顯我們
+
+1322
+01:06:55,300 --> 01:06:59,402
+the middle of typing a number,so we're good to go here, all right.
+不會一開始就有數字，所以這樣就很好了
+
+1323
+01:07:01,105 --> 01:07:04,373
+So now we have, we know whether the use is in the middle of typing a number.
+現在我們就知道了什麼時候輸入了數字
+
+1324
+01:07:04,375 --> 01:07:06,241
+We can go down here and say if the user,
+我們能從這裡繼續深入，如果說用戶 ——
+
+1325
+01:07:06,243 --> 01:07:12,246
+now again, I'm just gonna hit Tab to jump past this, maybe a couple times.
+再一次，按一下 Tab 跳過這些，可能還要多按幾次，找到這個 ——
+
+1326
+01:07:12,248 --> 01:07:14,648
+But if the user's in the middle of typing a number,
+但是如果用戶正在輸入數字，
+
+1327
+01:07:14,650 --> 01:07:17,184
+then we'll do what we were doing before.
+那就和剛才我們剛剛做的操作一樣，
+
+1328
+01:07:17,186 --> 01:07:21,187
+Otherwise, we're just gonna set the display.text equal to the new digit we
+不然的話，如果我們設置 「display.text = 」
+
+1329
+01:07:21,189 --> 01:07:24,557
+just typed, 'kay?
+我們剛剛輸入的新數字
+
+1330
+01:07:24,558 --> 01:07:27,926
+And we're gonna say that the user is now in the middle of typing a number.
+這就表示了用戶現在正在輸入數字
+
+1331
+01:07:27,928 --> 01:07:30,062
+Question?
+什麼問題？
+
+1332
+01:07:30,063 --> 01:07:32,197
+Why would we have to do [INAUDIBLE] to display it?
+[學生提問]
+
+1333
+01:07:32,199 --> 01:07:34,833
+Initialize?
+[學生提問]
+
+1334
+01:07:34,835 --> 01:07:37,669
+Why did we not have to initialize this?
+為什麼我們沒有初始化這個？
+
+1335
+01:07:37,671 --> 01:07:39,988
+That's a fantastic question and
+這是個非常棒的的問題，
+
+1336
+01:07:39,989 --> 01:07:42,306
+I'm gonna talk about that on Wednesday cuz there's only one minute left.
+我將在週三說這個問題，因為現在只剩下一分鐘了
+
+1337
+01:07:42,308 --> 01:07:44,908
+But that is a great question and it'll also, when I talk about it,
+在我下次說到的時候，這依然是個很好的問題
+
+1338
+01:07:44,910 --> 01:07:48,679
+I'm gonna tell you why this is an exclamation point and not a question mark.
+我將會說一下為什麼這裡是個感嘆號而不是個問號，
+
+1339
+01:07:48,681 --> 01:07:52,548
+Because I told you that optionals are made with question marks.
+因為我之前說過 optional 都是由問號組成的，
+
+1340
+01:07:52,550 --> 01:07:55,318
+So why the heck is this optional?
+但是為什麼這個 optional 是這樣的？
+
+1341
+01:07:55,319 --> 01:07:58,087
+Cuz that's what it is, an exclamation point, so we'll talk about that next time.
+因為這是個感嘆號，我們下節課再說這個問題，
+
+1342
+01:07:58,089 --> 01:08:01,056
+All right, so let's go ahead and run one last time here.
+所以讓我們下次課繼續，
+
+1343
+01:08:01,058 --> 01:08:04,793
+And hopefully this is gonna, this 0 will be cleared out, it is and
+我們之前希望這個 0 可以被清掉，看來沒問題，看看這個，
+
+1344
+01:08:04,795 --> 01:08:07,696
+hopefully this will continue to append, it is.
+希望這個也可以正常的附加數字，看來也沒問題
+
+1345
+01:08:07,698 --> 01:08:11,532
+So we're in a great spot right here, we've got a calculator,
+我們今天已經有了一個不錯的開始，我們已經有一個計算器了，
+
+1346
+01:08:11,534 --> 01:08:16,904
+we can enter numbers in it, next step is, we gotta make it do some calculating, and
+我們已經能夠輸入數字了，下一步我們將讓其能夠計算，
+
+1347
+01:08:16,906 --> 01:08:19,406
+we're gonna do that next time so I will see you then.
+我們下節課再來實現，大家下節課見
+
+1348
+01:08:21,042 --> 01:08:24,910
+For more, please visit us at stanford.edu.
+想瀏覽更多？請訪問 stanford.edu
