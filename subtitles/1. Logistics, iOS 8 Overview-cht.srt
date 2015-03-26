@@ -903,7 +903,7 @@ Okay? All right, so here's the demo.
 203
 00:10:49,701 --> 00:10:53,936
 The demo I'm gonna do, is something I actually did a few years ago that really works well-
-接下來我要做的展示，事實上是我前幾年做的，我們要用 Swift 來實作它，真的運行起來還不錯
+接下來我要做的展示，事實上是我前幾年做的，我們要用 Swift 來實作它，真的執行起來還不錯
 
 205
 00:10:53,938 --> 00:10:55,971
@@ -1305,7 +1305,7 @@ We're not gonna really be doing the iPad part of it for a couple weeks.
 296
 00:15:00,250 --> 00:15:04,352
 But it is our intent to eventually build an app that works on both.
-但是我們最終會把它設計成一個同時能夠運行在 iPad 和 iPhone 上的應用
+但是我們最終會把它設計成一個同時能夠執行在 iPad 和 iPhone 上的應用
 
 297
 00:15:04,354 --> 00:15:06,186
@@ -1360,7 +1360,7 @@ All right, so here's our first project, its been created so
 307
 00:15:37,849 --> 00:15:43,586
 this is Xcode that your seeing right here, this is Xcode's main screen and
-這裡你看到的就是 Xcode, 這是 Xcode 的主視窗
+這裡你看到的就是 Xcode, 這是 Xcode 的主畫面
 
 308
 00:15:43,588 --> 00:15:46,955
@@ -1465,12 +1465,12 @@ And even some of these files, like this AppDelegate,
 328
 00:16:47,411 --> 00:16:50,845
 I'm just gonna move that down to Supporting Files to get it out of the way.
-我會把它們移出去到 Supporting Files
+我會把它們移下來到 Supporting Files
 
 329
 00:16:50,847 --> 00:16:53,081
 Same things with these image assets,
-image assets 資料夾也是
+image assets 也是
 
 330
 00:16:53,083 --> 00:16:56,117
@@ -1550,7 +1550,7 @@ So we're going to build this entire user interface.
 345
 00:17:39,523 --> 00:17:41,055
 Purely graphically.
-完全地都是圖形化的
+完全圖形化的
 
 346
 00:17:41,057 --> 00:17:43,057
@@ -1640,12 +1640,12 @@ building our user interface and by the way, your user interface, you can see I
 363
 00:18:33,804 --> 00:18:39,140
 have a low resolution screen here so my UI doesn't even really fit in the space here.
-因為螢幕的低分辨率，所以我的 UI 沒有很好地符合這裡的空間大小
+因為螢幕的低解析度，所以我的 UI 沒有很好地符合這裡的空間大小
 
 364
 00:18:39,142 --> 00:18:42,677
 You'll probably have maybe a little higher resolution screen then I do but
-你們可能有比我更高解析度的螢幕分辨率的螢幕
+你們可能有比我更高解析度的螢幕
 
 365
 00:18:42,679 --> 00:18:45,979
@@ -1800,7 +1800,7 @@ you'll start seeing things like buttons and text fields and things like that.
 395
 00:20:22,733 --> 00:20:26,401
 Well this is what we need obviously, to build our display here,
-很明顯這是我們構建顯示區域所需要的東西
+很明顯這是我們建立顯示區域所需要的東西
 
 396
 00:20:26,403 --> 00:20:28,536
@@ -1815,7 +1815,7 @@ One, this one called Label is static text, you see?
 398
 00:20:32,142 --> 00:20:37,011
 And this one Text Field is editable text, in other words you can touch on this one.
-這種稱為 Text Field 是可編輯的文字，也就是說，當你按下時
+這種稱為 Text Field 是可編輯的文字，也就是說，當你觸碰時
 
 399
 00:20:37,013 --> 00:20:39,846
@@ -1825,7 +1825,7 @@ And the little keyboard would slide up from the bottom and you could type in it.
 400
 00:20:39,848 --> 00:20:43,600
 So, the calculator, you can't really touch on the screen and start typing
-對於計算機來說，你是不能按下螢幕然後進行輸入的，
+對於計算機來說，你是不能觸碰螢幕然後進行輸入的，
 
 401
 00:20:43,604 --> 00:20:45,018
@@ -1930,7 +1930,7 @@ When you resize it also re-puts those dashed blue lines out there, okay?
 422
 00:21:42,237 --> 00:21:43,969
 So you definitely wanna, even have,
-所以當你調整大小時，你肯定想
+所以當你調整大小時，你肯定會想要
 
 423
 00:21:43,971 --> 00:21:47,106
@@ -1950,7 +1950,7 @@ like a calculator probably doesn't want to come up, this is gonna be initial sta
 426
 00:21:54,147 --> 00:21:58,349
 Doesn't want to come up saying Label, it probably wants 0 or
-初始狀態上面不會顯示 Label，它可能會顯示 0
+初始狀態上面不會顯示 Label，它大概要會顯示 0
 
 427
 00:21:58,351 --> 00:22:01,318
@@ -1965,12 +1965,12 @@ There's also things you wanna set about this though or
 429
 00:22:04,356 --> 00:22:08,258
 anything you drag in your UI that you just can't direct manipulate and
-你拖到 UI 里的內容時，
+你拖到 UI 裡的內容時，
 
 430
 00:22:08,260 --> 00:22:12,261
 that's what the top half of this Utilities windows is, is for, okay?
-你可以使用右上方的 Utilities windows（工具視窗）
+你可以使用 Utilities windows（工具視窗）上半部的功能，了解嗎？
 
 431
 00:22:12,263 --> 00:22:13,829
@@ -1980,7 +1980,7 @@ So if you look at the top half here,
 432
 00:22:13,831 --> 00:22:17,065
 there's a bunch of tabs across the top including something like this,
-在頂部這裡有許多標籤，包括像這種
+在頂部這裡有許多資訊標籤，包括像這種
 
 433
 00:22:17,067 --> 00:22:20,035
@@ -1990,22 +1990,22 @@ the Size Inspector for setting the size of this thing.
 434
 00:22:20,037 --> 00:22:24,305
 And this tab right here, really important, this is the Attributes Inspector.
-這個標籤，稱作 Attributes Inspector（屬性檢查器），非常重要
+這個資訊標籤，稱作 Attributes Inspector（屬性檢查器），非常重要
 
 435
 00:22:24,307 --> 00:22:27,908
 And this is an object oriented inspector, depending on what you have selected.
-這是一個物件導向的檢查器，當你選擇不同的東西時
+以及這是一個物件導向檢查器，當你選中不同的東西時
 
 436
 00:22:27,910 --> 00:22:30,611
 You'll have different user interface here in the top.
-使用者介面將會有所改變
+你會在這上面有不同的使用者介面
 
 437
 00:22:30,613 --> 00:22:33,880
 And this let's you edit attributes about what's selected.
-通過它可以讓你修改選中的內容的屬性
+它可以讓你編輯選中內容的屬性
 
 438
 00:22:33,882 --> 00:22:34,882
@@ -2015,12 +2015,12 @@ So, for example,
 439
 00:22:34,883 --> 00:22:37,883
 a calculator, the zero doesn't really want to be on the left, right?
-計算機中這個 0 其實不是在左邊，對不？
+計算機中這個 0 現在不應該在左邊，是吧？
 
 440
 00:22:37,886 --> 00:22:40,653
 Calculators, the zero, the numbers are on the right and
-這個 0 應該是在右邊
+計算機的這個 0 應該要在右邊
 
 441
 00:22:40,655 --> 00:22:43,589
@@ -2030,17 +2030,17 @@ they kind of grow out from the right.
 442
 00:22:43,591 --> 00:22:47,426
 And so we can easily fix that with this Alignment thing right here.
-我們可以很輕鬆地使用這裡的 Alignment（校准）修改它
+我們可以很容易地使用這裡的 Alignment（對齊）修改它
 
 443
 00:22:47,428 --> 00:22:50,595
 So I'm gonna click this and you see the zero move over to the right.
-我點按這裡，你就可以看到 0 到了右邊
+所以我點按這裡，你就可以看到 0 移到了右邊
 
 444
 00:22:50,597 --> 00:22:52,130
 And, and maybe I want a bigger font.
-還有，也許我想要大點的字體
+還有，也許我想要大一點的字體
 
 445
 00:22:52,132 --> 00:22:53,231
@@ -2055,12 +2055,12 @@ I can click on this, pick different fonts.
 447
 00:22:55,668 --> 00:22:59,470
 I'm gonna just move it up to like 32 point, it's a nice big font.
-把它增大到 32 點，稍微大點的字體
+把它增大到 32 點，它是看起來還不錯大的字體
 
 448
 00:22:59,472 --> 00:23:00,937
 You can notice it kinda cuts off.
-你可以看到內容有點被裁剪了
+你可以看到它有部份被裁掉了
 
 449
 00:23:00,939 --> 00:23:02,572
@@ -2075,12 +2075,12 @@ So I can always just resize this larger to make that fit.
 451
 00:23:08,479 --> 00:23:10,345
 So this is how we build our user interface.
-這就是我們建立使用者介面的方式
+這就是我們如何建立使用者介面的方式
 
 452
 00:23:10,347 --> 00:23:14,949
 It's very direct manipulation and very object oriented as you'll start to
-非常直觀的操作，並且非常地物件導向
+非常直覺的操作，並且非常地物件導向
 
 453
 00:23:14,951 --> 00:23:17,451
@@ -2090,62 +2090,62 @@ see when we add different kinds of objects.
 454
 00:23:17,453 --> 00:23:20,187
 So, let's actually run this application, okay?
-所以，讓我們真正地運行我們的應用吧
+所以，讓我們真正地執行我們的應用吧
 
 455
 00:23:20,189 --> 00:23:22,956
 We haven't done, built any calculaterness about it,
-儘管我們還沒有完成任何關於計算的東西，
+儘管我們還沒有作任何關於計算的東西，
 
 456
 00:23:22,958 --> 00:23:25,992
 but we have this one field, let's run it and see what it looks like.
-不過可以讓我們運行一下看看是什麼效果
+不過可以讓我們執行它，然後看看長什麼樣子
 
 457
 00:23:25,994 --> 00:23:27,226
 So, how do you run things?
-應該怎麼運行？
+所以你應該如何執行它？
 
 458
 00:23:27,228 --> 00:23:29,562
 Well, you see right here where it says, iPhone 6?
-嗯，這裡你可以看到，iPhone 6？
+嗯，你可以看到這裡有寫說，iPhone 6？
 
 459
 00:23:29,564 --> 00:23:33,331
 This actually is a selector that lets you say where you want to
-這實際上是可以讓你選擇用什麼設備
+這裡實際上是讓你選擇你想要用什麼設備
 
 460
 00:23:33,333 --> 00:23:35,166
 run your application.
-運行你的應用
+執行你的應用
 
 461
 00:23:35,168 --> 00:23:38,636
 So you can see you can run it on an iOS device if you have one connected,
-如果當你連上了一個 iOS 設備時，你可以在 iOS 設備上運行，
+如果當你連上了一個 iOS 設備時，你可以在 iOS 設備上執行，
 
 462
 00:23:38,638 --> 00:23:40,271
 I don't have one connected currently.
-現在我還沒有連接
+現在我還沒有連接任何一種設備
 
 463
 00:23:41,273 --> 00:23:43,056
 But you can do that.
-不過你可以這樣做試試
+不過你可以這樣做
 
 464
 00:23:43,057 --> 00:23:44,840
 And we'll talk in a Friday section probably in a week or
-我們將會在一到兩周後的週五的課上
+我們將會在一到兩周後的週五的課堂上
 
 465
 00:23:44,843 --> 00:23:48,478
 two about how to get your devices hooked up.
-談論如何連接你的設備
+談論如何把你的設備連接上來
 
 466
 00:23:48,480 --> 00:23:52,948
@@ -2160,7 +2160,7 @@ But also there's these plethora of simulators here, iPhone 6,
 468
 00:23:56,554 --> 00:23:58,920
 And you can pick one of these to run on and
-你可以選擇其中的一個運行，
+你可以選擇其中的一個執行，
 
 469
 00:23:58,922 --> 00:24:02,490
@@ -2170,32 +2170,32 @@ it'll actually simulate that device right here on your computer.
 470
 00:24:02,492 --> 00:24:05,827
 So I'm gonna run on the iPhone 6.
-這裡我將會運行在 iPhone 6 上
+這裡我將會執行在 iPhone 6 上
 
 471
 00:24:05,829 --> 00:24:08,729
 Okay,I'm just gonna hit Play, see this Play button right here?
-好了，我將要點按 Play 按鈕，看到 Play 按鈕沒？
+好的，我將要點按 Play(播放) 按鈕，看到 Play 按鈕沒？
 
 472
 00:24:08,731 --> 00:24:11,498
 That's how you simulate, so Play.
-這就是使用模擬器的方式，點按 Play
+這就是你如何模擬的方法，點按 Play
 
 473
 00:24:11,500 --> 00:24:12,933
 Now it's launching the simulator.
-現在啓動模擬器
+現在它會啓動模擬器
 
 474
 00:24:12,935 --> 00:24:14,601
 It's a separate process.
-它是一個單獨的程式
+它是一個單獨運作的程式
 
 475
 00:24:14,603 --> 00:24:16,169
 And it's going to run our App in there.
-我們的 App 將會運行在它裡面
+我們的 App 將會在這裡面執行
 
 476
 00:24:16,171 --> 00:24:17,403
@@ -2220,22 +2220,22 @@ Oh that's not so good.
 480
 00:24:21,341 --> 00:24:23,825
 And the reason this is so
-這是因為
+會這麼大的理由是因為
 
 481
 00:24:23,826 --> 00:24:26,310
 big is because the iPhone 6 has a very high resolution display on it.
-iPhone 6 的高分辨率螢幕
+iPhone 6 上面有超高解析度螢幕
 
 482
 00:24:26,312 --> 00:24:30,881
 Okay, the retina display, and it's way higher resolution than my computer, okay?
-這種視網膜螢幕，比我電腦上的分辨率大得多，對吧？
+這種視網膜螢幕，比我電腦上的解析度高得多，對吧？
 
 483
 00:24:30,883 --> 00:24:35,151
 So I actually have to scroll around, you see there's the top of it.
-所以我不得不上下滾動，你可以看到它的頂部
+所以事實上我不得不上下滾動，你可以看到它的頂部
 
 484
 00:24:35,153 --> 00:24:37,754
@@ -2245,12 +2245,12 @@ Scroll up and down to get to it all.
 485
 00:24:37,756 --> 00:24:42,558
 Luckily if you go to Window, this is not in the simulator now, the iOS simulator.
-如果我們前往 Window 選項，這個選項現在不在 iOS 模擬器
+幸運地如果我們連到 Window 選單項目，不是這個 iOS simulator選單項目
 
 486
 00:24:42,560 --> 00:24:46,628
 If you go to Window and Scale, you can scale it down to be smaller and
-如果你點按 Window 並且點按 Scale， 你可以把它縮小，
+如果你連到 Window選單項目，然後點按 Scale， 你可以把它縮小點，
 
 487
 00:24:46,630 --> 00:24:47,762
@@ -2260,7 +2260,7 @@ then it'll fit.
 488
 00:24:47,764 --> 00:24:49,497
 Okay, so if you have a low resolution screen,
-因此，如果你有低分辨率的螢幕
+因此，如果你有低解析度的螢幕
 
 489
 00:24:49,499 --> 00:24:51,532
@@ -2270,12 +2270,12 @@ you're definitely gonna wanna use Window > Scale.
 490
 00:24:51,534 --> 00:24:54,368
 Cmd+3 right there is another way to do it.
-也可以實用快捷鍵 Cmd+3
+也可以用快捷鍵 Cmd+3
 
 491
 00:24:54,370 --> 00:24:55,154
 Okay?
-懂不？
+了解嗎？
 
 492
 00:24:55,155 --> 00:25:00,939
@@ -2285,7 +2285,7 @@ So here's our UI, but it doesn't look to good, okay, because where's this?
 493
 00:25:00,942 --> 00:25:05,011
 We put this zero in there and it just never showed up, what did we do wrong?
-我們把 0 放在那裡，卻從來都沒有出現，我們哪裡做錯了？
+我們把 0 放在那裡，卻沒有出現，我們哪裡做錯了？
 
 494
 00:25:05,013 --> 00:25:08,781
@@ -2295,7 +2295,7 @@ Well we didn't really do anything wrong and that zero is actually there.
 495
 00:25:08,783 --> 00:25:11,750
 It's just here. Let me line up these UI's, this is not
-就在那，先讓我把它們排成一列，雖然沒有
+它就在那，讓我把這些介面排成一列，雖然沒有
 
 496
 00:25:11,752 --> 00:25:16,554
@@ -2310,17 +2310,17 @@ you can see that the zero is actually off screen, [NOISE] okay?
 498
 00:25:19,859 --> 00:25:24,028
 So its there but you just can't see it because its over here off the screen.
-所以實際上它存在不過你看不到它，因為它在螢幕外面
+所以實際上它是存在的，不過你看不到它，因為它在螢幕外面
 
 499
 00:25:24,030 --> 00:25:28,465
 Okay, and that's a problem, but that's a problem we can fix.
-這是一個問題，不過這個問題我們可以解決
+這是一個問題，不過這是個我們可以解決的問題
 
 500
 00:25:28,467 --> 00:25:29,732
 So let's go fix that problem.
-來，我們開始解決這個問題吧
+所以讓我們來解決這個問題
 
 501
 00:25:31,302 --> 00:25:32,534
@@ -2345,7 +2345,7 @@ It's square.
 505
 00:25:38,375 --> 00:25:40,908
 Okay, no iOS device is square.
-不過沒有任何 iOS 設備是正方形的
+不過並沒有任何 iOS 設備是正方形的
 
 506
 00:25:40,910 --> 00:25:43,544
@@ -2360,7 +2360,7 @@ They're all, you know, tall and thin,
 508
 00:25:46,080 --> 00:25:48,581
 or, if you turn them sideways, then they're long and short.
-或者如果把它們側身來看，它們都又長又短
+或者如果把它們轉個方向來看，它們都又長又短
 
 509
 00:25:48,583 --> 00:25:50,650
@@ -2370,7 +2370,7 @@ Or even like an iPad.
 510
 00:25:50,651 --> 00:25:52,718
 You know the aspect ratio on an iPad is slightly different than an iPhone so
-你知道 iPad 的縱橫比例和 iPhone 稍微有點不同
+你知道 iPad 的長寬比例和 iPhone 稍微有點不同
 
 511
 00:25:52,721 --> 00:25:55,588
@@ -2380,62 +2380,62 @@ their all slightly different, but none of them are square.
 512
 00:25:55,590 --> 00:25:58,657
 So why do we design our UI in a square?
-那為什麼我們把 UI 設計為方的？
+那為什麼我們要在正方形裡設計我們的 UI？
 
 513
 00:25:58,659 --> 00:26:03,762
 Because the way you design iOS interfaces, you design them in this square and
-因為你這種 iOS 介面的設計，是將內容放這個方形中
+因為你這種 iOS 介面的設計方式，你在正方形中設計它們
 
 514
 00:26:03,764 --> 00:26:09,033
 you give everything inside the square rules, called constraints,
-然後給所有的內容都添加規則，這些規則我們稱之為約束，
+你給在裡面的所有東西正方形的規則，稱之為「約束」，
 
 515
 00:26:09,035 --> 00:26:12,236
 about what happens to them when they get squished down.
-是關於當它們被壓扁時應該發生什麼變化
+是有關於當它們被壓扁時應該發生什麼變化
 
 516
 00:26:12,238 --> 00:26:15,505
 Either squished down vertically, squished down horizontally,
-不過是水平還是垂直的壓扁
+不管是水平還是垂直的壓扁
 
 517
 00:26:15,507 --> 00:26:18,508
 depending on what kinda device their getting put on, okay?
-取決於它們被放到哪種設備中，明白不？
+這會取決於它們被放到哪種設備中，了解嗎？
 
 518
 00:26:18,510 --> 00:26:22,912
 So you put these rules in there, so, what does it look like to put these rules in?
-所以你會在這裡加入這些規則，那當加入這樣規則後會怎樣？
+所以你會在這裡面放進這些規則，那麼，放進這些規則時要怎麼作的？
 
 519
 00:26:22,914 --> 00:26:25,115
 Well again, it's all direct manipulation
-同樣的，這些都是直觀的操作
+同樣的，這些都是直覺的操作
 
 520
 00:26:25,117 --> 00:26:31,186
 So I'm going to give some rules to this label right here to make it so that it knows
-我將要對這裡的這個 Label 增加一些規則，使得它知道
+我將要對這裡的這個 Label 給定一些規則，使得它知道
 
 521
 00:26:31,188 --> 00:26:36,957
 what to do when this square gets squished down in any direction for any device.
-對於任何方向的任何設備被壓扁時應該如何顯示
+對於任何設備中的任何方向，在被壓扁時應該怎麼作
 
 522
 00:26:36,959 --> 00:26:38,659
 So, what do I want the rules to be?
-那我希望這些規則是什麼樣的？
+那我想要這些規則是什麼樣的？
 
 523
 00:26:38,661 --> 00:26:42,162
 Well, I always want this thing to use the whole width.
-我總希望它可以使用全部的寬度
+我總是想要它可以使用全部的寬度
 
 524
 00:26:42,164 --> 00:26:44,931
@@ -2445,12 +2445,12 @@ However much width I have, I want it all.
 525
 00:26:44,933 --> 00:26:50,102
 So I'm gonna pin this right edge to this edge, okay?
-所以我要固定這個右邊緣到這個邊緣的距離，對吧？
+所以我要釘定這個右邊緣到這個邊緣，對吧？
 
 526
 00:26:50,104 --> 00:26:53,205
 I'm gonna make it so all widths are pinned to each other.
-我這樣做是因為所有寬度都會由另外一方決定
+我這樣做是因為所有寬度都會互相釘住
 
 527
 00:26:53,207 --> 00:26:55,007
@@ -2460,32 +2460,32 @@ And I do that with the Ctrl key.
 528
 00:26:55,009 --> 00:26:57,559
 I've turned on sticky keys so
-我已經開啓粘滯鍵所以
+我已經開啓暫留按鍵所以
 
 529
 00:26:57,560 --> 00:27:00,110
 you can see down in the lower left here, it's showing the modifier keys I'm using.
-在左下角你可以看到，它顯示了我正使用的按鍵
+在左下角你可以看到，它顯示了我正使用的修飾鍵
 
 530
 00:27:00,113 --> 00:27:02,213
 So right now I'm holding down Ctrl.
-現在我按住 Ctrl
+現在我按住 Ctrl鍵
 
 531
 00:27:02,215 --> 00:27:08,485
 And I'm gonna Ctrl+drag from the right edge of this to the container it's in.
-我按住 Ctrl，同時從右邊拖動到它的容器的右邊
+我按住 Ctrl鍵，同時從右邊拖動到它的容器的右邊
 
 532
 00:27:08,487 --> 00:27:11,822
 See how it's showing me what I'm dragged to.
-看它是如何展示我正在拖動的過程
+看它是如何展示我正在拖動了什麼
 
 533
 00:27:11,824 --> 00:27:15,125
 So when I drag to this container, it puts a menu up and says,
-當我拖到這個容器時，彈出了一個菜單，上面說，
+當我拖到這個容器時，彈出了一個選單，上面寫說，
 
 534
 00:27:15,127 --> 00:27:20,830
@@ -2500,7 +2500,7 @@ this thing's edge, what do you want it to be?
 536
 00:27:24,001 --> 00:27:26,568
 Well, I can do a lot of things here.
-恩，我可以做很多事情
+恩，我可以在這裡做很多
 
 537
 00:27:26,569 --> 00:27:29,136
@@ -2555,8 +2555,7 @@ Now, see all these yellow and orange lines that appeared when I did that?
 547
 00:27:59,666 --> 00:28:04,401
 That's because the systems like, okay, you've started telling me the rules for this label,
-這就像是系統在說，嗯，
-你已經開始告訴我應該遵循對這個標籤的某些規則，
+這就像是系統在說，嗯，你已經開始告訴我應該遵循對這個標籤的某些規則，
 
 548
 00:28:04,403 --> 00:28:06,504
@@ -3116,12 +3115,12 @@ But let's see if this fixes our problem.
 660
 00:33:34,226 --> 00:33:37,527
 Let's go ahead and run our application again.
-我們再次運行一下應用
+我們再次執行一下應用
 
 661
 00:33:37,529 --> 00:33:39,795
 So I'm just hitting that play button.
-點按這個運行按鈕
+點按這個執行按鈕
 
 662
 00:33:39,797 --> 00:33:41,563
@@ -3141,7 +3140,7 @@ And not only that, if we rotate this phoned,
 665
 00:33:48,038 --> 00:33:52,273
 which you can do in the Simulators menu, Hardware > Rotate.
-你可以在模擬器的菜單中點按 Hardware > Rotate
+你可以在模擬器的選單中點按 Hardware > Rotate
 
 666
 00:33:53,976 --> 00:33:58,378
@@ -5378,7 +5377,7 @@ using this backslash parenthesis. Okay?
 1119
 00:56:28,256 --> 00:56:30,189
 So let's go ahead and run and
-現在讓我們編譯運行然後
+現在讓我們編譯執行然後
 
 1120
 00:56:30,190 --> 00:56:32,123
@@ -5973,7 +5972,7 @@ whatever the optional type is out of there for you.
 1240
 01:02:40,811 --> 01:02:44,579
 So now let's go ahead and run again and
-所以讓我們繼續，重新運行一次，
+所以讓我們繼續，重新執行一次，
 
 1241
 01:02:44,581 --> 01:02:51,318
@@ -6173,7 +6172,7 @@ Are we cool with that?
 1280
 01:04:48,889 --> 01:04:49,821
 So let's run again.
-再讓我們運行一次
+再讓我們執行一次
 
 1281
 01:04:49,823 --> 01:04:52,857
