@@ -14,11 +14,20 @@ CS193P 课程地址：[CS193P iPhone Application Development](http://web.stanfor
 3. Applying MVC | 完成 | 完成
 4. More Swift and Foundation Frameworks | 完成 | 完成 
 5. Objective-C Compatibility, Property List, Views | 完成 | 完成 
-6. Protocols and Delegation, Gestures | 完成 | 完成 3/6
-7. Multiple MVCs | 完成 | 未开始
-8. View Controller Lifecycle, Autolayout | 完成 4/7 | 未开始
+6. Protocols and Delegation, Gestures | 完成 | 完成 5/6
+7. Multiple MVCs | 完成 | 完成
+8. View Controller Lifecycle, Autolayout | 完成 | 未开始
+9. Scroll View and Multithreading | 完成 | 未开始
+10. Table View| 完成 | 未开始
+11. Unwind Segues, Alerts, Timers, View Animation | 进行中 | N/A
+12. Dynamic Animation | 进行中 | N/A
+13. Application Lifecycle and Core Motion | 完成 | 未开始
+14. Core Location and MapKit | 进行中 | N/A
+15. Modal Segues | 完成 | 未开始
+16. Camera, Persistence, and Embed Segues | 进行中 | N/A
+17. Internationalization and Settings | 进行中 | N/A
 
-注：更新时间：北京时间2015年03月12日18时46分
+注：更新时间：北京时间 2015 年 05 月 4 日 17 时 37 分
 
 ### 校对规则
 
